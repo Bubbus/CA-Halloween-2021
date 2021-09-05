@@ -27,6 +27,7 @@ class F
 #include "downtime\functions.hpp"
 #include "identity\functions.hpp"
 #include "logiVehicle\functions.hpp"
+#include "anomaly\functions.hpp"
 
 
 }

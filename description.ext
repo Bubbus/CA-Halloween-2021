@@ -328,21 +328,777 @@ class CfgDebriefingSections
 // it will play until the file stops, Sounds cannot be interrupted
 // unless the object playing the sound is killed or otherwise destroyed.
 // Sound files can be played in 3D, and are an effect for volume purposes.
-/*
 class CfgSounds
 {
-	sounds[] = {};
-	class wolf1
+	// START: Burper
+
+	class bones_drop
 	{
-		// how the sound is referred to in the editor (e.g. trigger effects)
-		name = "my_wolf_sound";
-		// filename, volume, pitch
-		sound[] = {"wolf1.ogg", 1, 1};
-		// subtitle delay in seconds, subtitle text
-		titles[] = {1, "*wolf growls*"};
+		name = "bones_drop";
+		sound[] = {"\sounds\bones_drop.ogg", db+30, 1};
+		titles[] = {};
 	};
+	class blood_splash
+	{
+		name = "blood_splash";
+		sound[] = {"\sounds\blood_splash.ogg", db+35, 1};
+		titles[] = {};
+	};
+	class zoomin
+	{
+		name = "zoomin";
+		sound[] = {"\sounds\zoomin.ogg", db+25, 1};
+		titles[] = {};
+	};
+	class 01_blast
+	{
+		name = "01_blast";
+		sound[] = {"\sounds\01_blast.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class 02_blast
+	{
+		name = "02_blast";
+		sound[] = {"\sounds\02_blast.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class 03_blast
+	{
+		name = "03_blast";
+		sound[] = {"\sounds\03_blast.ogg", db+30, 1};
+		titles[] = {};
+	};
+
+	class 01_blast_mediu
+	{
+		name = "01_blast_mediu";
+		sound[] = {"\sounds\01_blast.ogg", db+40, 1};
+		titles[] = {};
+	};
+	class 02_blast_mediu
+	{
+		name = "02_blast_mediu";
+		sound[] = {"\sounds\02_blast.ogg", db+40, 1};
+		titles[] = {};
+	};
+	class 03_blast_mediu
+	{
+		name = "03_blast_mediu";
+		sound[] = {"\sounds\03_blast.ogg", db+40, 1};
+		titles[] = {};
+	};
+
+	class 01_far_blast
+	{
+		name = "01_far_blast";
+		sound[] = {"\sounds\01_far_blast.ogg", db+15, 1};
+		titles[] = {};
+	};
+	class 02_far_blast
+	{
+		name = "02_far_blast";
+		sound[] = {"\sounds\02_far_blast.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class 03_far_blast
+	{
+		name = "03_far_blast";
+		sound[] = {"\sounds\03_far_blast.ogg", db+10, 1};
+		titles[] = {};
+	};
+	class vortex
+	{
+		name = "vortex";
+		sound[] = {"\sounds\vortex.ogg", db+40, 1};
+		titles[] = {};
+	};
+	class strigat_1
+	{
+		name = "strigat_1";
+		sound[] = {"\sounds\strigat_1.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class strigat_2
+	{
+		name = "strigat_2";
+		sound[] = {"\sounds\strigat_2.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class strigat_3
+	{
+		name = "strigat_3";
+		sound[] = {"\sounds\strigat_3.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class strigat_4
+	{
+		name = "strigat_4";
+		sound[] = {"\sounds\strigat_4.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class strigat_5
+	{
+		name = "strigat_5";
+		sound[] = {"\sounds\strigat_5.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class strigat_6
+	{
+		name = "strigat_6";
+		sound[] = {"\sounds\strigat_6.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class strigat_7
+	{
+		name = "strigat_7";
+		sound[] = {"\sounds\strigat_7.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class strigat_8
+	{
+		name = "strigat_8";
+		sound[] = {"\sounds\strigat_8.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class strigat_9
+	{
+		name = "strigat_9";
+		sound[] = {"\sounds\strigat_9.ogg",db+20, 1};
+		titles[] = {};
+	};
+	class strigat_91
+	{
+		name = "strigat_91";
+		sound[] = {"\sounds\strigat_91.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class strigat_92
+	{
+		name = "strigat_92";
+		sound[] = {"\sounds\strigat_92.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class bodyfall_metal_3
+	{
+		name = "bodyfall_metal_3";
+		sound[] = {"\sounds\bodyfall_metal_3.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class bodyfall_wood_1
+	{
+		name = "bodyfall_wood_1";
+		sound[] = {"\sounds\bodyfall_wood_1.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class bodyfall_wood_2
+	{
+		name = "bodyfall_wood_2";
+		sound[] = {"\sounds\bodyfall_wood_2.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class bodyfall_wood_3
+	{
+		name = "bodyfall_wood_3";
+		sound[] = {"\sounds\bodyfall_wood_3.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class device_puls
+	{
+		name = "device_puls";
+		sound[] = {"\sounds\device_puls.ogg",1, 1};
+		titles[] = {};
+	};
+	class puls_bass
+	{
+		name = "puls_bass";
+		sound[] = {"\sounds\puls_bass.ogg", db+10, 1};
+		titles[] = {};
+	};
+	class charge_b
+	{
+		name = "charge_b";
+		sound[] = {"\sounds\charge_b.ogg", db+5, 1};
+		titles[] = {};
+	};
+
+	// END: Burper
+
+
+
+	// START: Farty
+
+	class sfaraie_08
+	{
+		name = "sfaraie_08";
+		sound[] = {"\sounds\sfaraie_08.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class sfaraie_09
+	{
+		name = "sfaraie_09";
+		sound[] = {"\sounds\sfaraie_09.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class acid_burn_1
+	{
+		name = "acid_burn_1";
+		sound[] = {"\sounds\acid_burn_1.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class acid_burn_2
+	{
+		name = "acid_burn_2";
+		sound[] = {"\sounds\acid_burn_2.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class acid_burn_3
+	{
+		name = "acid_burn_3";
+		sound[] = {"\sounds\acid_burn_3.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class acid_burn_4
+	{
+		name = "acid_burn_4";
+		sound[] = {"\sounds\acid_burn_4.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class toxic_field
+	{
+		name = "toxic_field";
+		sound[] = {"\sounds\toxic_field.ogg", 0.1, 1};
+		titles[] = {};
+	};
+	class breath_toxic
+	{
+		name = "breath_toxic";
+		sound[] = {"\sounds\breath_toxic.ogg", 0.6, 1.0};
+		titles[] = {0,""};
+	};
+	class dezechipare_toxic
+	{
+		name = "dezechipare_toxic";
+		sound[] = {"\sounds\dezechipare_toxic.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 01_breat_toxic
+	{
+		name = "01_breat_toxic";
+		sound[] = {"\sounds\01_breat_toxic.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 02_breat_toxic
+	{
+		name = "02_breat_toxic";
+		sound[] = {"\sounds\02_breat_toxic.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 03_breat_toxic
+	{
+		name = "03_breat_toxic";
+		sound[] = {"\sounds\03_breat_toxic.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 04_breat_toxic
+	{
+		name = "04_breat_toxic";
+		sound[] = {"\sounds\04_breat_toxic.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class puls_1
+	{
+		name = "puls_1";
+		sound[] = {"\sounds\puls_1.ogg", db+1, 1};
+		titles[] = {1, ""};
+	};
+	class echipare_toxic
+	{
+		name = "echipare_toxic";
+		sound[] = {"\sounds\echipare_toxic.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class voce_fart
+	{
+		name = "voce_fart";
+		sound[] = {"\sounds\voce_fart.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 01_anomaly_move
+	{
+		name = "01_anomaly_move";
+		sound[] = {"\sounds\01_anomaly_move.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 02_anomaly_move
+	{
+		name = "02_anomaly_move";
+		sound[] = {"\sounds\02_anomaly_move.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 01_fart_attack
+	{
+		name = "01_fart_attack";
+		sound[] = {"\sounds\01_fart_attack.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 02_fart_attack
+	{
+		name = "02_fart_attack";
+		sound[] = {"\sounds\02_fart_attack.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class 01_strig_fart
+	{
+		name = "01_strig_fart";
+		sound[] = {"\sounds\01_strig_fart.ogg", 1, 1.0};
+		titles[] = {0,""};
+	};
+	class sfaraie_01
+	{
+		name = "sfaraie_01";
+		sound[] = {"\sounds\sfaraie_01.ogg", db+5, 1.0};
+		titles[] = {0,""};
+	};
+	class farty_mort
+	{
+		name = "farty_mort";
+		sound[] = {"\sounds\farty_mort.ogg", db+20, 1.0};
+		titles[] = {0,""};
+	};
+	class tuse_1
+	{
+		name = "tuse_1";
+		sound[] = {"\sounds\tuse_1.ogg", db+5, 1.0};
+		titles[] = {0,""};
+	};
+	class tuse_2
+	{
+		name = "tuse_2";
+		sound[] = {"\sounds\tuse_2.ogg", db+5, 1.0};
+		titles[] = {0,""};
+	};
+	class tuse_3
+	{
+		name = "tuse_3";
+		sound[] = {"\sounds\tuse_3.ogg", db+5, 1.0};
+		titles[] = {0,""};
+	};
+
+	// END: Farty
+
+
+
+	// START: Flamer
+
+	class flamer_voice
+	{
+		name = "flamer_voice";
+		sound[] = {"\sounds\flamer_voice.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class 01_blast_2
+	{
+		name = "01_blast";
+		sound[] = {"\sounds\01_blast_2.ogg", db+10, 1};
+		titles[] = {};
+	};
+	class 02_blast_2
+	{
+		name = "2";
+		sound[] = {"\sounds\02_blast_2.ogg", db+10, 1};
+		titles[] = {};
+	};
+	class 03_blast_2
+	{
+		name = "03_blast";
+		sound[] = {"\sounds\03_blast_2.ogg", db+10, 1};
+		titles[] = {};
+	};
+	class furnal
+	{
+		name = "furnal";
+		sound[] = {"\sounds\furnal.ogg",1, 1};
+		titles[] = {1, ""};
+	};
+	class burned
+	{
+		name = "burned";
+		sound[] = {"\sounds\burned.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class close_bomb
+	{
+		name = "close_bomb";
+		sound[] = {"\sounds\close_bomb.ogg",db+30, 1};
+		titles[] = {};
+	};
+	class eko_sharp
+	{
+		name = "eko_sharp";
+		sound[] = {"\sounds\eko_sharp.ogg",1, 1};
+		titles[] = {};
+	};
+	class eko_bomb
+	{
+		name = "eko_bomb";
+		sound[] = {"\sounds\eko_bomb.ogg",1, 1};
+		titles[] = {};
+	};
+	class foc_initial
+	{
+		name = "foc_initial";
+		sound[] = {"\sounds\foc_initial.ogg",1, 1};
+		titles[] = {};
+	};
+	class NoSound
+	{
+		name = "NoSound";
+		sound[] = {"", 0, 1};
+		titles[] = {0, ""};
+	};
+	class 02
+	{
+		name = "02";
+		sound[] = {"\sounds\02.ogg",1, 1};
+		titles[] = {1, ""};
+	};
+	class 04
+	{
+		name = "04";
+		sound[] = {"\sounds\04.ogg",1, 1};
+		titles[] = {1, ""};
+	};
+	class 03
+	{
+		name = "03";
+		sound[] = {"\sounds\03.ogg",1, 1};
+		titles[] = {1, ""};
+	};
+
+	// END: Flamer
+
+
+
+	// START: Sparky
+
+	class magnetic_pulse
+	{
+		name = "magnetic_pulse";
+		sound[] = {"\sounds\magnetic_pulse.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};
+	class sparks_1
+	{
+		name = "sparks_1";
+		sound[] = {"\sounds\sparks_1.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};
+	class sparks_2
+	{
+		name = "sparks_2";
+		sound[] = {"\sounds\sparks_2.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};
+	class sparks_3
+	{
+		name = "sparks_3";
+		sound[] = {"\sounds\sparks_3.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};
+	class sparks_4
+	{
+		name = "sparks_4";
+		sound[] = {"\sounds\sparks_4.ogg", 1, 1};
+		titles[] = {1, ""};
+	};
+	class sparks_5
+	{
+		name = "sparks_5";
+		sound[] = {"\sounds\sparks_5.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};
+	class after_01
+	{
+		name = "after_01";
+		sound[] = {"\sounds\after_01.ogg", 0.5, 1};
+		titles[] = {1, ""};
+	};
+	class after_02
+	{
+		name = "after_02";
+		sound[] = {"\sounds\after_02.ogg", 0.7, 1};
+		titles[] = {1, ""};
+	};
+	class 01_atak
+	{
+		name = "01_atak";
+		sound[] = {"\sounds\01_atak.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};
+	class 02_atak
+	{
+		name = "02_atak";
+		sound[] = {"\sounds\02_atak.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};
+	class 03_atak
+	{
+		name = "03_atak";
+		sound[] = {"\sounds\03_atak.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};
+	class 04_atak
+	{
+		name = "04_atak";
+		sound[] = {"\sounds\04_atak.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};
+	class 05_atak
+	{
+		name = "05_atak";
+		sound[] = {"\sounds\05_atak.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};
+	class 06_atak
+	{
+		name = "06_atak";
+		sound[] = {"\sounds\06_atak.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};
+
+	// END: Sparky
+
+
+
+	// START: Fireworks
+
+	class firework1
+	{
+		name = "firework1";
+		sound[] = {"\sounds\firework1.ogg",1, 1};
+		titles[] = {1, ""};
+	};
+	class firework2
+	{
+		name = "firework2";
+		sound[] = {"\sounds\firework2.ogg",1, 1};
+		titles[] = {1, ""};
+	};
+	class firework3
+	{
+		name = "firework3";
+		sound[] = {"\sounds\firework3.ogg",1, 1};
+		titles[] = {1, ""};
+	};
+	class fluier1
+	{
+		name = "fluier1";
+		sound[] = {"\sounds\fluier1.ogg", db+15, 1};
+		titles[] = {1, ""};
+	};
+	class fluier2
+	{
+		name = "fluier2";
+		sound[] = {"\sounds\fluier2.ogg", db+15, 1};
+		titles[] = {1, ""};
+	};
+	class fluier3
+	{
+		name = "fluier3";
+		sound[] = {"\sounds\fluier3.ogg", db+15, 1};
+		titles[] = {1, ""};
+	};
+	class fluier4
+	{
+		name = "fluier4";
+		sound[] = {"\sounds\fluier4.ogg", db+15, 1};
+		titles[] = {1, ""};
+	};
+	class fluier5
+	{
+		name = "fluier5";
+		sound[] = {"\sounds\fluier5.ogg", db+15, 1};
+		titles[] = {1, ""};
+	};
+	class fluier6
+	{
+		name = "fluier6";
+		sound[] = {"\sounds\fluier6.ogg", db+15, 1};
+		titles[] = {1, ""};
+	};
+	class fluier7
+	{
+		name = "fluier7";
+		sound[] = {"\sounds\fluier7.ogg", db+15, 1};
+		titles[] = {1, ""};
+	};
+	class eko_fir_1
+	{
+		name = "eko_fir_1";
+		sound[] = {"\sounds\eko_fir_1.ogg",0.2, 1};
+		titles[] = {1, ""};
+	};
+	class eko_fir_2
+	{
+		name = "eko_fir_2";
+		sound[] = {"\sounds\eko_fir_2.ogg",0.2, 1};
+		titles[] = {1, ""};
+	};
+	class eko_fir_3
+	{
+		name = "eko_fir_3";
+		sound[] = {"\sounds\eko_fir_3.ogg",0.2, 1};
+		titles[] = {1, ""};
+	};
+	class eko_fir_4
+	{
+		name = "eko_fir_4";
+		sound[] = {"\sounds\eko_fir_4.ogg",0.2, 1};
+		titles[] = {1, ""};
+	};
+
+	// END: Fireworks
+
+
+
+	// START: MEGA Sparky
+
+	class magnetic_pulse_mega
+	{
+		name = "magnetic_pulse_mega";
+		sound[] = {"\sounds\magnetic_pulse.ogg", db+40, 1};
+		titles[] = {1, ""};
+	};
+	class sparks_1_mega
+	{
+		name = "sparks_1_mega";
+		sound[] = {"\sounds\sparks_1.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class sparks_2_mega
+	{
+		name = "sparks_2_mega";
+		sound[] = {"\sounds\sparks_2.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class sparks_3_mega
+	{
+		name = "sparks_3_mega";
+		sound[] = {"\sounds\sparks_3.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class sparks_4_mega
+	{
+		name = "sparks_4_mega";
+		sound[] = {"\sounds\sparks_4.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class sparks_5_mega
+	{
+		name = "sparks_5_mega";
+		sound[] = {"\sounds\sparks_5.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class after_01_mega
+	{
+		name = "after_01_mega";
+		sound[] = {"\sounds\after_01.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};
+	class after_02_mega
+	{
+		name = "after_02_mega";
+		sound[] = {"\sounds\after_02.ogg", db+10, 1};
+		titles[] = {1, ""};
+	};
+	class 01_atak_mega
+	{
+		name = "01_atak_mega";
+		sound[] = {"\sounds\01_atak.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class 02_atak_mega
+	{
+		name = "02_atak_mega";
+		sound[] = {"\sounds\02_atak.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class 03_atak_mega
+	{
+		name = "03_atak_mega";
+		sound[] = {"\sounds\03_atak.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class 04_atak_mega
+	{
+		name = "04_atak_mega";
+		sound[] = {"\sounds\04_atak.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class 05_atak_mega
+	{
+		name = "05_atak_mega";
+		sound[] = {"\sounds\05_atak.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+	class 06_atak_mega
+	{
+		name = "06_atak_mega";
+		sound[] = {"\sounds\06_atak.ogg", db+20, 1};
+		titles[] = {1, ""};
+	};
+
+	// END: MEGA Sparky
+
+
+
+	// START: electrical sparks
+
+	class spark1
+	{
+		name = "spark1";
+		sound[] = {"\sounds\spark1.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark11
+	{
+		name = "spark11";
+		sound[] = {"\sounds\spark11.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark2
+	{
+		name = "spark2";
+		sound[] = {"\sounds\spark2.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark22
+	{
+		name = "spark22";
+		sound[] = {"\sounds\spark22.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark3
+	{
+		name = "spark3";
+		sound[] = {"\sounds\spark3.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark4
+	{
+		name = "spark4";
+		sound[] = {"\sounds\spark4.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark5
+	{
+		name = "spark5";
+		sound[] = {"\sounds\spark5.ogg", db+5, 1};
+		titles[] = {};
+	};
+
+	// END: electrical sparks
 };
-*/
 
 
 // ============================================================================================
