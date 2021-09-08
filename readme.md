@@ -3,8 +3,8 @@
 ## SETTING UP REPO
 1. Pull repo into folder, name it `HalloweenBase.vr` or similar, as long as the end is `.vr`.  Ensure branch is set to `base`.
 2. Copy/paste folder, name it to `HalloweenPart1.Tanoa` or similar.  Ensure branch is set to `part-1.Tanoa`.
-3. Copy/paste folder, name it to `HalloweenPart2.CamLaoNam` or similar.  Ensure branch is set to `part-2.CamLaoNam`.
-4. Copy/paste folder, name it to `HalloweenPart3.CamLaoNam` or similar.  Ensure branch is set to `part-3.CamLaoNam`.
+3. Copy/paste folder, name it to `HalloweenPart2.Cam_Lao_Nam` or similar.  Ensure branch is set to `part-2.CamLaoNam`.
+4. Copy/paste folder, name it to `HalloweenPart3.Cam_Lao_Nam` or similar.  Ensure branch is set to `part-3.CamLaoNam`.
 5. Don't switch the branches around just pull/push m8.
 
 ## Operation Don't Break the Repo
