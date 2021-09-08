@@ -30,17 +30,17 @@ _rocket say3d [_launchSound, 2000];
 {
 	params ["_rocket", "_projLifetime", "_rocketFlame", "_rocketSmoke"];
 
-	_startTime = time;
-	_lastRun = time;
+	_startTime = CBA_missionTime;
+	_lastRun = CBA_missionTime;
 
-	while {(time - _startTime) < _projLifetime} do
+	while {(CBA_missionTime - _startTime) < _projLifetime} do
 	{
-		_interval = time - _lastRun;
+		_interval = CBA_missionTime - _lastRun;
 		_movement = [0, 0, 200 * _interval];
 
 		_rocket setPosASL (getPosASL _rocket vectorAdd _movement);
 
-		_lastRun = time;
+		_lastRun = CBA_missionTime;
 		sleep 0.01666;
 
 	};

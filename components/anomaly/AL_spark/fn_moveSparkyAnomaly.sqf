@@ -125,7 +125,7 @@ if (hasInterface) then
 
 		while {alive _posSmoother and {alive _obiect_orb}} do
 		{
-			private _time = serverTime;
+			private _time = CBA_missionTime;
 			private _curXFreqSkew = ((sin _time) * _xyFreqSkew) / _time;
 			private _curYFreqSkew = ((cos _time) * _xyFreqSkew) / _time;
 			private _xCycle = sin (_time * (_xMod + _curXFreqSkew));
@@ -147,7 +147,7 @@ if (hasInterface) then
 
 		while {alive _posSmoother and {alive _obiect_orb}} do
 		{
-			private _time = serverTime;
+			private _time = CBA_missionTime;
 			private _curFreqSkew = (sin _time) * _xyFreqSkew;
 			private _xCycle = sin (_time * (_xMod + _curFreqSkew));
 			private _yCycle = cos (_time * (_yMod + _curFreqSkew));
@@ -170,14 +170,14 @@ if (hasInterface) then
 {
 	params ["_baseObj", "_posSmoother", "_radius"];
 
-	_lastRun = serverTime;
+	_lastRun = CBA_missionTime;
 	_maxVel = _radius * 0.1;
 
 	if (hasInterface) then
 	{
 		while {alive _baseObj and {alive _posSmoother}} do
 		{
-			_movement = _maxVel * (serverTime - _lastRun);
+			_movement = _maxVel * (CBA_missionTime - _lastRun);
 			_smootherPos = getPosASL _posSmoother;
 			_dirVec = _smootherPos vectorFromTo (getPosASL _baseObj);
 			_distance = (_posSmoother distance _baseObj) min _movement;
@@ -185,7 +185,7 @@ if (hasInterface) then
 
 			_posSmoother setPosASL (_smootherPos vectorAdd _moveVec);
 
-			_lastRun = serverTime;
+			_lastRun = CBA_missionTime;
 			_plyDist = _posSmoother distance player;
 			sleep ((((_plyDist - var_sparkyAnomaly_visibleDistance) * 0.01666) max 0.0333) min 2);
 
@@ -196,7 +196,7 @@ if (hasInterface) then
 	{
 		while {alive _baseObj and {alive _posSmoother}} do
 		{
-			_movement = _maxVel * (serverTime - _lastRun);
+			_movement = _maxVel * (CBA_missionTime - _lastRun);
 			_smootherPos = getPosASL _posSmoother;
 			_dirVec = _smootherPos vectorFromTo (getPosASL _baseObj);
 			_distance = (_posSmoother distance _baseObj) min _movement;
@@ -204,7 +204,7 @@ if (hasInterface) then
 
 			_posSmoother setPosASL (_smootherPos vectorAdd _moveVec);
 
-			_lastRun = serverTime;
+			_lastRun = CBA_missionTime;
 			sleep 0.5;
 
 		};

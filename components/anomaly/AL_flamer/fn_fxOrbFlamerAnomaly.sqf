@@ -22,10 +22,10 @@ _orb setObjectTexture [0, "res\01_burper.jpg"];
 
 		_spinMul = (_orb getVariable ["spinMultiplier", 45]);
 		_wiggle = (0.25 * (45 / _spinMul)) min 0.25;
-		_height = 0.95 + (cos (time * (_spinMul * 4))) * _wiggle;
+		_height = 0.95 + (cos (CBA_missionTime * (_spinMul * 4))) * _wiggle;
 
 		_orb setPos [_flamerPos#0, _flamerPos#1, (_flamerPos#2) + _height];
-		_orb setDir (time mod 360) * _spinMul;
+		_orb setDir (CBA_missionTime mod 360) * _spinMul;
 
 		sleep 0.016;
 	};

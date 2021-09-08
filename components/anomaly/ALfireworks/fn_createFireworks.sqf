@@ -12,9 +12,9 @@ _launcher setVariable ["launchingFireworks", true, true];
 {
 	params ["_launcher", "_duration"];
 
-	_startTime = time;
+	_startTime = CBA_missionTime;
 
-	while {(time - _startTime) < _duration} do
+	while {(CBA_missionTime - _startTime) < _duration} do
 	{
 		_projLife = random [1, 1.4, 1.9];
 		[_launcher, _projLife] remoteExec ["f_fnc_createFireworkRocket"];

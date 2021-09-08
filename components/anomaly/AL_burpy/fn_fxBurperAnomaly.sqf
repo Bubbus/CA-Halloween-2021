@@ -144,7 +144,7 @@ fnc_burperAnomaly_anim_burp =
 		_b_dir = _b_dir+2;
 		_obj_anim setdir _b_dir;
 
-		_height = 1 + (cos (time * 180)) * 0.3;
+		_height = 1 + (cos (CBA_missionTime * 180)) * 0.3;
 		_obj_anim setPosATL [getposATL _work_obj select 0, getposATL _work_obj select 1, _height];
 		sleep 0.01;
 	};
