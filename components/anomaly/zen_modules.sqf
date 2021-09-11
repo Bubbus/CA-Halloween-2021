@@ -9,12 +9,20 @@ call
 
     ["[CA-BOO] Anomalies", "Burper", _createBurper] call zen_custom_modules_fnc_register;
 
+    _createScreamer =
+    {
+    	params ["_pos"];
+
+    	[_pos] remoteExec ["f_fnc_createScreamer", 2];
+    };
+
+    ["[CA-BOO] Anomalies", "Screamer", _createScreamer] call zen_custom_modules_fnc_register;
 
     _createFartySmall =
     {
     	params ["_pos"];
 
-    	[_pos, 10, 5] remoteExec ["fnc_zen_createFarty", 2];
+    	[_pos, 10, 3] remoteExec ["fnc_zen_createFarty", 2];
     };
 
     ["[CA-BOO] Anomalies", "Farty (20m)", _createFartySmall] call zen_custom_modules_fnc_register;
@@ -24,7 +32,7 @@ call
     {
     	params ["_pos"];
 
-    	[_pos, 25, 10] remoteExec ["fnc_zen_createFarty", 2];
+    	[_pos, 25, 7] remoteExec ["fnc_zen_createFarty", 2];
     };
 
     ["[CA-BOO] Anomalies", "Farty (50m)", _createFartyNormal] call zen_custom_modules_fnc_register;
@@ -34,7 +42,7 @@ call
     {
     	params ["_pos"];
 
-    	[_pos, 37.5, 20] remoteExec ["fnc_zen_createFarty", 2];
+    	[_pos, 37.5, 16] remoteExec ["fnc_zen_createFarty", 2];
     };
 
     ["[CA-BOO] Anomalies", "Farty (75m)", _createFartyHuge] call zen_custom_modules_fnc_register;

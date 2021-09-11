@@ -5,3 +5,4 @@
 #include "ALfireworks\functions.hpp"
 #include "AL_megasparky\functions.hpp"
 #include "BUB_Hellblast\functions.hpp"
+#include "AL_screamer\functions.hpp"

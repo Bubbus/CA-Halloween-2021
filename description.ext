@@ -1098,6 +1098,54 @@ class CfgSounds
 	};
 
 	// END: electrical sparks
+
+
+	// START: Screamer
+
+	class miscare_screamer
+	{
+		name = "miscare_screamer";
+		sound[] = {"\sounds\miscare_screamer.ogg", db+20, 1};
+		titles[] = {};
+	};
+
+	class scream
+	{
+		name = "scream";
+		sound[] = {"\sounds\scream.ogg", db+20, 1};
+		titles[] = {};
+	};
+
+	class ecou
+	{
+		name = "ecou";
+		sound[] = {"\sounds\ecou.ogg", db+20, 1};
+		titles[] = {};
+	};
+
+	class stones_scream
+	{
+		name = "stones_scream";
+		sound[] = {"\sounds\stones_scream.ogg", db+20, 1};
+		titles[] = {};
+	};
+
+	class teleport_screamer
+	{
+		name = "teleport_screamer";
+		sound[] = {"\sounds\teleport_screamer.ogg", db+10, 1};
+		titles[] = {};
+	};
+
+	class earthquakes
+	{
+		name = "earthquakes";
+		sound[] = {"\sounds\earthquakes.ogg", 1, 1};
+		titles[] = {};
+	};
+
+	// END: Screamer
+
 };
 
 
