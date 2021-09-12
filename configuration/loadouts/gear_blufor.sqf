@@ -72,18 +72,55 @@ BEGIN_LOADOUTS;
 
 // Rifleman Loadout
 
-_baseLoadout = [["arifle_MX_F","","acc_flashlight","optic_Holosight",["30Rnd_65x39_caseless_mag",30],[],""],[],["hgun_P07_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_B_CombatUniform_mcam",[["ACE_tourniquet",2],["ACE_packingBandage",3],["ACE_elasticBandage",3],["ACE_morphine",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_Flashlight_XL50",1],["ACRE_PRC343_ID_1",1],["16Rnd_9x21_Mag",1,17],["SmokeShell",2,1]]],["V_PlateCarrier2_rgr",[["HandGrenade",4,1],["30Rnd_65x39_caseless_mag_Tracer",3,30],["30Rnd_65x39_caseless_mag",7,30]]],["B_AssaultPack_rgr",[["ACE_salineIV",1],["ACE_EntrenchingTool",1],["30Rnd_65x39_caseless_mag_Tracer",1,30]]],"H_HelmetB_snakeskin","G_Lowprofile",[],["ItemMap","","","ItemCompass","ItemWatch","NVGoggles"]];
+_baseLoadout = [["vn_m14","","vn_b_m14","",["vn_m14_mag",20],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["CFP_GUER_M81Tee",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1],["vn_m7_grenade_mag",2,1]]],["CUP_V_OI_TKI_Jacket6_01",[["vn_m14_mag",6,20],["vn_m67_grenade_mag",1,1]]],["grcb_rus_patrol_bag_khaki",[["ACE_EntrenchingTool",1],["vn_m18_white_mag",2,1],["vn_m34_grenade_mag",2,1],["vn_m67_grenade_mag",1,1],["vn_m18_green_mag",1,1],["vn_m18_red_mag",1,1],["vn_m14_mag",6,20],["vn_m1911_mag",4,7]]],"vn_b_boonie_05_01","",["Binocular","","","",[],[],""],["vn_b_item_map","","","ItemCompass","ItemWatch",""]];
 
 CREATE_LOADOUT(rif,_baseLoadout);   // Riflemen will now have the loadout from the line above.
 
-ADD_UNIFORM(rif,"U_B_CombatUniform_mcam");  // Add a random uniform or t-shirt.
-ADD_UNIFORM(rif,"U_B_CombatUniform_mcam");  // Units are twice as likely to have a uniform than a t-shirt because this line has been copied.
-ADD_UNIFORM(rif,"U_B_CombatUniform_mcam_tshirt");
+ADD_UNIFORM(rif,"CFP_GUER_M81Tee");  // Add a random uniform or t-shirt.
+ADD_UNIFORM(rif,"CFP_GUER_GreenTan");  // Units are twice as likely to have a uniform than a t-shirt because this line has been copied.
+ADD_UNIFORM(rif,"CFP_GUER_ERDLpants");
+ADD_UNIFORM(rif,"CFP_GUER_ChocChippants");
+ADD_UNIFORM(rif,"CFP_GUER_Khk_Wdl");
+ADD_UNIFORM(rif,"CFP_GUER_PolyDesTee");
+ADD_UNIFORM(rif,"CFP_GUER_Tigerpants");
+ADD_UNIFORM(rif,"CFP_GUER_PolyDespants");
+ 
 
-ADD_HAT(rif,"H_HelmetB_snakeskin"); // Add a random helmet to all riflemen.
-ADD_HAT(rif,"H_HelmetB_grass");
-ADD_HAT(rif,"H_HelmetB");
+ADD_VEST(rif, "CUP_V_OI_TKI_Jacket6_06");
+ADD_VEST(rif, "CUP_V_OI_TKI_Jacket6_05");
+ADD_VEST(rif, "CUP_V_OI_TKI_Jacket6_04");
+ADD_VEST(rif, "CUP_V_OI_TKI_Jacket2_04");
+ADD_VEST(rif, "CUP_V_OI_TKI_Jacket2_01");
+ADD_VEST(rif, "CUP_V_OI_TKI_Jacket3_04");
+ADD_VEST(rif, "CUP_V_OI_TKI_Jacket5_04");
+ADD_VEST(rif, "CUP_V_OI_TKI_Jacket5_01");
 
+ADD_HAT(rif,"vn_b_boonie_04_05"); // Add a random helmet to all riflemen.
+ADD_HAT(rif,"vn_b_boonie_03_07");
+ADD_HAT(rif,"vn_b_boonie_04_06");
+ADD_HAT(rif,"vn_b_boonie_04_07");
+ADD_HAT(rif,"vn_b_boonie_01_01");
+ADD_HAT(rif,"vn_b_boonie_05_05");
+ADD_HAT(rif,"vn_b_boonie_04_06");
+ADD_HAT(rif,"vn_b_boonie_04_01");
+ADD_HAT(rif,"vn_b_boonie_04_03");
+ADD_HAT(rif,"vn_b_boonie_02_02");
+ADD_HAT(rif,"vn_b_boonie_02_05");
+
+ADD_BACKPACK(rif,"grcb_rus_patrol_bag_olive");
+ADD_BACKPACK(rif,"grcb_rus_patrol_bag_Black");
+ADD_BACKPACK(rif,"grcb_rus_patrol_bag_khaki_shovel");
+ADD_BACKPACK(rif,"grcb_rus_patrol_bag_hxt");
+ADD_BACKPACK(rif,"grcb_rus_patrol_bag_flora");
+ADD_BACKPACK(rif,"vn_b_pack_trp_02");
+ADD_BACKPACK(rif,"vn_b_pack_01");
+ADD_BACKPACK(rif,"vn_b_pack_04");
+ADD_BACKPACK(rif,"vn_b_pack_01_02");
+
+
+_variantLoadout = [["vn_m2carbine","","","",["vn_carbine_30_mag",30],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["CFP_GUER_GreenTan",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1],["vn_m7_grenade_mag",2,1]]],["CUP_V_OI_TKI_Jacket6_06",[["vn_m67_grenade_mag",1,1],["vn_carbine_30_mag",5,30],["vn_m1911_mag",2,7]]],["vn_b_pack_trp_02",[["ACE_EntrenchingTool",1],["vn_m18_white_mag",2,1],["vn_m34_grenade_mag",2,1],["vn_m67_grenade_mag",1,1],["vn_m18_green_mag",1,1],["vn_m18_red_mag",1,1]]],"vn_b_boonie_04_07","UK3CB_BAF_G_Tactical_Grey",["Binocular","","","",[],[],""],["vn_b_item_map","","","ItemCompass","ItemWatch",""]];
+
+CREATE_VARIANT(rif,_variantLoadout);
 
 // Commander Loadout
 
@@ -94,36 +131,71 @@ CREATE_LOADOUT(co,_baseLoadout);
 
 // Fireteam lead Loadout
 
-_baseLoadout = [["arifle_MX_GL_F","","acc_flashlight","optic_Holosight",["30Rnd_65x39_caseless_mag",30],["3Rnd_HE_Grenade_shell",3],""],[],["hgun_P07_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_B_CombatUniform_mcam",[["ACE_elasticBandage",3],["ACE_morphine",2],["ACE_packingBandage",3],["ACE_tourniquet",2],["ACRE_PRC343_ID_3",1],["ACRE_PRC148_ID_1",1],["ACE_splint",2],["ACE_epinephrine",1],["ACRE_PRC152",1]]],["V_PlateCarrierGL_mtp",[["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["HandGrenade",2,1],["SmokeShell",4,1],["30Rnd_65x39_caseless_mag_Tracer",3,30],["30Rnd_65x39_caseless_mag",6,30],["16Rnd_9x21_Mag",1,17]]],["B_AssaultPack_rgr",[["3Rnd_HE_Grenade_shell",4,3],["3Rnd_Smoke_Grenade_shell",3,3],["3Rnd_SmokeRed_Grenade_shell",2,3],["3Rnd_SmokeBlue_Grenade_shell",2,3],["SmokeShellRed",1,1],["SmokeShellBlue",2,1]]],"H_HelmetB_snakeskin","G_Lowprofile",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch","NVGoggles"]];
+_baseLoadout = [["vn_m14","","vn_b_m14","",["vn_m14_mag",20],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["CFP_GUER_M81Tee",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1],["vn_m7_grenade_mag",2,1]]],["CUP_V_OI_TKI_Jacket6_01",[["vn_m14_mag",6,20],["vn_m67_grenade_mag",1,1]]],["grcb_rus_patrol_bag_khaki",[["ACE_EntrenchingTool",1],["vn_m18_white_mag",4,1],["vn_m34_grenade_mag",2,1],["vn_m18_green_mag",3,1],["vn_m18_red_mag",3,1],["vn_m14_mag",6,20],["vn_m1911_mag",4,7],["vn_m67_grenade_mag",2,1]]],"vn_b_boonie_05_01","",["Binocular","","","",[],[],""],["vn_b_item_map","","","ItemCompass","ItemWatch",""]];
 
 CREATE_LOADOUT(ftl,_baseLoadout);
 COPY_ADDONS(ftl,rif);   // FTLs will now get the random uniforms and hats from the Rifleman class.
-
 
 // Squad lead Loadout
 
 COPY_LOADOUT(sl,ftl);   // SLs will be identical to FTLs.  Because FTLs get the random Rifleman stuff, SLs will get it too.
 
+// RTO
+
+_baseLoadout = [["vn_m14","","vn_b_m14","",["vn_m14_mag",20],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["CFP_GUER_M81Tee",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1],["vn_m7_grenade_mag",2,1]]],["CUP_V_OI_TKI_Jacket6_01",[["vn_m14_mag",6,20],["vn_m67_grenade_mag",1,1]]],["vn_b_pack_lw_06",[["ACE_EntrenchingTool",1],["ACRE_PRC152",1],["vn_m18_white_mag",3,1],["vn_m34_grenade_mag",2,1],["vn_m18_green_mag",1,1],["vn_m18_red_mag",1,1],["vn_m14_mag",8,20],["vn_m1911_mag",4,7],["vn_m67_grenade_mag",1,1]]],"vn_b_boonie_05_01","",["Binocular","","","",[],[],""],["vn_b_item_map","","","ItemCompass","ItemWatch",""]];
+
+CREATE_LOADOUT(rto,_baseLoadout);
+
+
+ADD_UNIFORM(rto,"CFP_GUER_M81Tee");  // Add a random uniform or t-shirt.
+ADD_UNIFORM(rto,"CFP_GUER_GreenTan");  // Units are twice as likely to have a uniform than a t-shirt because this line has been copied.
+ADD_UNIFORM(rto,"CFP_GUER_ERDLpants");
+ADD_UNIFORM(rto,"CFP_GUER_ChocChippants");
+ADD_UNIFORM(rto,"CFP_GUER_Khk_Wdl");
+ADD_UNIFORM(rto,"CFP_GUER_PolyDesTee");
+ADD_UNIFORM(rto,"CFP_GUER_Tigerpants");
+ADD_UNIFORM(rto,"CFP_GUER_PolyDespants");
+ 
+
+ADD_VEST(rto, "CUP_V_OI_TKI_Jacket6_06");
+ADD_VEST(rto, "CUP_V_OI_TKI_Jacket6_05");
+ADD_VEST(rto, "CUP_V_OI_TKI_Jacket6_04");
+ADD_VEST(rto, "CUP_V_OI_TKI_Jacket2_04");
+ADD_VEST(rto, "CUP_V_OI_TKI_Jacket2_01");
+ADD_VEST(rto, "CUP_V_OI_TKI_Jacket3_04");
+ADD_VEST(rto, "CUP_V_OI_TKI_Jacket5_04");
+ADD_VEST(rto, "CUP_V_OI_TKI_Jacket5_01");
+
+ADD_HAT(rto,"vn_b_boonie_04_05"); // Add a random helmet to all riflemen.
+ADD_HAT(rto,"vn_b_boonie_03_07");
+ADD_HAT(rto,"vn_b_boonie_04_06");
+ADD_HAT(rto,"vn_b_boonie_04_07");
+ADD_HAT(rto,"vn_b_boonie_01_01");
+ADD_HAT(rto,"vn_b_boonie_05_05");
+ADD_HAT(rto,"vn_b_boonie_04_06");
+ADD_HAT(rto,"vn_b_boonie_04_01");
+ADD_HAT(rto,"vn_b_boonie_04_03");
+ADD_HAT(rto,"vn_b_boonie_02_02");
+ADD_HAT(rto,"vn_b_boonie_02_05");
 
 // Medic Loadout
 
-_baseLoadout = [["arifle_MXC_F","","acc_flashlight","optic_ACO_grn",["30Rnd_65x39_caseless_mag",30],[],""],[],["hgun_P07_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_B_CombatUniform_mcam",[["ACRE_PRC343_ID_3",1],["ACRE_PRC148_ID_1",1],["ACE_bloodIV",1],["ACRE_PRC152",1]]],["V_PlateCarrier1_rgr",[["ACE_bloodIV",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["HandGrenade",2,1],["30Rnd_65x39_caseless_mag_Tracer",2,30],["30Rnd_65x39_caseless_mag",4,30],["SmokeShell",2,1],["16Rnd_9x21_Mag",1,17]]],["B_Kitbag_mcamo",[["ACE_morphine",15],["ACE_epinephrine",10],["ACE_fieldDressing",10],["ACE_packingBandage",20],["ACE_elasticBandage",20],["ACE_bloodIV_500",3],["ACE_adenosine",5],["ACE_bloodIV",5],["ACE_splint",20],["ACE_tourniquet",10],["FSGm_ItemMedicBagMil",1],["ACE_personalAidKit",1],["ACE_surgicalKit",1],["ACE_EntrenchingTool",1]]],"H_HelmetB_snakeskin","G_Lowprofile",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch","NVGoggles"]];
+_baseLoadout = [["vn_m2carbine","","","",["vn_carbine_30_mag",30],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["CFP_GUER_GreenTan",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1],["vn_m7_grenade_mag",2,1]]],["CUP_V_OI_TKI_Jacket6_06",[["vn_carbine_30_mag",5,30],["vn_m1911_mag",2,7],["vn_m67_grenade_mag",1,1]]],["vn_b_pack_trp_02",[["ACE_elasticBandage",35],["ACE_EntrenchingTool",1],["FSGm_ItemMedicBag",1],["ACE_morphine",6],["ACE_salineIV",8],["ACE_salineIV_500",8],["ACE_splint",10],["ACE_tourniquet",6],["ACE_epinephrine",6],["ACE_adenosine",6],["vn_m18_white_mag",3,1],["vn_carbine_30_mag",2,30]]],"vn_b_boonie_04_07","UK3CB_BAF_G_Tactical_Grey",["Binocular","","","",[],[],""],["vn_b_item_map","","","ItemCompass","ItemWatch",""]];
 
 CREATE_LOADOUT(med,_baseLoadout);
 COPY_ADDONS(med,rif);
 
 
-// Combat Lifefacer Loadout
+// Montana Miller Loadout
 
-_baseLoadout = [["arifle_MXC_F","","acc_flashlight","optic_ACO_grn",["30Rnd_65x39_caseless_mag",30],[],""],[],["hgun_P07_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_B_CombatUniform_mcam",[["ACRE_PRC343_ID_3",1],["ACRE_PRC148_ID_1",1],["ACE_bloodIV",1],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["16Rnd_9x21_Mag",1,17]]],["V_PlateCarrier1_rgr",[["ACE_bloodIV",4],["HandGrenade",2,1],["30Rnd_65x39_caseless_mag_Tracer",2,30],["30Rnd_65x39_caseless_mag",5,30],["SmokeShell",2,1]]],["B_Kitbag_mcamo",[["ACE_morphine",15],["ACE_epinephrine",10],["ACE_fieldDressing",10],["ACE_packingBandage",20],["ACE_elasticBandage",20],["ACE_bloodIV_500",4],["ACE_adenosine",5],["ACE_bloodIV",8],["ACE_splint",20],["ACE_tourniquet",10],["ACE_EntrenchingTool",1],["ACE_surgicalKit",1]]],"H_HelmetB_snakeskin","G_Lowprofile",[],["ItemMap","ItemGPS","","ItemCompass","ItemWatch","NVGoggles"]];
+_baseLoadout = [["vn_m1897","","","",["vn_m1897_fl_mag",6],[],""],[],["vn_m1895","","","",["vn_m1895_mag",7],[],""],["CFP_GUER_TanTee",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1],["vn_m7_grenade_mag",2,1]]],["CUP_V_OI_TKI_Jacket1_06",[["vn_m1895_mag",3,7],["vn_m1897_buck_mag",1,6],["vn_m1897_fl_mag",1,6]]],["vn_b_pack_trp_02",[["ACE_EntrenchingTool",1],["vn_m1897_buck_mag",6,6],["vn_m1897_fl_mag",6,6],["vn_m1895_mag",15,7],["vn_m18_white_mag",4,1],["vn_m34_grenade_mag",2,1]]],"CUP_H_NAPA_Fedora","vn_b_scarf_01_03",["Binocular","","","",[],[],""],["vn_b_item_map","","","ItemCompass","ItemWatch",""]];
 
-CREATE_LOADOUT(cls,_baseLoadout);
-COPY_ADDONS(cls,rif);
-
+CREATE_LOADOUT(miller,_baseLoadout);
 
 // Autorifleman Loadout
 
-_baseLoadout = [["arifle_MX_SW_F","","acc_flashlight","optic_Holosight",["100Rnd_65x39_caseless_mag",100],[],"bipod_01_F_snd"],[],["hgun_P07_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_B_CombatUniform_mcam",[["ACE_elasticBandage",3],["ACE_morphine",1],["ACE_epinephrine",1],["ACE_packingBandage",3],["ACE_tourniquet",2],["ACRE_PRC343_ID_1",1],["ACE_splint",2],["ACE_MapTools",1],["ACE_Flashlight_XL50",1],["16Rnd_9x21_Mag",2,17]]],["V_PlateCarrier1_rgr",[["HandGrenade",2,1],["100Rnd_65x39_caseless_mag",3,100],["100Rnd_65x39_caseless_mag_Tracer",1,100],["SmokeShell",2,1]]],["B_AssaultPack_rgr",[["ACE_SpareBarrel",1,1],["100Rnd_65x39_caseless_mag",3,100],["100Rnd_65x39_caseless_mag_Tracer",1,100]]],"H_HelmetB_snakeskin","G_Lowprofile",[],["ItemMap","","","ItemCompass","ItemWatch","NVGoggles"]];
+_baseLoadout = [["hlc_lmg_MG42","","","",["hlc_200Rnd_792x57_M_MG42",200],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["CFP_GUER_GreenTan",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1],["vn_m7_grenade_mag",2,1]]],["CUP_V_OI_TKI_Jacket6_06",[["vn_m67_grenade_mag",1,1],["vn_m1911_mag",5,7],["vn_m18_white_mag",2,1]]],["vn_b_pack_trp_02",[["ACE_EntrenchingTool",1],["hlc_200Rnd_792x57_M_MG42",2,200]]],"vn_b_boonie_04_07","UK3CB_BAF_G_Tactical_Grey",["Binocular","","","",[],[],""],["vn_b_item_map","","","ItemCompass","ItemWatch",""]];
+
 
 CREATE_LOADOUT(ar,_baseLoadout);
 COPY_ADDONS(ar,rif);
@@ -131,26 +203,29 @@ COPY_ADDONS(ar,rif);
 
 // Assistant AR Loadout
 
-_baseLoadout = [["arifle_MX_F","","acc_flashlight","optic_Hamr",["30Rnd_65x39_caseless_mag",30],[],"bipod_01_F_snd"],[],["hgun_P07_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_B_CombatUniform_mcam",[["ACE_elasticBandage",3],["ACE_morphine",2],["ACE_epinephrine",1],["ACE_packingBandage",3],["ACE_tourniquet",2],["ACRE_PRC343_ID_3",1],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_splint",2],["16Rnd_9x21_Mag",1,17]]],["V_PlateCarrier2_rgr",[["HandGrenade",3,1],["30Rnd_65x39_caseless_mag_Tracer",6,30],["30Rnd_65x39_caseless_mag",4,30],["SmokeShell",2,1]]],["B_Kitbag_mcamo",[["ACE_EntrenchingTool",1],["ACE_salineIV",1],["100Rnd_65x39_caseless_mag",6,100],["100Rnd_65x39_caseless_mag_Tracer",3,100]]],"H_HelmetB_snakeskin","G_Lowprofile",["Binocular","","","",[],[],""],["ItemMap","","","ItemCompass","ItemWatch","NVGoggles"]];
+_baseLoadout = [["vn_m2carbine","","","",["vn_carbine_30_mag",30],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["CFP_GUER_GreenTan",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1],["vn_m7_grenade_mag",2,1]]],["CUP_V_OI_TKI_Jacket6_06",[["vn_m67_grenade_mag",1,1],["vn_carbine_30_mag",5,30],["vn_m1911_mag",2,7]]],["vn_b_pack_trp_02",[["ACE_EntrenchingTool",1],["vn_m18_white_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_m67_grenade_mag",1,1],["hlc_200Rnd_792x57_M_MG42",2,200],["vn_carbine_30_mag",3,30]]],"vn_b_boonie_04_07","UK3CB_BAF_G_Tactical_Grey",["Binocular","","","",[],[],""],["vn_b_item_map","","","ItemCompass","ItemWatch",""]];
 
 CREATE_LOADOUT(aar,_baseLoadout);
 COPY_ADDONS(aar,rif);
 
+_variantLoadout = [["vn_m14","","vn_b_m14","",["vn_m14_mag",20],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["CFP_GUER_GreenTan",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1],["vn_m7_grenade_mag",2,1]]],["CUP_V_OI_TKI_Jacket6_06",[["vn_m67_grenade_mag",1,1],["vn_m1911_mag",2,7],["vn_m14_mag",5,20]]],["vn_b_pack_trp_02",[["ACE_EntrenchingTool",1],["vn_m18_white_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_m67_grenade_mag",1,1],["hlc_200Rnd_792x57_M_MG42",2,200],["vn_m14_mag",3,20]]],"vn_b_boonie_04_07","UK3CB_BAF_G_Tactical_Grey",["Binocular","","","",[],[],""],["vn_b_item_map","","","ItemCompass","ItemWatch",""]];
 
-// Light anti-tank Loadout
+CREATE_VARIANT(aar,_variantLoadout);
 
-_baseLoadout = [["arifle_MX_F","","acc_flashlight","optic_Holosight",["30Rnd_65x39_caseless_mag",30],[],""],["ACE_launch_NLAW_ready_F","","","",["NLAW_F",1],[],""],["hgun_P07_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_B_CombatUniform_mcam",[["ACE_elasticBandage",3],["ACE_morphine",2],["ACE_epinephrine",1],["ACE_packingBandage",3],["ACE_tourniquet",2],["ACRE_PRC343_ID_1",1],["ACE_MapTools",1],["ACE_Flashlight_XL50",1],["ACE_splint",2],["16Rnd_9x21_Mag",1,17]]],["V_PlateCarrier1_rgr",[["HandGrenade",3,1],["30Rnd_65x39_caseless_mag_Tracer",2,30],["30Rnd_65x39_caseless_mag",8,30],["SmokeShell",2,1]]],["B_AssaultPack_rgr",[["ACE_EntrenchingTool",1]]],"H_HelmetB_snakeskin","G_Lowprofile",[],["ItemMap","","","ItemCompass","ItemWatch","NVGoggles"]];
+// Grenadier Loadout
 
-CREATE_LOADOUT(lat,_baseLoadout);
-COPY_ADDONS(lat,rif);
+_baseLoadout = [["vn_m2carbine_gl","","","",["vn_carbine_30_mag",30],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["CFP_GUER_GreenTan",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1],["vn_m7_grenade_mag",2,1]]],["CUP_V_OI_TKI_Jacket6_06",[["vn_m67_grenade_mag",1,1],["vn_m1911_mag",2,7],["vn_carbine_30_mag",5,30]]],["vn_b_pack_trp_02",[["ACE_EntrenchingTool",1],["vn_m18_white_mag",2,1],["vn_m34_grenade_mag",2,1],["vn_m67_grenade_mag",1,1],["vn_m18_green_mag",1,1],["vn_m18_red_mag",1,1],["vn_carbine_15_mag",9,15],["vn_m1911_mag",2,7],["vn_22mm_m19_wp_mag",4,1],["vn_22mm_m17_frag_mag",7,1],["vn_22mm_m22_smoke_mag",4,1]]],"vn_b_boonie_04_07","UK3CB_BAF_G_Tactical_Grey",["Binocular","","","",[],[],""],["vn_b_item_map","","","ItemCompass","ItemWatch",""]];
+
+CREATE_LOADOUT(gren,_baseLoadout);
+COPY_ADDONS(gren,rif);
 
 
-// Marksman Loadout
+// SMG Loadout
 
-_baseLoadout = [["arifle_MXM_F","","acc_flashlight","optic_SOS",["30Rnd_65x39_caseless_mag",30],[],"bipod_01_F_snd"],[],["hgun_P07_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_B_CombatUniform_mcam",[["ACE_elasticBandage",3],["ACE_morphine",2],["ACE_epinephrine",1],["ACE_packingBandage",3],["ACE_tourniquet",2],["ACE_RangeCard",1],["ACRE_PRC343_ID_3",1],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_splint",2],["16Rnd_9x21_Mag",1,17]]],["V_PlateCarrier1_rgr",[["HandGrenade",2,1],["SmokeShell",4,1],["30Rnd_65x39_caseless_mag",8,30],["30Rnd_65x39_caseless_mag_Tracer",2,30]]],["B_AssaultPack_rgr",[]],"H_HelmetB_snakeskin","G_Lowprofile",[],["ItemMap","","","ItemCompass","ItemWatch","NVGoggles"]];
+_baseLoadout = [["vn_m45","","","",["vn_m45_mag",36],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["CFP_GUER_GreenTan",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1],["vn_m7_grenade_mag",2,1]]],["CUP_V_OI_TKI_Jacket6_06",[["vn_m67_grenade_mag",1,1],["vn_m1911_mag",2,7],["vn_m45_mag",5,36]]],["vn_b_pack_trp_02",[["ACE_EntrenchingTool",1],["vn_m18_white_mag",2,1],["vn_m34_grenade_mag",2,1],["vn_m67_grenade_mag",2,1],["vn_m18_green_mag",1,1],["vn_m18_red_mag",1,1],["vn_m45_mag",14,36],["vn_m1911_mag",3,7]]],"vn_b_boonie_04_07","UK3CB_BAF_G_Tactical_Grey",["Binocular","","","",[],[],""],["vn_b_item_map","","","ItemCompass","ItemWatch",""]];
 
-CREATE_LOADOUT(mk,_baseLoadout);
-COPY_ADDONS(mk,rif);
+CREATE_LOADOUT(smg,_baseLoadout);
+COPY_ADDONS(smg,rif);
 
 
 // Crewman Loadout
