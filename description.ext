@@ -1146,6 +1146,90 @@ class CfgSounds
 
 	// END: Screamer
 
+
+	// START: Swarmer
+
+	class AL_swarmer_roi_02
+	{
+		name = "roi_02";
+		sound[] = {"\sounds\AL_swarmer\roi_02.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_roi_atk_01
+	{
+		name = "roi_atk_01";
+		sound[] = {"\sounds\AL_swarmer\roi_atk_01.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_roi_mort
+	{
+		name = "roi_mort";
+		sound[] = {"\sounds\AL_swarmer\roi_mort.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_eating
+	{
+		name = "eating";
+		sound[] = {"\sounds\AL_swarmer\eating.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_strigat_92
+	{
+		name = "strigat_92";
+		sound[] = {"\sounds\AL_swarmer\strigat_92.ogg", db+10, 1};
+		titles[] = {};
+	};
+	class AL_swarmer_insect_03
+	{
+		name = "insect_03";
+		sound[] = {"\sounds\AL_swarmer\insect_03.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_insect_01
+	{
+		name = "insect_01";
+		sound[] = {"\sounds\AL_swarmer\insect_01.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_insect_04
+	{
+		name = "insect_04";
+		sound[] = {"\sounds\AL_swarmer\insect_04.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_insect_05
+	{
+		name = "insect_05";
+		sound[] = {"\sounds\AL_swarmer\insect_05.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_insect_07
+	{
+		name = "insect_07";
+		sound[] = {"\sounds\AL_swarmer\insect_07.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_insect_08
+	{
+		name = "insect_08";
+		sound[] = {"\sounds\AL_swarmer\insect_08.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_hive_queen_01
+	{
+		name = "hive_queen_01";
+		sound[] = {"\sounds\AL_swarmer\hive_queen_01.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_hive_queen_02
+	{
+		name = "hive_queen_02";
+		sound[] = {"\sounds\AL_swarmer\hive_queen_02.ogg",1,1};
+		titles[] = {};
+	};
+
+	// END: Swarmer
+
 };
 
 

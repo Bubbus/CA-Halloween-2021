@@ -18,6 +18,15 @@ call
 
     ["[CA-BOO] Anomalies", "Screamer", _createScreamer] call zen_custom_modules_fnc_register;
 
+    _createSwarmer =
+    {
+    	params ["_pos"];
+
+    	[_pos, 50, "", 0.2] remoteExec ["f_fnc_createSwarmer", 2];
+    };
+
+    ["[CA-BOO] Anomalies", "Swarmer", _createSwarmer] call zen_custom_modules_fnc_register;
+
     _createFartySmall =
     {
     	params ["_pos"];
