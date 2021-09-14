@@ -21,7 +21,7 @@ fnc_find_target_hiv =
 	params ["_hiver", "_teritoriu"];
 
 	private _neartargets = (ASLToAGL getPosASL _hiver) nearEntities ["CAManBase", _teritoriu];
-	_neartargets = _neartargets select {!(_x getVariable ["anomalyIgnore", false])};
+	_neartargets = _neartargets select {(isDamageAllowed _x) and {!(_x getVariable ["anomalyIgnore", false])}};
 
 	_neartargets
 };
@@ -137,7 +137,11 @@ while {alive _swarmerAgent} do
 				if (alive _swarmerAgent) then
 				{
 					[_tgt_hiv, _swarmerAgent] remoteExec ["f_fnc_fxSwarmerEating"];
-					_tgt_hiv setdamage ((damage _tgt_hiv) + _damageToDeal);
+
+					private _woundCount = (ceil (_damageToDeal * 6)) max 1;
+					private _harmDistribution = [0.7, 0.8, 1.2] vectorMultiply (_damageToDeal max 0.3);
+
+					[_tgt_hiv, _woundCount, nil, nil, _harmDistribution] call f_fnc_woundUnitRandomly;
 				};
 
 				//_swarmerAgent moveTo AGLToASL (_tgt_hiv modelToWorld [0,0,0]);

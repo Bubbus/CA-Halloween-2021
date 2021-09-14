@@ -32,6 +32,15 @@ call
 
     ["[CA-BOO] Anomalies", "Swarmer", _createSwarmer] call zen_custom_modules_fnc_register;
 
+    _createTwins =
+    {
+    	params ["_pos"];
+
+    	[_pos, 200, false, 50, true] remoteExec ["f_fnc_createTwins", 2];
+    };
+
+    ["[CA-BOO] Anomalies", "Totem", _createTwins] call zen_custom_modules_fnc_register;
+
     _createFartySmall =
     {
     	params ["_pos"];
