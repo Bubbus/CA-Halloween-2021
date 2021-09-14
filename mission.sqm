@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1594;
+		nextID=1602;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6171.4238,21.780067,4409.0693};
-		dir[]={-1.2363449e-007,-0.70710683,0.70710683};
-		up[]={-1.2363449e-007,0.70710671,0.70710683};
-		aside[]={1,0,1.7484557e-007};
+		pos[]={6099.604,5.4786215,4347.3936};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -8362,7 +8362,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=97;
+		items=105;
 		class Item0
 		{
 			dataType="Logic";
@@ -13088,6 +13088,7 @@ class Mission
 			};
 			id=1560;
 			type="Land_vn_shelveswooden_f";
+			atlOffset=-0.49196362;
 		};
 		class Item91
 		{
@@ -13104,6 +13105,7 @@ class Mission
 			};
 			id=1561;
 			type="Land_vn_shelveswooden_f";
+			atlOffset=-0.49196362;
 		};
 		class Item92
 		{
@@ -13183,6 +13185,108 @@ class Mission
 			id=1571;
 			type="vn_b_wheeled_m54_01_airport";
 			atlOffset=-0.00054073334;
+		};
+		class Item97
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4672.293,159.01801,2161.918};
+				angles[]={0.013332055,0,0.021328852};
+			};
+			title="Ruins #1";
+			description="This seems like a good location to place the first set of ruins. It gives the infantry a good defensive position -- this ridge, and the town -- that will keep the dig team close to the action.";
+			id=1594;
+			atlOffset=0.00054931641;
+		};
+		class Item98
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={3641.6741,37.679001,2187.4541};
+				angles[]={0.013332055,0,0.021328852};
+			};
+			title="Rebel-Occupied Town";
+			description="Good place for some contact -- maybe even an ambush? Could do with some minor set piecing.";
+			id=1595;
+			atlOffset=-0.00045394897;
+		};
+		class Item99
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={2648.6541,141.502,2398.917};
+				angles[]={0.013332055,0,0.021328852};
+			};
+			title="Ruins #2";
+			description="Final dig site. Should be a full dig-site set piece, with the idea being that someone else was already set up and digging here. Should be some basic fortifications to give players cover while they defend here in 360." \n "" \n "Existing buildings should be hidden as-needed.";
+			id=1596;
+			atlOffset=-0.0001373291;
+		};
+		class Item100
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={1526.12,5.9159999,3010.2729};
+				angles[]={0.013332055,0,0.021328852};
+			};
+			title="Optional Ambush Site";
+			description="Last town before airstrip -- depending on mission flow, this could be a  minor ambush site. Could make for a good 'push through!' moment after a quiet car ride from the second dig site.";
+			id=1597;
+			atlOffset=-6.4373016e-005;
+		};
+		class Item101
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={2125.6621,17.413,3404.083};
+			};
+			title="Aircraft & Government Outpost";
+			description="Mission ends here with the players holding off an attack ""while the planes are fueled."" Government forces should be here in some strength to ""cover the players while they take off"".";
+			id=1598;
+			atlOffset=4.7264805;
+		};
+		class Item102
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={5569.5542,1.39,3942.554};
+				angles[]={0.013332055,0,0.021328852};
+			};
+			title="Base Camp Spawn Point";
+			description="Players start here. Minor gov't presence guarding entrances would help set the stage.";
+			id=1599;
+		};
+		class Item103
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={5291.0981,20.018999,3620.6289};
+				angles[]={6.2751846,0,6.2591896};
+			};
+			title="Gov't Checkpoint";
+			description="Government troops set up a checkpoint here. This is the clear ' You are leaving the safe zone' location.";
+			id=1600;
+			atlOffset=0.00032806396;
+		};
+		class Item104
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={4864.2051,26.427,2770.323};
+				angles[]={0.013332055,0,0.021328852};
+			};
+			title="Potential Contact Point";
+			description="Convoy to first ruins should be uneventful, BUT if we need to slow them down for whatever reason, this is a decent place to mount a small ambush.";
+			id=1601;
+			atlOffset=-5.1498413e-005;
 		};
 	};
 };
