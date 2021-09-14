@@ -1230,6 +1230,125 @@ class CfgSounds
 
 	// END: Swarmer
 
+	// START: Twins
+
+	class AL_twins_spark1
+	{
+		name = "spark1";
+		sound[] = {"\sounds\AL_twins\spark1.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_spark11
+	{
+		name = "spark11";
+		sound[] = {"\sounds\AL_twins\spark11.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_spark2
+	{
+		name = "spark2";
+		sound[] = {"\sounds\AL_twins\spark2.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_spark22
+	{
+		name = "spark22";
+		sound[] = {"\sounds\AL_twins\spark22.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_spark3
+	{
+		name = "spark3";
+		sound[] = {"\sounds\AL_twins\spark3.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_spark4
+	{
+		name = "spark4";
+		sound[] = {"\sounds\AL_twins\spark4.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_spark5
+	{
+		name = "spark5";
+		sound[] = {"\sounds\AL_twins\spark5.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_metalic1
+	{
+		name = "metalic1";
+		sound[] = {"\sounds\AL_twins\metalic1.ogg", db+25, 1};
+		titles[] = {};
+	};
+	class AL_twins_metalic2
+	{
+		name = "metalic2";
+		sound[] = {"\sounds\AL_twins\metalic2.ogg", db+25, 1};
+		titles[] = {};
+	};
+	class AL_twins_metalic3
+	{
+		name = "metalic3";
+		sound[] = {"\sounds\AL_twins\metalic3.ogg", db+35, 1};
+		titles[] = {};
+	};
+	class AL_twins_metalic4
+	{
+		name = "metalic4";
+		sound[] = {"\sounds\AL_twins\metalic4.ogg", db+35, 1};
+		titles[] = {};
+	};
+	class AL_twins_metalic5
+	{
+		name = "metalic5";
+		sound[] = {"\sounds\AL_twins\metalic5.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class AL_twins_metalic6
+	{
+		name = "metalic6";
+		sound[] = {"\sounds\AL_twins\metalic6.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_metalic7
+	{
+		name = "metalic7";
+		sound[] = {"\sounds\AL_twins\metalic7.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_sound_twin
+	{
+		name = "sound_twin";
+		sound[] = {"\sounds\AL_twins\sound_twin.ogg", 1, 1};
+		titles[] = {};
+	};
+	class AL_twins_murmur
+	{
+		name = "murmur"; // Name for mission editor
+		sound[] = {"\sounds\AL_twins\murmur.ogg", 0.8, 1.0};
+		titles[] = {0, ""};
+	};
+	class AL_twins_geiger
+	{
+		name = "geiger"; // Name for mission editor
+		sound[] = {"\sounds\AL_twins\geiger.ogg", .7, 1.0};
+		titles[] = {0, ""};
+	};
+	class AL_twins_earthquake_02
+	{
+		name = "earthquake_02";
+		sound[] = {"\sounds\AL_twins\earthquake_02.ogg",0.7, 1};
+		titles[] = {1, ""};
+	};
+	class AL_twins_tiuit
+	{
+		name = "tiuit"; // Name for mission editor
+		sound[] = {"\sounds\AL_twins\tiuit.ogg", 0.2, 1.0};
+		titles[] = {0, ""};
+	};
+
+	// END: Twins
+
 };
 
 
