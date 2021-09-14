@@ -27,6 +27,7 @@ _flamer disableAI "ALL";
 _flamer setMass 7000;
 _flamer setVariable ["flamerState", "waiting", true];
 _flamer setAnimSpeedCoef 1.5;
+_flamer setVariable ["anomalyIgnore", true, true];
 
 {
 	_flamer enableAI _x;
@@ -160,7 +161,7 @@ _flamer call fnc_flamerAnomaly_hide_flamer;
 
 			if !((isNil '_result') or {isNull _result}) exitWith { _tgt_flamer = _result; true };
 
-			_players = allPlayers select {!(_x getVariable ["f_var_isZeus", false])};
+			_players = allPlayers select {(isDamageAllowed _x) and {!(_x getVariable ["anomalyIgnore", false])}};
 			_distances = (allPlayers apply {_x distance _origin_flamer}) + [1000];
 			_closest = selectMin _distances;
 

@@ -31,6 +31,8 @@ _entitate setUnitPos "UP";
 
 _entitate allowDamage false;
 _entitate addEventHandler ["HandleDamage", {0}];
+_entitate setVariable ["anomalyIgnore", true, true];
+_entitate setVariable ["ace_medical_allowDamage", false, true];
 
 // vizibility
 [_entitate, true] remoteExec ["hideObject", 0, _entitate];

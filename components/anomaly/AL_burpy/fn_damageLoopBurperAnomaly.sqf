@@ -5,7 +5,7 @@ while {alive _object_burp_damage} do
 {
 	//_list_units_in_range = (position _object_burp_damage) nearEntities [["Man","LandVehicle"],9];
 	_list_units_in_range = (position _object_burp_damage) nearEntities ["CAManBase",9];
-	_list_units_in_range = _list_units_in_range select {(isDamageAllowed _x) and {!(_x getVariable ["f_var_isZeus", false])}};
+	_list_units_in_range = _list_units_in_range select {(isDamageAllowed _x) and {!(_x getVariable ["anomalyIgnore", false])}};
 
 	{
 		_tipat= ["strigat_1","strigat_2","strigat_3","strigat_4","strigat_5","strigat_6","strigat_7","strigat_8","strigat_9","strigat_91","strigat_92"] call BIS_fnc_selectRandom;

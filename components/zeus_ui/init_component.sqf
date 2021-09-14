@@ -14,6 +14,7 @@ waitUntil
 
 player setVariable ["f_var_isKillLogRecipient", true, true];
 player setVariable ["f_var_isZeus", true, true];
+player setVariable ["anomalyIgnore", true, true];
 
 [player] call f_fnc_giveUnitGodmode;
 

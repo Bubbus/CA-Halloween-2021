@@ -1,4 +1,12 @@
 // by ALIAS
+// Cleaned up by Bubbus
+
+#include "../macros.hpp"
+
+if (!isServer) exitWith {};
+
+if EXISTS(swarmer_public) exitWith {};
+
 fnc_avoid_hive =
 {
 	params ["_hiver","_chased"];
@@ -10,10 +18,12 @@ fnc_avoid_hive =
 
 fnc_find_target_hiv =
 {
-	params ["_hiver","_teritoriu"];
-	private ["_neartargets","_teritoriu"];
-	_neartargets = (ASLToAGL getPosASL _hiver) nearEntities ["CAManBase",_teritoriu];
-	_neartargets - [_hiver]
+	params ["_hiver", "_teritoriu"];
+
+	private _neartargets = (ASLToAGL getPosASL _hiver) nearEntities ["CAManBase", _teritoriu];
+	_neartargets = _neartargets select {!(_x getVariable ["anomalyIgnore", false])};
+
+	_neartargets
 };
 
 fnc_move_swarm =
@@ -34,7 +44,6 @@ fnc_ajust_poz =
 
 private ["_tgt_hiv"];
 
-if (!isServer) exitWith {};
 
 _startingPositionASL = _this select 0;
 _territoryRadius = _this select 1;
@@ -57,7 +66,9 @@ _swarmerAgent setUnitPos "UP";
 _swarmerAgent disableAI "ALL";
 { _swarmerAgent enableAI _x } forEach ["MOVE","ANIM","TEAMSWITCH","PATH"];
 _swarmerAgent setAnimSpeedCoef 1.1;
-_swarmerAgent setVariable ["isHive",false,true];
+_swarmerAgent setVariable ["isHive", false, true];
+_swarmerAgent setVariable ["anomalyIgnore", true, true];
+_swarmerAgent setVariable ["ace_medical_allowDamage", false, true];
 
 [_swarmerAgent] remoteExec ["f_fnc_fxSwarmerSounds"];
 [_swarmerAgent] remoteExec ["f_fnc_fxSwarmerFlies"];
@@ -85,8 +96,8 @@ while {alive _swarmerAgent} do
 
 	};
 
-	_swarmerAgent setVariable ["tgt",nil,true];
-	_list_unit_range_hiv = [_swarmerAgent,_territoryRadius] call fnc_find_target_hiv;
+	_swarmerAgent setVariable ["tgt", nil, true];
+	_list_unit_range_hiv = [_swarmerAgent, _territoryRadius] call fnc_find_target_hiv;
 
 	if (count _list_unit_range_hiv > 0) then
 	{

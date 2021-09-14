@@ -22,7 +22,12 @@ call
     {
     	params ["_pos"];
 
-    	[_pos, 50, "", 0.2] remoteExec ["f_fnc_createSwarmer", 2];
+        if EXISTS(swarmer_public) exitWith
+        {
+            ["A Swarmer already exists."] call zen_common_fnc_showMessage;
+        };
+
+    	[_pos, 50, "", 0.51] remoteExec ["f_fnc_createSwarmer", 2];
     };
 
     ["[CA-BOO] Anomalies", "Swarmer", _createSwarmer] call zen_custom_modules_fnc_register;

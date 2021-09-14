@@ -10,8 +10,6 @@ _toxic_dam	= _this select 2;
 
 _center_toxic = getPosATL _obj_sursa;
 
-waitUntil {!isNil {player getVariable "protejat_tox"}};
-
 while {alive _obj_sursa} do
 {
 	waitUntil {alive player};
@@ -29,7 +27,7 @@ while {alive _obj_sursa} do
 
 	while {_isInRadius and {alive _obj_sursa}} do
 	{
-		if ((player getVariable ["protejat_tox", false]) or {player getVariable ["f_var_isZeus", false]}) then
+		if ((isDamageAllowed _x) and {!(_x getVariable ["anomalyIgnore", false])}) then
 		{
 			player setVariable ["lastOkInFarty", serverTime, true];
 			sleep (1.2 + random 1)

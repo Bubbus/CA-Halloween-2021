@@ -6,8 +6,6 @@ _location_pos = _this select 1;
 _damage_toxic = _this select 2;
 _radius_toxic = _this select 3;
 
-if (_unit getVariable ["protejat_tox", false]) exitwith {};
-
 _reldir = [_unit, _location_pos] call BIS_fnc_dirTo;
 _fct = [30,-30] call BIS_fnc_selectRandom;
 _op_dir = if (_reldir<180) then {_reldir+180 +_fct} else {_reldir-180+_fct};
