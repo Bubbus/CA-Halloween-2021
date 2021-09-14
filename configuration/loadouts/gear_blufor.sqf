@@ -120,7 +120,7 @@ ADD_BACKPACK(rif,"vn_b_pack_01_02");
 
 _variantLoadout = [["vn_m2carbine","","","",["vn_carbine_30_mag",30],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["CFP_GUER_GreenTan",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1],["vn_m7_grenade_mag",2,1]]],["CUP_V_OI_TKI_Jacket6_06",[["vn_m67_grenade_mag",1,1],["vn_carbine_30_mag",5,30],["vn_m1911_mag",2,7]]],["vn_b_pack_trp_02",[["ACE_EntrenchingTool",1],["vn_m18_white_mag",2,1],["vn_m34_grenade_mag",2,1],["vn_m67_grenade_mag",1,1],["vn_m18_green_mag",1,1],["vn_m18_red_mag",1,1]]],"vn_b_boonie_04_07","UK3CB_BAF_G_Tactical_Grey",["Binocular","","","",[],[],""],["vn_b_item_map","","","ItemCompass","ItemWatch",""]];
 
-CREATE_VARIANT(rif,_variantLoadout);
+ADD_VARIANT(rif,_variantLoadout);
 
 // Commander Loadout
 
@@ -210,7 +210,7 @@ COPY_ADDONS(aar,rif);
 
 _variantLoadout = [["vn_m14","","vn_b_m14","",["vn_m14_mag",20],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["CFP_GUER_GreenTan",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1],["vn_m7_grenade_mag",2,1]]],["CUP_V_OI_TKI_Jacket6_06",[["vn_m67_grenade_mag",1,1],["vn_m1911_mag",2,7],["vn_m14_mag",5,20]]],["vn_b_pack_trp_02",[["ACE_EntrenchingTool",1],["vn_m18_white_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_m67_grenade_mag",1,1],["hlc_200Rnd_792x57_M_MG42",2,200],["vn_m14_mag",3,20]]],"vn_b_boonie_04_07","UK3CB_BAF_G_Tactical_Grey",["Binocular","","","",[],[],""],["vn_b_item_map","","","ItemCompass","ItemWatch",""]];
 
-CREATE_VARIANT(aar,_variantLoadout);
+ADD_VARIANT(aar,_variantLoadout);
 
 // Grenadier Loadout
 
