@@ -1098,6 +1098,257 @@ class CfgSounds
 	};
 
 	// END: electrical sparks
+
+
+	// START: Screamer
+
+	class miscare_screamer
+	{
+		name = "miscare_screamer";
+		sound[] = {"\sounds\miscare_screamer.ogg", db+20, 1};
+		titles[] = {};
+	};
+
+	class scream
+	{
+		name = "scream";
+		sound[] = {"\sounds\scream.ogg", db+20, 1};
+		titles[] = {};
+	};
+
+	class ecou
+	{
+		name = "ecou";
+		sound[] = {"\sounds\ecou.ogg", db+20, 1};
+		titles[] = {};
+	};
+
+	class stones_scream
+	{
+		name = "stones_scream";
+		sound[] = {"\sounds\stones_scream.ogg", db+20, 1};
+		titles[] = {};
+	};
+
+	class teleport_screamer
+	{
+		name = "teleport_screamer";
+		sound[] = {"\sounds\teleport_screamer.ogg", db+10, 1};
+		titles[] = {};
+	};
+
+	class earthquakes
+	{
+		name = "earthquakes";
+		sound[] = {"\sounds\earthquakes.ogg", 1, 1};
+		titles[] = {};
+	};
+
+	// END: Screamer
+
+
+	// START: Swarmer
+
+	class AL_swarmer_roi_02
+	{
+		name = "roi_02";
+		sound[] = {"\sounds\AL_swarmer\roi_02.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_roi_atk_01
+	{
+		name = "roi_atk_01";
+		sound[] = {"\sounds\AL_swarmer\roi_atk_01.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_roi_mort
+	{
+		name = "roi_mort";
+		sound[] = {"\sounds\AL_swarmer\roi_mort.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_eating
+	{
+		name = "eating";
+		sound[] = {"\sounds\AL_swarmer\eating.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_strigat_92
+	{
+		name = "strigat_92";
+		sound[] = {"\sounds\AL_swarmer\strigat_92.ogg", db+10, 1};
+		titles[] = {};
+	};
+	class AL_swarmer_insect_03
+	{
+		name = "insect_03";
+		sound[] = {"\sounds\AL_swarmer\insect_03.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_insect_01
+	{
+		name = "insect_01";
+		sound[] = {"\sounds\AL_swarmer\insect_01.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_insect_04
+	{
+		name = "insect_04";
+		sound[] = {"\sounds\AL_swarmer\insect_04.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_insect_05
+	{
+		name = "insect_05";
+		sound[] = {"\sounds\AL_swarmer\insect_05.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_insect_07
+	{
+		name = "insect_07";
+		sound[] = {"\sounds\AL_swarmer\insect_07.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_insect_08
+	{
+		name = "insect_08";
+		sound[] = {"\sounds\AL_swarmer\insect_08.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_hive_queen_01
+	{
+		name = "hive_queen_01";
+		sound[] = {"\sounds\AL_swarmer\hive_queen_01.ogg",1,1};
+		titles[] = {};
+	};
+	class AL_swarmer_hive_queen_02
+	{
+		name = "hive_queen_02";
+		sound[] = {"\sounds\AL_swarmer\hive_queen_02.ogg",1,1};
+		titles[] = {};
+	};
+
+	// END: Swarmer
+
+	// START: Twins
+
+	class AL_twins_spark1
+	{
+		name = "spark1";
+		sound[] = {"\sounds\AL_twins\spark1.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_spark11
+	{
+		name = "spark11";
+		sound[] = {"\sounds\AL_twins\spark11.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_spark2
+	{
+		name = "spark2";
+		sound[] = {"\sounds\AL_twins\spark2.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_spark22
+	{
+		name = "spark22";
+		sound[] = {"\sounds\AL_twins\spark22.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_spark3
+	{
+		name = "spark3";
+		sound[] = {"\sounds\AL_twins\spark3.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_spark4
+	{
+		name = "spark4";
+		sound[] = {"\sounds\AL_twins\spark4.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_spark5
+	{
+		name = "spark5";
+		sound[] = {"\sounds\AL_twins\spark5.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_metalic1
+	{
+		name = "metalic1";
+		sound[] = {"\sounds\AL_twins\metalic1.ogg", db+25, 1};
+		titles[] = {};
+	};
+	class AL_twins_metalic2
+	{
+		name = "metalic2";
+		sound[] = {"\sounds\AL_twins\metalic2.ogg", db+25, 1};
+		titles[] = {};
+	};
+	class AL_twins_metalic3
+	{
+		name = "metalic3";
+		sound[] = {"\sounds\AL_twins\metalic3.ogg", db+35, 1};
+		titles[] = {};
+	};
+	class AL_twins_metalic4
+	{
+		name = "metalic4";
+		sound[] = {"\sounds\AL_twins\metalic4.ogg", db+35, 1};
+		titles[] = {};
+	};
+	class AL_twins_metalic5
+	{
+		name = "metalic5";
+		sound[] = {"\sounds\AL_twins\metalic5.ogg", db+20, 1};
+		titles[] = {};
+	};
+	class AL_twins_metalic6
+	{
+		name = "metalic6";
+		sound[] = {"\sounds\AL_twins\metalic6.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_metalic7
+	{
+		name = "metalic7";
+		sound[] = {"\sounds\AL_twins\metalic7.ogg", db+30, 1};
+		titles[] = {};
+	};
+	class AL_twins_sound_twin
+	{
+		name = "sound_twin";
+		sound[] = {"\sounds\AL_twins\sound_twin.ogg", 1, 1};
+		titles[] = {};
+	};
+	class AL_twins_murmur
+	{
+		name = "murmur"; // Name for mission editor
+		sound[] = {"\sounds\AL_twins\murmur.ogg", 0.8, 1.0};
+		titles[] = {0, ""};
+	};
+	class AL_twins_geiger
+	{
+		name = "geiger"; // Name for mission editor
+		sound[] = {"\sounds\AL_twins\geiger.ogg", .7, 1.0};
+		titles[] = {0, ""};
+	};
+	class AL_twins_earthquake_02
+	{
+		name = "earthquake_02";
+		sound[] = {"\sounds\AL_twins\earthquake_02.ogg",0.7, 1};
+		titles[] = {1, ""};
+	};
+	class AL_twins_tiuit
+	{
+		name = "tiuit"; // Name for mission editor
+		sound[] = {"\sounds\AL_twins\tiuit.ogg", 0.2, 1.0};
+		titles[] = {0, ""};
+	};
+
+	// END: Twins
+
 };
 
 

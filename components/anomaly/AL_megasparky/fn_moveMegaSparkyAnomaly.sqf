@@ -283,7 +283,7 @@ if (isServer) then
 		while {alive _obiect_orb} do
 		{
 			_list_units_in_range = (getPosATL _obiect_orb) nearEntities [["CAManBase", "Air", "Car", "Motorcycle", "Tank"], 90];
-			_list_units_in_range = _list_units_in_range select {!(_x getVariable ["f_var_isZeus", false])};
+			_list_units_in_range = _list_units_in_range select {(isDamageAllowed _x) and {!(_x getVariable ["anomalyIgnore", false])}};
 
 			if (count _list_units_in_range > 0) then
 			{
