@@ -249,7 +249,7 @@ if (hasInterface) then
 	            (_distance < 10)
 	        };
 
-	        if !((player getVariable ["f_var_isZeus", false]) or {uniform player == "U_B_CBRN_Suit_01_MTP_F"}) then
+	        if !(((isDamageAllowed player) and {!(player getVariable ["anomalyIgnore", false])}) or {uniform player == "U_B_CBRN_Suit_01_MTP_F"}) then
 	        {
 	            [[player], (getpos _obiect_orb)] call _sparkyAttack;
 	        };

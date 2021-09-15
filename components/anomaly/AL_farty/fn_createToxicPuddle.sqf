@@ -21,7 +21,7 @@ fnc_toxicPuddle_damageLoop =
             (_distance < 2)
         };
 
-        if !(player getVariable ["f_var_isZeus", false]) then
+        if ((isDamageAllowed player) and {!(player getVariable ["anomalyIgnore", false])}) then
         {
             [player, 3, nil, nil, [0.2, 0.4, 0.6]] call f_fnc_woundUnitRandomly;
         };
