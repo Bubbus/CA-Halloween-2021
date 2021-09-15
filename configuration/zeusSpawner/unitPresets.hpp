@@ -177,55 +177,41 @@ class CA_ZeusUI_Units
 
 		class T100_Varsuk		// Classnames can't contain '-'
 		{
-			unitName = "T-100 Varsuk";
-			vehicle = "O_MBT_02_cannon_F";
-			units[] = {"crew", "crew", "crew"};
+			unitName = "Jeep (50 Cal)";
+			vehicle = "vn_b_wheeled_m151_mg_03";
+			units[] = {"rif", "rif"};
 		};
 
 		class MSE3_Marid
 		{
-			unitName = "MSE-3 Marid";
-			vehicle = "O_APC_Wheeled_02_rcws_F";
-			units[] = {"crew", "crew", "crew"};
+			unitName = "Jeep (Unarmed)";
+			vehicle = "vn_b_wheeled_m151_01";
+			units[] = {"rif", "rif", "rif"};
 		};
 
 		class MSE3_Marid_Reinforcements
 		{
-			unitName = "MSE-3 Marid + Squad 6x";
-			vehicle = "O_APC_Wheeled_02_rcws_F";
-			units[] = {"crew", "crew", "crew"};
+			unitName = "Truck + Squad 6x";
+			vehicle = "vn_b_wheeled_m54_02";
+			units[] = {"rif"};
 			reinforcements[] = {"ftl", "ar", "aar", "lat", "rif", "mk"};
 		};
 
-		class BTRK_Kamysh
+		class Huey_Reinforcements
 		{
-			unitName = "BTR-K Kamysh";
-			vehicle = "O_APC_Tracked_02_cannon_F";
-			units[] = {"crew", "crew", "crew"};
+			unitName = "Huey + Squad 6x";
+			vehicle = "vn_b_air_uh1c_07_06";
+			units[] = {"rif", "rif", "rif"};
+			reinforcements[] = {"ftl", "ar", "aar", "lat", "rif", "mk"};
 		};
 
 		class BTRK_Kamysh_Reinforcements
 		{
-			unitName = "BTR-K Kamysh + Squad 6x";
-			vehicle = "O_APC_Tracked_02_cannon_F";
-			units[] = {"crew", "crew", "crew"};
-			reinforcements[] = {"ftl", "ar", "aar", "lat", "rif", "mk"};
+			unitName = "Huey";
+			vehicle = "vn_b_air_uh1c_07_06";
+			units[] = {"rif", "rif", "rif"};
 		};
-
-		class Ifrit_HMG
-		{
-			unitName = "Ifrit HMG";
-			vehicle = "O_MRAP_02_HMG_F";
-			units[] = {"ftl", "rif", "rif"};
-		};
-
-		class Tempest_Reinforcements
-		{
-			unitName = "Tempest Transport + Section 9x";
-			vehicle = "O_Truck_03_covered_F";
-			units[] = {"rif", "rif"};
-			reinforcements[] = {"ftl", "ar", "aar", "lat", "med", "mk", "rif", "rif", "rif"};
-		};
+	
 	};
 
 	class INDFOR_Infantry
@@ -286,54 +272,24 @@ class CA_ZeusUI_Units
 
 		class MBT52_Kuma		// Classnames can't contain '-'
 		{
-			unitName = "MBT-52 Kuma";
-			vehicle = "I_MBT_03_cannon_F";
-			units[] = {"crew", "crew", "crew"};
+			unitName = "Jeep (???)";
+			vehicle = "vn_c_wheeled_m151_01";
+			units[] = {"rif", "rif", "rif"};
 		};
 
 		class AFV4_Gorgon
 		{
-			unitName = "AFV-4 Gorgon";
-			vehicle = "I_APC_Wheeled_03_cannon_F";
-			units[] = {"crew", "crew", "crew"};
+			unitName = "Jeep (???)";
+			vehicle = "vn_c_wheeled_m151_02";
+			units[] = {"rif", "rif", "rif"};
 		};
 
 		class AFV4_Gorgon_Reinforcements
 		{
-			unitName = "AFV-4 Gorgon + Squad 6x";
-			vehicle = "I_APC_Wheeled_03_cannon_F";
-			units[] = {"crew", "crew", "crew"};
+			unitName = "Truck + Squad 6x";
+			vehicle = "vn_i_wheeled_m54_01";
+			units[] = {"rif"};
 			reinforcements[] = {"ftl", "ar", "aar", "lat", "rif", "mk"};
-		};
-
-		class FV720_Mora
-		{
-			unitName = "FV-720 Mora";
-			vehicle = "I_APC_tracked_03_cannon_F";
-			units[] = {"crew", "crew", "crew"};
-		};
-
-		class FV720_Mora_Reinforcements
-		{
-			unitName = "FV-720 Mora + Squad 6x";
-			vehicle = "I_APC_tracked_03_cannon_F";
-			units[] = {"crew", "crew", "crew"};
-			reinforcements[] = {"ftl", "ar", "aar", "lat", "rif", "mk"};
-		};
-
-		class Strider_HMG
-		{
-			unitName = "Strider HMG";
-			vehicle = "I_MRAP_03_hmg_F";
-			units[] = {"ftl", "rif", "rif"};
-		};
-
-		class Zamak_Reinforcements
-		{
-			unitName = "Zamak Transport + Section 9x";
-			vehicle = "I_Truck_02_covered_F";
-			units[] = {"rif", "rif"};
-			reinforcements[] = {"ftl", "ar", "aar", "lat", "med", "mk", "rif", "rif", "rif"};
 		};
 	};
 };
