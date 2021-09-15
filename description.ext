@@ -28,9 +28,9 @@ class Header
 // ============================================================================================
 
 
-onLoadName = "*** Insert mission name here. ***";
-onLoadMission = "Made with the CA2 Framework";
-author = "*** Insert mission author name here. ***";
+onLoadName = "Part 1";
+onLoadMission = "Montana Miller and the Island of Secrets";
+author = "Gibbusfilm Games LLC";
 loadScreen = "ca_logo_large.jpg";
 
 
@@ -175,8 +175,8 @@ class CfgDebriefing
 {
 	class End1
 	{
-		title = "Ending #1";
-		subtitle = "";
+		title = "Secrets unearthed";
+		subtitle = "and yet how little we know...";
 		description = "Please post to the AAR thread!";
 		// pictureBackground = "";
 		// picture = "";
@@ -185,8 +185,8 @@ class CfgDebriefing
 
 	class End2
 	{
-		title = "Ending #2";
-		subtitle = "";
+		title = "Island escaped";
+		subtitle = "some secrets must remain buried...";
 		description = "Please post to the AAR thread!";
 		// pictureBackground = "";
 		// picture = "";
@@ -195,8 +195,8 @@ class CfgDebriefing
 
 	class End3
 	{
-		title = "Ending #3";
-		subtitle = "";
+		title = "Lost to the Island";
+		subtitle = "but Montana Miller will return...";
 		description = "Please post to the AAR thread!";
 		// pictureBackground = "";
 		// picture = "";
