@@ -18,7 +18,7 @@ fnc_flamerAnomaly_find_target_flamer =
 	private ["_neartargets","_teritoriu"];
 
 	_neartargets = (ASLToAGL getPosASL _flamer) nearEntities ["CAManBase", _teritoriu];
-	_zeuses = allPlayers select {_x getVariable ["f_var_isZeus", false]};
+	_zeuses = allPlayers select {(isDamageAllowed _x) and {!(_x getVariable ["anomalyIgnore", false])}};
 	_neartargets - [_flamer] - _zeuses
 
 };
