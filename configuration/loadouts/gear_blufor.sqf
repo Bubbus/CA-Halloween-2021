@@ -72,7 +72,7 @@ BEGIN_LOADOUTS;
 
 // Rifleman Loadout
 
-_baseLoadout = [["vn_m14","","vn_b_m14","",["vn_m14_mag",20],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["CFP_GUER_M81Tee",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1],["vn_m7_grenade_mag",2,1]]],["CUP_V_OI_TKI_Jacket6_01",[["vn_m14_mag",6,20],["vn_m67_grenade_mag",1,1]]],["grcb_rus_patrol_bag_khaki",[["ACE_EntrenchingTool",1],["vn_m18_white_mag",2,1],["vn_m34_grenade_mag",2,1],["vn_m67_grenade_mag",1,1],["vn_m18_green_mag",1,1],["vn_m18_red_mag",1,1],["vn_m14_mag",6,20],["vn_m1911_mag",4,7]]],"vn_b_boonie_05_01","",["Binocular","","","",[],[],""],["vn_b_item_map","","","ItemCompass","ItemWatch",""]];
+_baseLoadout = [["vn_m14","","vn_b_m14","",["vn_m14_mag",20],[],""],[],["vn_m_machete_02","","","",[],[],""],["CFP_GUER_M81Tee",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1],["vn_m7_grenade_mag",2,1]]],["CUP_V_OI_TKI_Jacket6_01",[["vn_m14_mag",6,20],["vn_m67_grenade_mag",1,1]]],["grcb_rus_patrol_bag_khaki",[["ACE_EntrenchingTool",1],["vn_m18_white_mag",2,1],["vn_m34_grenade_mag",2,1],["vn_m67_grenade_mag",3,1],["vn_m18_green_mag",1,1],["vn_m18_red_mag",1,1],["vn_m14_mag",10,20]]],"vn_b_boonie_05_01","",["Binocular","","","",[],[],""],["vn_b_item_map","","ItemRadioAcreFlagged","ItemCompass","ItemWatch",""]];
 
 CREATE_LOADOUT(rif,_baseLoadout);   // Riflemen will now have the loadout from the line above.
 
