@@ -291,7 +291,7 @@ if (isServer) then
 				sleep 7;
 			};
 
-			sleep 3;
+			sleep 2;
 
 		};
 
