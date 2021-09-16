@@ -1,52 +1,71 @@
 MIKE FORCE
-RIF
-[["vn_sten_sd","vn_s_sten","","",["vn_sten_t_mag",32],[],""],[],[],["vn_b_uniform_sog_02_01",[["vn_b_item_firstaidkit",1],["vn_sten_t_mag",3,32],["vn_m61_grenade_mag",2,1],["vn_m34_grenade_mag",2,1]]],["vn_b_vest_sog_04",[["vn_m7_grenade_mag",1,1],["vn_m14_grenade_mag",1,1],["vn_mine_m18_mag",2,1]]],["vn_b_pack_02_sten_pl",[["vn_b_item_firstaidkit",2],["vn_sten_t_mag",12,32],["vn_m61_grenade_mag",4,1],["vn_m18_yellow_mag",2,1],["vn_mine_m14_mag",6,1],["vn_mine_m18_range_mag",2,1]]],"vn_b_boonie_02_01","vn_b_scarf_01_01",["vn_m19_binocs_grn","","","",[],[],""],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass_sog","vn_b_item_watch",""]]
-
 SL
-[["vn_xm177","","","",["vn_m16_20_t_mag",18],[],""],["vn_m72","","","",["vn_m72_mag",1],[],""],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["vn_b_uniform_sog_01_01",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_m7_grenade_mag",1,1],["vn_m14_grenade_mag",1,1],["vn_m16_20_t_mag",2,18]]],["vn_b_vest_sog_01",[["vn_m16_20_t_mag",1,18],["vn_m1911_mag",1,7]]],["vn_b_pack_02_xm177_pl",[["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",14,18],["vn_40mm_m381_he_mag",10,1],["vn_m61_grenade_mag",2,1],["vn_m18_red_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_mine_m112_remote_mag",1,1],["vn_mine_m14_mag",3,1],["vn_mine_m18_range_mag",1,1]]],"vn_b_boonie_02_01","vn_b_scarf_01_01",["vn_m19_binocs_grn","","","",[],[],""],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass_sog","vn_b_item_watch",""]]
+[["vn_m14","","","",["vn_m14_mag",20],[],""],[],["vn_welrod","","","",["vn_welrod_mag",8],[],""],["vn_b_uniform_macv_01_02",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_m7_grenade_mag",1,1],["vn_m14_grenade_mag",1,1]]],["vn_b_vest_usarmy_02",[["vn_welrod_mag",1,8],["vn_m14_mag",6,20]]],["vn_b_pack_03_02_type56_pl",[["vn_b_item_firstaidkit",2],["vn_m61_grenade_mag",4,1],["vn_m18_red_mag",2,1],["vn_m18_yellow_mag",2,1],["vn_m18_purple_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_mine_m112_remote_mag",1,1],["vn_mine_m14_mag",3,1],["vn_mine_m18_range_mag",1,1],["vn_m14_mag",9,20]]],"vn_b_boonie_04_02","vn_b_scarf_01_03",["vn_m19_binocs_grn","","","",[],[],""],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
 
-MED
-[["vn_xm177_camo","","","",["vn_m16_20_t_mag",18],[],""],[],["vn_m79_p","","","",["vn_40mm_m406_he_mag",1],[],""],["vn_b_uniform_sog_01_06",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_m7_grenade_mag",1,1],["vn_m14_grenade_mag",1,1],["vn_40mm_m406_he_mag",1,1],["vn_40mm_m397_ab_mag",1,1],["vn_40mm_m433_hedp_mag",1,1]]],["vn_b_vest_sog_02",[["vn_m16_20_t_mag",3,18],["vn_mine_m18_mag",1,1]]],["vn_b_pack_02_medic_xm177_pl",[["vn_b_item_medikit_01",1],["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",10,18],["vn_m67_grenade_mag",2,1],["vn_m7_grenade_mag",2,1],["vn_m34_grenade_mag",2,1],["vn_m18_red_mag",2,1],["vn_m18_yellow_mag",2,1],["vn_m18_purple_mag",2,1]]],"vn_b_boonie_02_03","vn_b_scarf_01_01",["vn_m19_binocs_grey","","","",[],[],""],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass_sog","vn_b_item_watch",""]]
+RIF
+[["vn_sten_sd","vn_s_sten","","",["vn_sten_t_mag",32],[],""],[],[],["vn_b_uniform_macv_04_02",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_m7_grenade_mag",1,1],["vn_sten_t_mag",1,32]]],["vn_b_vest_usarmy_02",[["vn_sten_t_mag",2,32]]],["vn_b_pack_04_02_sten_pl",[["vn_b_item_firstaidkit",2],["vn_sten_t_mag",12,32],["vn_m61_grenade_mag",4,1],["vn_m7_grenade_mag",2,1],["vn_m14_grenade_mag",1,1],["vn_m18_red_mag",2,1],["vn_m18_yellow_mag",2,1],["vn_m18_purple_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_mine_m112_remote_mag",1,1],["vn_mine_m14_mag",3,1],["vn_mine_m18_range_mag",1,1]]],"vn_b_boonie_03_02","vn_b_scarf_01_01",["vn_m19_binocs_grey","","","",[],[],""],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
+
+RIF 2
+[["vn_m1897","","","",["vn_m1897_fl_mag",6],[],""],[],[],["vn_b_uniform_macv_04_02",[["vn_b_item_firstaidkit",1],["vn_m1897_buck_mag",4,6]]],["vn_b_vest_usarmy_02",[["vn_m1897_fl_mag",3,6],["vn_m61_grenade_mag",2,1],["vn_m7_grenade_mag",1,1],["vn_m14_grenade_mag",1,1]]],["vn_b_pack_05_02_m1897_pl",[["vn_b_item_firstaidkit",2],["vn_m1897_buck_mag",8,6],["vn_m1897_fl_mag",8,6],["vn_m61_grenade_mag",4,1],["vn_m18_yellow_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_mine_m14_mag",6,1]]],"vn_b_boonie_02_02","vn_b_scarf_01_01",["vn_m19_binocs_grn","","","",[],[],""],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
 
 AR
-[["vn_rpd_shorty","","","",["vn_rpd_125_mag",125],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["vn_b_uniform_sog_01_03",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m1911_mag",1,7]]],["vn_b_vest_sog_05",[["vn_rpd_125_mag",1,125]]],["vn_b_pack_02_rpd_pl",[["vn_b_item_firstaidkit",2],["vn_rpd_125_mag",4,125],["vn_m61_grenade_mag",4,1],["vn_m18_yellow_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_mine_m14_mag",6,1],["vn_mine_m18_range_mag",2,1]]],"vn_b_bandana_03","vn_b_scarf_01_01",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass_sog","vn_b_item_watch",""]]
+[["vn_rpd","","","",["vn_rpd_100_mag",100],[],""],[],["vn_m10","","","",["vn_m10_mag",6],[],""],["vn_b_uniform_macv_01_02",[["vn_b_item_firstaidkit",1],["vn_m10_mag",3,6]]],["vn_b_vest_usarmy_03",[["vn_rpd_100_mag",1,100],["vn_m61_grenade_mag",2,1],["vn_m7_grenade_mag",1,1],["vn_m14_grenade_mag",1,1]]],["vn_b_pack_02_02_rpd_pl",[["vn_b_item_firstaidkit",2],["vn_rpd_100_mag",4,100],["vn_m61_grenade_mag",4,1],["vn_m18_yellow_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_mine_m14_mag",6,1],["vn_mine_m18_range_mag",2,1]]],"vn_b_bandana_02","vn_b_scarf_01_01",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
+
+MED
+[["vn_mat49","","","",["vn_mat49_t_mag",32],[],""],[],[],["vn_b_uniform_macv_02_02",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_mat49_t_mag",3,32]]],["vn_b_vest_usarmy_02",[["vn_mine_m18_mag",1,1]]],["vn_b_pack_m5_medic_mat49_pl",[["vn_b_item_medikit_01",1],["vn_b_item_firstaidkit",2],["vn_mat49_t_mag",10,32],["vn_m67_grenade_mag",6,1],["vn_m34_grenade_mag",2,1],["vn_m18_yellow_mag",4,1]]],"vn_b_bandana_01","vn_b_scarf_01_01",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
 
 MK
-[["vn_m16_sniper_sd","vn_s_m16","","vn_o_9x_m16",["vn_m16_20_t_mag",18],[],""],[],["vn_mk22_sd","vn_s_mk22","","",["vn_mk22_mag",14],[],""],["vn_b_uniform_sog_02_01",[["vn_b_item_firstaidkit",1],["vn_mk22_mag",1,14],["vn_m61_grenade_mag",2,1],["vn_m7_grenade_mag",2,1],["vn_m16_20_t_mag",2,18]]],["vn_b_vest_sog_04",[["vn_m16_20_t_mag",1,18],["vn_mine_m18_range_mag",1,1]]],["vn_b_pack_01_xm177_pl",[["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",12,18],["vn_m61_grenade_mag",4,1],["vn_m18_red_mag",2,1],["vn_m18_yellow_mag",2,1],["vn_m18_purple_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_mine_m112_remote_mag",1,1],["vn_mine_m14_mag",3,1],["vn_mine_m18_range_mag",1,1]]],"vn_b_bandana_02","vn_b_scarf_01_01",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass_sog","vn_b_item_watch",""]]
+[["vn_m21","","","vn_o_9x_m14",["vn_m14_t_mag",20],[],""],[],[],["vn_b_uniform_macv_06_02",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m14_t_mag",2,20]]],["vn_b_vest_usarmy_03",[["vn_m14_t_mag",1,20],["vn_mine_m18_mag",1,1]]],["vn_b_pack_01_02_m14_pl",[["vn_b_item_firstaidkit",2],["vn_m14_t_mag",10,20],["vn_m61_grenade_mag",2,1],["vn_m18_yellow_mag",2,1],["vn_m18_purple_mag",2,1]]],"vn_b_boonie_02_02","vn_b_scarf_01_01",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
 
 US ARMY
-MIKE FORCE
-RIF
-[["vn_sten_sd","vn_s_sten","","",["vn_sten_t_mag",32],[],""],[],[],["vn_b_uniform_sog_02_01",[["vn_b_item_firstaidkit",1],["vn_sten_t_mag",3,32],["vn_m61_grenade_mag",2,1],["vn_m34_grenade_mag",2,1]]],["vn_b_vest_sog_04",[["vn_m7_grenade_mag",1,1],["vn_m14_grenade_mag",1,1],["vn_mine_m18_mag",2,1]]],["vn_b_pack_02_sten_pl",[["vn_b_item_firstaidkit",2],["vn_sten_t_mag",12,32],["vn_m61_grenade_mag",4,1],["vn_m18_yellow_mag",2,1],["vn_mine_m14_mag",6,1],["vn_mine_m18_range_mag",2,1]]],"vn_b_boonie_02_01","vn_b_scarf_01_01",["vn_m19_binocs_grn","","","",[],[],""],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass_sog","vn_b_item_watch",""]]
-
 SL
-[["vn_xm177","","","",["vn_m16_20_t_mag",18],[],""],["vn_m72","","","",["vn_m72_mag",1],[],""],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["vn_b_uniform_sog_01_01",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_m7_grenade_mag",1,1],["vn_m14_grenade_mag",1,1],["vn_m16_20_t_mag",2,18]]],["vn_b_vest_sog_01",[["vn_m16_20_t_mag",1,18],["vn_m1911_mag",1,7]]],["vn_b_pack_02_xm177_pl",[["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",14,18],["vn_40mm_m381_he_mag",10,1],["vn_m61_grenade_mag",2,1],["vn_m18_red_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_mine_m112_remote_mag",1,1],["vn_mine_m14_mag",3,1],["vn_mine_m18_range_mag",1,1]]],"vn_b_boonie_02_01","vn_b_scarf_01_01",["vn_m19_binocs_grn","","","",[],[],""],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass_sog","vn_b_item_watch",""]]
+[["vn_xm177","","","",["vn_m16_20_t_mag",18],[],""],["vn_m72","","","",["vn_m72_mag",1],[],""],["vn_p38s","","","",["vn_m10_mag",6],[],""],["vn_b_uniform_macv_02_01",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_m10_mag",1,6],["vn_m16_20_t_mag",1,18]]],["vn_b_vest_usarmy_02",[]],["vn_b_pack_lw_06_m16_pl",[["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",10,18],["vn_m61_grenade_mag",2,1],["vn_m18_yellow_mag",2,1],["vn_m18_purple_mag",2,1]]],"vn_b_helmet_m1_03_01","vn_b_scarf_01_03",["vn_m19_binocs_grey","","","",[],[],""],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
 
-MED
-[["vn_xm177_camo","","","",["vn_m16_20_t_mag",18],[],""],[],["vn_m79_p","","","",["vn_40mm_m406_he_mag",1],[],""],["vn_b_uniform_sog_01_06",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_m7_grenade_mag",1,1],["vn_m14_grenade_mag",1,1],["vn_40mm_m406_he_mag",1,1],["vn_40mm_m397_ab_mag",1,1],["vn_40mm_m433_hedp_mag",1,1]]],["vn_b_vest_sog_02",[["vn_m16_20_t_mag",3,18],["vn_mine_m18_mag",1,1]]],["vn_b_pack_02_medic_xm177_pl",[["vn_b_item_medikit_01",1],["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",10,18],["vn_m67_grenade_mag",2,1],["vn_m7_grenade_mag",2,1],["vn_m34_grenade_mag",2,1],["vn_m18_red_mag",2,1],["vn_m18_yellow_mag",2,1],["vn_m18_purple_mag",2,1]]],"vn_b_boonie_02_03","vn_b_scarf_01_01",["vn_m19_binocs_grey","","","",[],[],""],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass_sog","vn_b_item_watch",""]]
+RIF 1
+[["vn_m16_bayo","","vn_b_m16","",["vn_m16_20_t_mag",18],[],""],[],[],["vn_b_uniform_macv_06_01",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m16_20_t_mag",3,18]]],["vn_b_vest_usarmy_02",[]],["vn_b_pack_lw_01_m16_pl",[["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",10,18],["vn_m61_grenade_mag",4,1],["vn_mine_m18_mag",1,1]]],"vn_b_helmet_m1_05_01","vn_b_aviator",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
+
+RIF 2
+[["vn_m16","","","",["vn_m16_20_t_mag",18],[],""],[],[],["vn_b_uniform_macv_04_01",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m18_yellow_mag",1,1],["vn_m18_red_mag",1,1],["vn_m16_20_t_mag",1,18]]],["vn_b_vest_usarmy_02",[["vn_m16_20_t_mag",2,18]]],["vn_b_pack_lw_01_m16_pl",[["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",10,18],["vn_m61_grenade_mag",4,1],["vn_mine_m18_mag",1,1]]],"vn_b_helmet_m1_07_01","vn_b_scarf_01_03",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
 
 AR
-[["vn_rpd_shorty","","","",["vn_rpd_125_mag",125],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["vn_b_uniform_sog_01_03",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m1911_mag",1,7]]],["vn_b_vest_sog_05",[["vn_rpd_125_mag",1,125]]],["vn_b_pack_02_rpd_pl",[["vn_b_item_firstaidkit",2],["vn_rpd_125_mag",4,125],["vn_m61_grenade_mag",4,1],["vn_m18_yellow_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_mine_m14_mag",6,1],["vn_mine_m18_range_mag",2,1]]],"vn_b_bandana_03","vn_b_scarf_01_01",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass_sog","vn_b_item_watch",""]]
+[["vn_m60","","","",["vn_m60_100_mag",100],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["vn_b_uniform_macv_05_01",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m1911_mag",1,7]]],["vn_b_vest_usarmy_06",[["vn_m60_100_mag",1,100]]],["vn_b_pack_lw_02_m60_pl",[["vn_b_item_firstaidkit",2],["vn_m60_100_mag",6,100],["vn_m61_grenade_mag",4,1],["vn_m18_yellow_mag",2,1],["vn_mine_m14_mag",2,1]]],"vn_b_helmet_m1_08_01","vn_b_aviator",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
+
+MED
+[["vn_m16","","","",["vn_m16_20_t_mag",18],[],""],[],[],["vn_b_uniform_macv_03_01",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m18_red_mag",2,1],["vn_m16_20_t_mag",3,18]]],["vn_b_vest_usarmy_07",[]],["vn_b_pack_m5_01_medic_m16_pl",[["vn_b_item_medikit_01",1],["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",10,18],["vn_m61_grenade_mag",2,1],["vn_m18_yellow_mag",2,1],["vn_m18_purple_mag",2,1]]],"vn_b_helmet_m1_04_01","vn_b_scarf_01_01",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
 
 MK
-[["vn_m16_sniper_sd","vn_s_m16","","vn_o_9x_m16",["vn_m16_20_t_mag",18],[],""],[],["vn_mk22_sd","vn_s_mk22","","",["vn_mk22_mag",14],[],""],["vn_b_uniform_sog_02_01",[["vn_b_item_firstaidkit",1],["vn_mk22_mag",1,14],["vn_m61_grenade_mag",2,1],["vn_m7_grenade_mag",2,1],["vn_m16_20_t_mag",2,18]]],["vn_b_vest_sog_04",[["vn_m16_20_t_mag",1,18],["vn_mine_m18_range_mag",1,1]]],["vn_b_pack_01_xm177_pl",[["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",12,18],["vn_m61_grenade_mag",4,1],["vn_m18_red_mag",2,1],["vn_m18_yellow_mag",2,1],["vn_m18_purple_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_mine_m112_remote_mag",1,1],["vn_mine_m14_mag",3,1],["vn_mine_m18_range_mag",1,1]]],"vn_b_bandana_02","vn_b_scarf_01_01",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass_sog","vn_b_item_watch",""]]
+[["vn_m21","","","vn_o_9x_m14",["vn_m14_t_mag",20],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["vn_b_uniform_macv_01_01",[["vn_b_item_firstaidkit",1],["vn_m67_grenade_mag",2,1],["vn_m18_purple_mag",2,1],["vn_m14_t_mag",1,20]]],["vn_b_vest_usarmy_08",[["vn_m14_t_mag",2,20],["vn_m1911_mag",1,7]]],["vn_b_pack_lw_01_m21_pl",[["vn_b_item_firstaidkit",2],["vn_m1911_mag",4,7],["vn_m14_t_mag",12,20],["vn_m61_grenade_mag",4,1]]],"vn_b_bandana_01","vn_b_scarf_01_03",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
+
+LAT
+[["vn_m16","","","",["vn_m16_20_t_mag",18],[],""],["vn_m72","","","",["vn_m72_mag",1],[],""],[],["vn_b_uniform_macv_05_01",[["vn_b_item_firstaidkit",1],["vn_m67_grenade_mag",2,1],["vn_m16_20_t_mag",3,18]]],["vn_b_vest_usarmy_02",[]],["vn_b_pack_trp_03_02_m16_pl",[["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",10,18],["vn_m67_grenade_mag",4,1],["vn_mine_m18_mag",2,1]]],"vn_b_bandana_01","vn_b_aviator",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
+
+ENG
+[["vn_m1897","","","",["vn_m1897_buck_mag",6],[],""],["vn_m72","","","",["vn_m72_mag",1],[],""],[],["vn_b_uniform_macv_04_01",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",1,1],["vn_m34_grenade_mag",1,1],["vn_m1897_buck_mag",2,6]]],["vn_b_vest_usarmy_11",[["vn_m1897_buck_mag",1,6]]],["vn_b_pack_lw_04_eng_m1897_pl",[["vn_b_item_toolkit",1],["vn_b_item_firstaidkit",2],["vn_m1897_buck_mag",8,6],["vn_m1897_fl_mag",8,6],["vn_m61_grenade_mag",4,1],["vn_m18_yellow_mag",2,1],["vn_m72_mag",1,1],["vn_mine_m16_mag",2,1],["vn_mine_tripwire_m49_04_mag",4,1],["vn_mine_m112_remote_mag",2,1]]],"vn_b_helmet_m1_05_01","vn_b_aviator",["vn_m19_binocs_grn","","","",[],[],""],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
 
 ARVN
-MIKE FORCE
-RIF
-[["vn_sten_sd","vn_s_sten","","",["vn_sten_t_mag",32],[],""],[],[],["vn_b_uniform_sog_02_01",[["vn_b_item_firstaidkit",1],["vn_sten_t_mag",3,32],["vn_m61_grenade_mag",2,1],["vn_m34_grenade_mag",2,1]]],["vn_b_vest_sog_04",[["vn_m7_grenade_mag",1,1],["vn_m14_grenade_mag",1,1],["vn_mine_m18_mag",2,1]]],["vn_b_pack_02_sten_pl",[["vn_b_item_firstaidkit",2],["vn_sten_t_mag",12,32],["vn_m61_grenade_mag",4,1],["vn_m18_yellow_mag",2,1],["vn_mine_m14_mag",6,1],["vn_mine_m18_range_mag",2,1]]],"vn_b_boonie_02_01","vn_b_scarf_01_01",["vn_m19_binocs_grn","","","",[],[],""],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass_sog","vn_b_item_watch",""]]
-
 SL
-[["vn_xm177","","","",["vn_m16_20_t_mag",18],[],""],["vn_m72","","","",["vn_m72_mag",1],[],""],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["vn_b_uniform_sog_01_01",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_m7_grenade_mag",1,1],["vn_m14_grenade_mag",1,1],["vn_m16_20_t_mag",2,18]]],["vn_b_vest_sog_01",[["vn_m16_20_t_mag",1,18],["vn_m1911_mag",1,7]]],["vn_b_pack_02_xm177_pl",[["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",14,18],["vn_40mm_m381_he_mag",10,1],["vn_m61_grenade_mag",2,1],["vn_m18_red_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_mine_m112_remote_mag",1,1],["vn_mine_m14_mag",3,1],["vn_mine_m18_range_mag",1,1]]],"vn_b_boonie_02_01","vn_b_scarf_01_01",["vn_m19_binocs_grn","","","",[],[],""],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass_sog","vn_b_item_watch",""]]
+[["vn_m16_bayo","","vn_b_m16","",["vn_m16_20_t_mag",18],[],""],[],["vn_p38s","","","",["vn_m10_mag",6],[],""],["vn_b_uniform_macv_02_07",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m10_mag",1,6],["vn_m16_20_t_mag",1,18]]],["vn_b_vest_usarmy_02",[]],["vn_b_pack_trp_04_02_m16_pl",[["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",10,18],["vn_m61_grenade_mag",2,1],["vn_m18_yellow_mag",2,1],["vn_m18_purple_mag",2,1],["vn_mine_m18_range_mag",1,1]]],"vn_b_helmet_m1_01_01","vn_b_scarf_01_01",["vn_m19_binocs_grey","","","",[],[],""],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
 
-MED
-[["vn_xm177_camo","","","",["vn_m16_20_t_mag",18],[],""],[],["vn_m79_p","","","",["vn_40mm_m406_he_mag",1],[],""],["vn_b_uniform_sog_01_06",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_m7_grenade_mag",1,1],["vn_m14_grenade_mag",1,1],["vn_40mm_m406_he_mag",1,1],["vn_40mm_m397_ab_mag",1,1],["vn_40mm_m433_hedp_mag",1,1]]],["vn_b_vest_sog_02",[["vn_m16_20_t_mag",3,18],["vn_mine_m18_mag",1,1]]],["vn_b_pack_02_medic_xm177_pl",[["vn_b_item_medikit_01",1],["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",10,18],["vn_m67_grenade_mag",2,1],["vn_m7_grenade_mag",2,1],["vn_m34_grenade_mag",2,1],["vn_m18_red_mag",2,1],["vn_m18_yellow_mag",2,1],["vn_m18_purple_mag",2,1]]],"vn_b_boonie_02_03","vn_b_scarf_01_01",["vn_m19_binocs_grey","","","",[],[],""],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass_sog","vn_b_item_watch",""]]
+RIF 1
+[["vn_m16_bayo","","vn_b_m16","",["vn_m16_20_t_mag",18],[],""],[],[],["vn_b_uniform_macv_01_07",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m18_yellow_mag",1,1],["vn_m18_red_mag",1,1],["vn_m16_20_t_mag",3,18]]],["vn_b_vest_usarmy_03",[]],["vn_b_pack_trp_02_02_m16_pl",[["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",10,18],["vn_m61_grenade_mag",2,1],["vn_m18_yellow_mag",2,1],["vn_m18_purple_mag",2,1]]],"vn_b_bandana_03","vn_b_scarf_01_01",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
+
+RIF 2
+[["vn_m16","","","",["vn_m16_40_t_mag",36],[],""],[],[],["vn_b_uniform_macv_02_07",[["vn_b_item_firstaidkit",1],["vn_m16_40_t_mag",3,36]]],["vn_b_vest_usarmy_04",[["vn_m61_grenade_mag",2,1],["vn_m67_grenade_mag",1,1],["vn_m18_yellow_mag",1,1]]],["vn_b_pack_trp_02_02_m16_pl",[["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",10,18],["vn_m61_grenade_mag",2,1],["vn_m18_yellow_mag",2,1],["vn_m18_purple_mag",2,1]]],"vn_b_helmet_m1_01_01","vn_b_scarf_01_01",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
 
 AR
-[["vn_rpd_shorty","","","",["vn_rpd_125_mag",125],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["vn_b_uniform_sog_01_03",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m1911_mag",1,7]]],["vn_b_vest_sog_05",[["vn_rpd_125_mag",1,125]]],["vn_b_pack_02_rpd_pl",[["vn_b_item_firstaidkit",2],["vn_rpd_125_mag",4,125],["vn_m61_grenade_mag",4,1],["vn_m18_yellow_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_mine_m14_mag",6,1],["vn_mine_m18_range_mag",2,1]]],"vn_b_bandana_03","vn_b_scarf_01_01",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass_sog","vn_b_item_watch",""]]
+[["vn_m60","","","",["vn_m60_100_mag",100],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["vn_b_uniform_macv_01_07",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m1911_mag",1,7]]],["vn_b_vest_usarmy_06",[["vn_m60_100_mag",1,100]]],["vn_b_pack_trp_01_02_m60_pl",[["vn_b_item_firstaidkit",2],["vn_m60_100_mag",6,100],["vn_m61_grenade_mag",4,1],["vn_m18_yellow_mag",2,1],["vn_mine_m16_mag",2,1]]],"vn_b_helmet_m1_02_01","vn_b_scarf_01_01",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
+
+MED
+[["vn_m16","","","",["vn_m16_20_t_mag",18],[],""],[],[],["vn_b_uniform_macv_03_07",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m16_20_t_mag",3,18]]],["vn_b_vest_usarmy_07",[["vn_mine_m18_mag",1,1]]],["vn_b_pack_m5_01_medic_m16_pl",[["vn_b_item_medikit_01",1],["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",10,18],["vn_m61_grenade_mag",2,1],["vn_m18_yellow_mag",2,1],["vn_m18_purple_mag",2,1]]],"vn_b_helmet_m1_01_01","vn_b_scarf_01_03",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
 
 MK
-[["vn_m16_sniper_sd","vn_s_m16","","vn_o_9x_m16",["vn_m16_20_t_mag",18],[],""],[],["vn_mk22_sd","vn_s_mk22","","",["vn_mk22_mag",14],[],""],["vn_b_uniform_sog_02_01",[["vn_b_item_firstaidkit",1],["vn_mk22_mag",1,14],["vn_m61_grenade_mag",2,1],["vn_m7_grenade_mag",2,1],["vn_m16_20_t_mag",2,18]]],["vn_b_vest_sog_04",[["vn_m16_20_t_mag",1,18],["vn_mine_m18_range_mag",1,1]]],["vn_b_pack_01_xm177_pl",[["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",12,18],["vn_m61_grenade_mag",4,1],["vn_m18_red_mag",2,1],["vn_m18_yellow_mag",2,1],["vn_m18_purple_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_mine_m112_remote_mag",1,1],["vn_mine_m14_mag",3,1],["vn_mine_m18_range_mag",1,1]]],"vn_b_bandana_02","vn_b_scarf_01_01",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass_sog","vn_b_item_watch",""]]
+[["vn_m21","","","vn_o_9x_m14",["vn_m14_t_mag",20],[],""],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["vn_b_uniform_macv_01_07",[["vn_b_item_firstaidkit",1],["vn_m67_grenade_mag",2,1],["vn_m18_purple_mag",2,1],["vn_m14_t_mag",1,20]]],["vn_b_vest_usarmy_08",[["vn_m14_t_mag",2,20],["vn_m1911_mag",1,7]]],["vn_b_pack_trp_02_02_m21_pl",[["vn_b_item_firstaidkit",2],["vn_m1911_mag",4,7],["vn_m14_t_mag",12,20],["vn_m61_grenade_mag",4,1]]],"vn_b_bandana_01","vn_b_scarf_01_01",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
+
+LAT
+[["vn_m16","","","",["vn_m16_20_t_mag",18],[],""],["vn_m72","","","",["vn_m72_mag",1],[],""],[],["vn_b_uniform_macv_01_07",[["vn_b_item_firstaidkit",1],["vn_m67_grenade_mag",2,1],["vn_m16_20_t_mag",3,18]]],["vn_b_vest_usarmy_02",[]],["vn_b_pack_trp_03_02_m16_pl",[["vn_b_item_firstaidkit",2],["vn_m16_20_t_mag",10,18],["vn_m67_grenade_mag",4,1],["vn_mine_m18_mag",2,1]]],"vn_b_bandana_02","vn_b_scarf_01_01",[],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
+
+LAT
+[["vn_m1897","","","",["vn_m1897_buck_mag",6],[],""],["vn_m72","","","",["vn_m72_mag",1],[],""],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["vn_b_uniform_macv_04_07",[["vn_b_item_firstaidkit",1],["vn_m61_grenade_mag",2,1],["vn_m34_grenade_mag",1,1],["vn_m1897_buck_mag",1,6]]],["vn_b_vest_usarmy_11",[["vn_m1911_mag",1,7]]],["vn_b_pack_trp_03_02_eng_m1897_pl",[["vn_b_item_toolkit",1],["vn_b_item_firstaidkit",2],["vn_m1897_buck_mag",8,6],["vn_m1897_fl_mag",8,6],["vn_m61_grenade_mag",2,1],["vn_m18_yellow_mag",2,1],["vn_mine_m16_mag",2,1],["vn_mine_tripwire_m49_04_mag",4,1],["vn_mine_m112_remote_mag",2,1]]],"vn_b_helmet_m1_03_01","vn_b_scarf_01_01",["vn_m19_binocs_grn","","","",[],[],""],["vn_b_item_map","","vn_b_item_radio_urc10","vn_b_item_compass","vn_b_item_watch",""]]
 
 NVA
 SL
@@ -67,6 +86,8 @@ AR
 MK
 [["vn_sks_sniper","","","vn_o_3x_m9130",["vn_sks_t_mag",10],[],""],[],[],["vn_o_uniform_nva_army_04_01",[["vn_o_item_firstaidkit",2],["vn_sks_t_mag",3,10],["vn_rdg2_mag",1,1]]],["vn_o_vest_02",[["vn_t67_grenade_mag",2,1]]],["vn_o_pack_06_sks_pl",[["vn_o_item_firstaidkit",2],["vn_sks_t_mag",10,10],["vn_rdg2_mag",2,1],["vn_f1_grenade_mag",2,1],["vn_rkg3_grenade_mag",2,1]]],"vn_o_helmet_nva_06","vn_g_spectacles_01",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]]
 
+VIETCONG
+
 vn_xm177_camoSL
 [["vn_k50m","","","",["vn_ppsh41_35_t_mag",35],[],""],[],["vn_m1895","","","",["vn_m1895_mag",7],[],""],["vn_o_uniform_vc_mf_01_07",[["vn_o_item_firstaidkit",1],["vn_ppsh41_35_t_mag",3,35],["vn_m1895_mag",2,7]]],["vn_o_vest_vc_05",[["vn_rdg2_mag",1,1],["vn_t67_grenade_mag",2,1]]],["vn_o_pack_01_ppsh_pl",[["vn_o_item_firstaidkit",2],["vn_ppsh41_35_t_mag",6,35],["vn_rdg2_mag",2,1],["vn_t67_grenade_mag",2,1]]],"vn_o_helmet_vc_01","vn_o_scarf_01_04",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]]
 
@@ -84,3 +105,51 @@ MED
 
 GREN
 [["vn_sks_gl","","","",["vn_sks_t_mag",10],["vn_22mm_m60_frag_mag",1],""],[],[],["vn_o_uniform_vc_mf_11_07",[["vn_o_item_firstaidkit",1],["vn_sks_t_mag",3,10],["vn_22mm_m60_frag_mag",3,1]]],["vn_o_vest_vc_02",[["vn_rdg2_mag",1,1],["vn_rgd33_grenade_mag",2,1]]],["vn_o_pack_04_sks_pl",[["vn_o_item_firstaidkit",2],["vn_sks_t_mag",10,10],["vn_22mm_m60_frag_mag",6,1],["vn_22mm_m60_heat_mag",2,1],["vn_22mm_lume_mag",2,1],["vn_22mm_m22_smoke_mag",2,1],["vn_22mm_m19_wp_mag",2,1],["vn_chicom_grenade_mag",2,1]]],"vn_o_helmet_vc_03","vn_o_scarf_01_04",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]]
+
+VEHICLES
+
+MIKE FORCE
+Jeep 50 Cal
+vn_b_wheeled_m151_mg_03 
+Jeep Transport
+vn_b_wheeled_m151_02 
+Transport
+vn_b_wheeled_m54_01 
+Huey Transport
+vn_b_air_uh1c_07_07
+
+US Army
+Jeep 50 cal
+vn_b_wheeled_m151_mg_02 
+Armoured Truck
+vn_b_wheeled_m151_mg_04 
+Transport Truck
+vn_b_wheeled_m54_ammo 
+Cobra
+vn_b_air_ah1g_04 
+Huey Transport
+vn_b_air_uh1c_07_01
+TANK 
+vn_b_armor_m41_01_01
+
+ARVN
+Jeep 50 Cal
+vn_i_wheeled_m151_mg_01_mp 
+Truck Covered
+vn_i_wheeled_m54_01 
+Type 63 Tank
+vn_i_armor_type63_01 
+Huey Transport
+vn_i_air_uh1c_07_01
+
+NVA
+BTR-40 DSKHM
+vn_o_wheeled_btr40_mg_02_nva65 
+ZPU Truck
+vn_o_wheeled_z157_mg_02_nva65 
+BTR 40 Transport
+vn_o_wheeled_btr40_01_nva65 
+Transport Truck
+vn_o_wheeled_z157_01_nva65 
+Mi-2 Transport
+vn_o_air_mi2_01_01
