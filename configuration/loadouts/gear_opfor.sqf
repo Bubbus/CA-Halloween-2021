@@ -71,106 +71,69 @@ BEGIN_LOADOUTS;
 
 // Rifleman Loadout
 
-_baseLoadout = [["arifle_Katiba_ACO_pointer_F","","acc_flashlight","optic_Aco",["30Rnd_65x39_caseless_green",30],[],""],[],["hgun_Rook40_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_O_CombatUniform_ocamo",[["ACE_elasticBandage",3],["ACE_packingBandage",3],["ACE_morphine",2],["ACE_epinephrine",1],["ACE_MapTools",1],["ACE_Flashlight_XL50",1],["ACE_splint",2],["ACE_tourniquet",2],["ACRE_PRC343_ID_18",1],["16Rnd_9x21_Mag",1,17]]],["V_HarnessO_brn",[["30Rnd_65x39_caseless_green",8,30],["HandGrenade",4,1],["SmokeShell",2,1],["30Rnd_65x39_caseless_green_mag_Tracer",2,30]]],["B_AssaultPack_ocamo",[["ACE_EntrenchingTool",1],["ACE_salineIV",1]]],"H_HelmetO_ocamo","G_Combat",[],["ItemMap","","","ItemCompass","ItemWatch","NVGoggles"]];
+_baseLoadout = [["vn_type56","","","",["vn_type56_t_mag",30],[],""],[],["vn_tt33","","","",["vn_tt33_mag",8],[],""],["vn_o_uniform_nva_army_04_03",[["vn_o_item_firstaidkit",1],["vn_type56_t_mag",3,30]]],["vn_o_vest_01",[["vn_tt33_mag",2,8],["vn_rdg2_mag",1,1],["vn_t67_grenade_mag",2,1]]],["vn_o_pack_05_type56_pl",[["vn_o_item_firstaidkit",2],["vn_type56_t_mag",8,30],["vn_rdg2_mag",2,1],["vn_rgd5_grenade_mag",2,1],["vn_rkg3_grenade_mag",2,1],["vn_mine_satchel_remote_02_mag",1,1],["vn_mine_punji_01_mag",1,1]]],"vn_o_helmet_nva_04","vn_b_scarf_01_03",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]];
 
-CREATE_LOADOUT(rif,_baseLoadout);
+CREATE_LOADOUT(nva_rif,_baseLoadout);
+
+_baseLoadout = [["vn_sks_bayo","","vn_b_sks","",["vn_sks_t_mag",10],[],""],[],[],["vn_o_uniform_nva_army_03_03",[["vn_o_item_firstaidkit",1],["vn_sks_t_mag",3,10],["vn_rdg2_mag",1,1],["vn_t67_grenade_mag",2,1]]],["vn_o_vest_02",[]],["vn_o_pack_02_sks_pl",[["vn_o_item_firstaidkit",2],["vn_sks_t_mag",10,10],["vn_rdg2_mag",2,1],["vn_t67_grenade_mag",2,1]]],"vn_o_helmet_nva_02","vn_b_scarf_01_03",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]];
+
+ADD_VARIANT(nva_rif,_baseLoadout);
+
 
 
 // Commander Loadout
 
-_baseLoadout = [["arifle_Katiba_C_F","","acc_flashlight","optic_Aco",["30Rnd_65x39_caseless_green",30],[],""],[],["hgun_Rook40_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_O_OfficerUniform_ocamo",[["ACE_elasticBandage",3],["ACE_packingBandage",3],["ACE_morphine",1],["ACE_epinephrine",1],["ACRE_PRC343_ID_15",1],["ACRE_PRC152",1],["ACRE_PRC148",1],["ACE_splint",2],["ACE_tourniquet",2]]],["V_TacVest_khk",[["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["SmokeShell",2,1],["SmokeShellBlue",1,1],["SmokeShellRed",1,1],["16Rnd_9x21_Mag",1,17],["30Rnd_65x39_caseless_green_mag_Tracer",2,30],["30Rnd_65x39_caseless_green",5,30]]],["B_AssaultPack_ocamo",[["NVGoggles",1]]],"H_MilCap_ocamo","G_Aviator",[],["ItemMap","","","ItemCompass","ItemWatch",""]];
+_baseLoadout = [["vn_ppsh41","","","",["vn_ppsh41_35_t_mag",35],[],""],[],["vn_pm","","","",["vn_pm_mag",8],[],""],["vn_o_uniform_nva_army_01_03",[["vn_o_item_firstaidkit",1],["vn_ppsh41_35_t_mag",3,35],["vn_pm_mag",2,8]]],["vn_o_vest_07",[["vn_rdg2_mag",1,1],["vn_t67_grenade_mag",2,1]]],["vn_o_pack_01_ppsh_pl",[["vn_o_item_firstaidkit",2],["vn_ppsh41_35_t_mag",6,35],["vn_rdg2_mag",2,1],["vn_t67_grenade_mag",2,1]]],"vn_o_helmet_nva_01","vn_g_glasses_01",["vn_m19_binocs_grn","","","",[],[],""],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]];
 
-CREATE_LOADOUT(co,_baseLoadout);
+CREATE_LOADOUT(nva_co,_baseLoadout);
 
 
 // Fireteam lead Loadout
 
-_baseLoadout = [["arifle_Katiba_GL_F","","acc_pointer_IR","optic_Aco",["30Rnd_65x39_caseless_green",30],["1Rnd_HE_Grenade_shell",1],""],[],["hgun_Rook40_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_O_CombatUniform_ocamo",[["ACE_elasticBandage",3],["ACE_packingBandage",3],["ACE_morphine",2],["ACE_epinephrine",1],["ACRE_PRC343_ID_18",1],["ACRE_PRC148_ID_4",1],["ACE_splint",2],["ACE_tourniquet",2],["16Rnd_9x21_Mag",1,17]]],["V_HarnessOGL_brn",[["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["HandGrenade",1,1],["30Rnd_65x39_caseless_green",5,30],["30Rnd_65x39_caseless_green_mag_Tracer",2,30],["1Rnd_HE_Grenade_shell",9,1]]],["B_AssaultPack_ocamo",[["1Rnd_Smoke_Grenade_shell",6,1],["1Rnd_SmokeRed_Grenade_shell",4,1],["1Rnd_SmokeBlue_Grenade_shell",4,1],["SmokeShellRed",2,1],["SmokeShellBlue",2,1],["SmokeShell",4,1],["1Rnd_HE_Grenade_shell",15,1],["HandGrenade",1,1]]],"H_HelmetO_ocamo","G_Combat",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch","NVGoggles"]];
+_baseLoadout = [["vn_ppsh41","","","",["vn_ppsh41_35_t_mag",35],[],""],[],["vn_pm","","","",["vn_pm_mag",8],[],""],["vn_o_uniform_nva_army_01_03",[["vn_o_item_firstaidkit",1],["vn_ppsh41_35_t_mag",3,35],["vn_pm_mag",2,8]]],["vn_o_vest_07",[["vn_rdg2_mag",1,1],["vn_t67_grenade_mag",2,1]]],["vn_o_pack_01_ppsh_pl",[["vn_o_item_firstaidkit",2],["vn_ppsh41_35_t_mag",6,35],["vn_rdg2_mag",2,1],["vn_t67_grenade_mag",2,1]]],"vn_o_helmet_nva_01","vn_g_glasses_01",["vn_m19_binocs_grn","","","",[],[],""],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]];
 
-CREATE_LOADOUT(ftl,_baseLoadout);
-COPY_ADDONS(ftl,rif);
+CREATE_LOADOUT(nva_ftl,_baseLoadout);
+COPY_ADDONS(nva_ftl,nva_rif);
 
 
 // Squad lead Loadout
 
-COPY_LOADOUT(sl,ftl);
+COPY_LOADOUT(nva_sl,nva_ftl);
 
 
 // Medic Loadout
 
-_baseLoadout = [["arifle_Katiba_C_F","","acc_flashlight","optic_Aco",["30Rnd_65x39_caseless_green",30],[],""],[],["hgun_Rook40_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_O_CombatUniform_ocamo",[["ACE_bloodIV",1],["ACE_bloodIV_500",1],["ACRE_PRC343_ID_18",1],["ACRE_PRC152_ID_1",1],["ACRE_PRC148_ID_4",1]]],["V_HarnessO_brn",[["ACE_bloodIV",4],["HandGrenade",2,1],["SmokeShell",4,1],["30Rnd_65x39_caseless_green",5,30],["30Rnd_65x39_caseless_green_mag_Tracer",2,30],["16Rnd_9x21_Mag",1,17]]],["B_Kitbag_cbr",[["ACE_morphine",15],["ACE_epinephrine",10],["ACE_fieldDressing",10],["ACE_packingBandage",20],["ACE_elasticBandage",20],["ACE_bloodIV_500",3],["ACE_adenosine",5],["ACE_bloodIV",5],["ACE_splint",20],["ACE_tourniquet",10],["FSGm_ItemMedicBagMil",1],["ACE_personalAidKit",1],["ACE_surgicalKit",1],["ACE_EntrenchingTool",1]]],"H_HelmetO_ocamo","G_Combat",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch","NVGoggles"]];
+_baseLoadout = [["vn_pps43","","","",["vn_pps_t_mag",35],[],""],[],[],["vn_o_uniform_nva_army_08_03",[["vn_o_item_firstaidkit",1],["vn_pps_t_mag",3,35],["vn_rdg2_mag",1,1]]],["vn_o_vest_06",[["vn_rdg2_mag",2,1]]],["vn_o_pack_02_medic_pps_pl",[["vn_b_item_medikit_01",1],["vn_o_item_firstaidkit",2],["vn_pps_t_mag",6,35],["vn_rdg2_mag",2,1]]],"vn_o_helmet_nva_02","vn_g_spectacles_01",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]];
 
-CREATE_LOADOUT(med,_baseLoadout);
-COPY_ADDONS(med,rif);
-
-
-// Combat Lifeasser Loadout
-
-_baseLoadout = [["arifle_Katiba_C_F","","acc_flashlight","optic_Aco",["30Rnd_65x39_caseless_green",30],[],""],[],["hgun_Rook40_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_O_CombatUniform_ocamo",[["ACE_bloodIV",1],["ACE_bloodIV_500",1],["ACRE_PRC343_ID_18",1],["ACRE_PRC152_ID_1",1],["ACRE_PRC148_ID_4",1]]],["V_HarnessO_brn",[["ACE_bloodIV",4],["HandGrenade",2,1],["SmokeShell",4,1],["30Rnd_65x39_caseless_green",5,30],["30Rnd_65x39_caseless_green_mag_Tracer",2,30],["16Rnd_9x21_Mag",1,17]]],["B_Kitbag_cbr",[["ACE_morphine",15],["ACE_epinephrine",10],["ACE_fieldDressing",10],["ACE_packingBandage",20],["ACE_elasticBandage",20],["ACE_bloodIV_500",5],["ACE_adenosine",5],["ACE_bloodIV",8],["ACE_splint",20],["ACE_tourniquet",10],["ACE_surgicalKit",1],["ACE_EntrenchingTool",1]]],"H_HelmetO_ocamo","G_Combat",[],["ItemMap","ItemGPS","","ItemCompass","ItemWatch","NVGoggles"]];
-
-CREATE_LOADOUT(cls,_baseLoadout);
-COPY_ADDONS(cls,rif);
-
+CREATE_LOADOUT(nva_med,_baseLoadout);
+COPY_ADDONS(nva_med,nva_rif);
 
 // Autorifleman Loadout
 
-_baseLoadout = [["LMG_Zafir_F","","acc_flashlight","optic_Aco",["150Rnd_762x54_Box",150],[],""],[],["hgun_Rook40_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_O_CombatUniform_ocamo",[["ACE_elasticBandage",3],["ACE_packingBandage",3],["ACE_morphine",2],["ACE_epinephrine",1],["ACRE_PRC343_ID_15",1],["ACE_splint",2],["ACE_tourniquet",2],["16Rnd_9x21_Mag",1,17]]],["V_HarnessO_brn",[["HandGrenade",2,1],["SmokeShell",2,1],["150Rnd_762x54_Box",2,150]]],["B_Kitbag_cbr",[["ACE_SpareBarrel",1,1],["150Rnd_762x54_Box_Tracer",2,150],["150Rnd_762x54_Box",1,150]]],"H_HelmetO_ocamo","G_Combat",[],["ItemMap","","","ItemCompass","ItemWatch","NVGoggles"]];
+_baseLoadout = [["vn_rpd","","","",["vn_rpd_100_mag",100],[],""],[],[],["vn_o_uniform_nva_army_11_03",[["vn_o_item_firstaidkit",1],["vn_rdg2_mag",1,1]]],["vn_o_vest_03",[["vn_rpd_100_mag",2,100],["vn_t67_grenade_mag",2,1]]],["vn_o_pack_04_rpd_pl",[["vn_o_item_firstaidkit",2],["vn_rpd_100_mag",3,100],["vn_rdg2_mag",2,1],["vn_rg42_grenade_mag",2,1]]],"vn_o_helmet_nva_03","vn_b_scarf_01_03",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]];
 
-CREATE_LOADOUT(ar,_baseLoadout);
-COPY_ADDONS(ar,rif);
-
-
-// Assistant AR Loadout
-
-_baseLoadout = [["arifle_Katiba_ACO_pointer_F","","acc_flashlight","optic_Arco_blk_F",["30Rnd_65x39_caseless_green",30],[],""],[],["hgun_Rook40_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_O_CombatUniform_ocamo",[["ACE_elasticBandage",3],["ACE_packingBandage",3],["ACE_morphine",2],["ACE_epinephrine",1],["ACRE_PRC343_ID_18",1],["ACE_splint",2],["ACE_tourniquet",2],["ACE_EntrenchingTool",1],["16Rnd_9x21_Mag",1,17]]],["V_HarnessO_brn",[["ACE_salineIV",1],["30Rnd_65x39_caseless_green",6,30],["HandGrenade",2,1],["SmokeShell",2,1],["30Rnd_65x39_caseless_green_mag_Tracer",6,30]]],["B_FieldPack_ocamo",[["150Rnd_762x54_Box_Tracer",1,150],["150Rnd_762x54_Box",3,150]]],"H_HelmetO_ocamo","G_Combat",["Binocular","","","",[],[],""],["ItemMap","","","ItemCompass","ItemWatch","NVGoggles"]];
-
-CREATE_LOADOUT(aar,_baseLoadout);
-COPY_ADDONS(aar,rif);
-
-
-// Light anti-tank Loadout
-
-_baseLoadout = [["arifle_Katiba_ACO_pointer_F","","acc_flashlight","optic_Aco",["30Rnd_65x39_caseless_green",30],[],""],["launch_RPG32_F","","","",["RPG32_F",1],[],""],["hgun_Rook40_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_O_CombatUniform_ocamo",[["ACE_elasticBandage",3],["ACE_packingBandage",3],["ACE_morphine",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_tourniquet",2],["ACE_EntrenchingTool",1],["ACRE_PRC343_ID_15",1],["16Rnd_9x21_Mag",1,17]]],["V_HarnessO_brn",[["ACE_salineIV",1],["30Rnd_65x39_caseless_green",8,30],["HandGrenade",2,1],["SmokeShell",2,1],["30Rnd_65x39_caseless_green_mag_Tracer",2,30]]],["B_Kitbag_cbr",[["RPG32_F",2,1],["RPG32_HE_F",2,1]]],"H_HelmetO_ocamo","G_Combat",[],["ItemMap","","","ItemCompass","ItemWatch","NVGoggles"]];
-
-CREATE_LOADOUT(lat,_baseLoadout);
-COPY_ADDONS(lat,rif);
-
+CREATE_LOADOUT(nva_ar,_baseLoadout);
+COPY_ADDONS(nva_ar,nva_rif);
 
 // Marksman Loadout
 
-_baseLoadout = [["srifle_DMR_01_F","","acc_flashlight","optic_SOS",["10Rnd_762x54_Mag",10],[],"bipod_02_F_hex"],[],["hgun_Rook40_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_O_CombatUniform_ocamo",[["ACE_elasticBandage",3],["ACE_packingBandage",3],["ACE_morphine",2],["ACE_epinephrine",1],["ACE_RangeCard",1],["ACRE_PRC343_ID_18",1],["ACE_splint",2],["ACE_tourniquet",2],["ACE_salineIV",1]]],["V_HarnessO_brn",[["HandGrenade",2,1],["SmokeShell",4,1],["10Rnd_762x54_Mag",12,10],["16Rnd_9x21_Mag",2,17]]],["B_AssaultPack_ocamo",[["ACE_10Rnd_762x54_Tracer_mag",12,10]]],"H_HelmetO_ocamo","G_Combat",[],["ItemMap","","ItemRadioAcreFlagged","ItemCompass","ItemWatch","NVGoggles"]];
+_baseLoadout = [["vn_sks_sniper","","","vn_o_3x_m9130",["vn_sks_t_mag",10],[],""],[],[],["vn_o_uniform_nva_army_04_01",[["vn_o_item_firstaidkit",2],["vn_sks_t_mag",3,10],["vn_rdg2_mag",1,1]]],["vn_o_vest_02",[["vn_t67_grenade_mag",2,1]]],["vn_o_pack_06_sks_pl",[["vn_o_item_firstaidkit",2],["vn_sks_t_mag",10,10],["vn_rdg2_mag",2,1],["vn_f1_grenade_mag",2,1],["vn_rkg3_grenade_mag",2,1]]],"vn_o_helmet_nva_06","vn_g_spectacles_01",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]];
 
-CREATE_LOADOUT(mk,_baseLoadout);
-COPY_ADDONS(mk,rif);
-
-
-// Crewman Loadout
-
-_baseLoadout = [["SMG_02_F","","","optic_Aco_smg",["30Rnd_9x21_Mag_SMG_02",30],[],""],[],[],["U_O_CombatUniform_ocamo",[["ACE_elasticBandage",3],["ACE_morphine",2],["ACE_epinephrine",1],["ACE_packingBandage",3],["ACE_tourniquet",2],["ACRE_PRC343_ID_15",1],["ACRE_PRC148_ID_5",1],["ACRE_PRC152",1],["ACE_splint",2]]],["V_BandollierB_cbr",[["SmokeShell",4,1],["SmokeShellBlue",1,1],["SmokeShellRed",1,1],["30Rnd_9x21_Mag",4,30]]],["B_AssaultPack_ocamo",[["ToolKit",1],["ACE_EntrenchingTool",1]]],"H_HelmetCrew_O","G_Combat",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch","NVGoggles"]];
-
-CREATE_LOADOUT(crew,_baseLoadout);
-
-
-// Engineer/logi Loadout
-
-_baseLoadout = [["arifle_Katiba_C_F","","acc_flashlight","optic_Aco",["30Rnd_65x39_caseless_green",30],[],""],[],["hgun_Rook40_F","","","",["16Rnd_9x21_Mag",17],[],""],["U_O_CombatUniform_ocamo",[["ACE_bloodIV",1],["ACE_bloodIV_500",1],["ACRE_PRC343_ID_18",1],["ACRE_PRC152_ID_1",1],["ACRE_PRC148_ID_4",1]]],["V_HarnessO_brn",[["ACE_bloodIV",4],["HandGrenade",2,1],["SmokeShell",4,1],["30Rnd_65x39_caseless_green",5,30],["30Rnd_65x39_caseless_green_mag_Tracer",2,30],["16Rnd_9x21_Mag",1,17]]],["B_AssaultPack_ocamo",[["ToolKit",1],["ACE_EntrenchingTool",1]]],"H_HelmetO_ocamo","G_Combat",["Binocular","","","",[],[],""],["ItemMap","ItemGPS","","ItemCompass","ItemWatch","NVGoggles"]];
-
-CREATE_LOADOUT(eng,_baseLoadout);
+CREATE_LOADOUT(nva_mk,_baseLoadout);
+COPY_ADDONS(nva_mk,nva_rif);
 
 
 // Small crate loadout
 CREATE_CRATE(small);
 
-ADD_RIFLE_TO_CRATE(small,rif,2);
-ADD_LAUNCHER_AMMO_TO_CRATE(small,lat,2);
-ADD_PISTOL_TO_CRATE(small,rif,2);
+ADD_RIFLE_TO_CRATE(small,nva_rif,2);
+ADD_PISTOL_TO_CRATE(small,nva_rif,2);
 
-ADD_PISTOL_AMMO_TO_CRATE(small,rif,8);
-ADD_RIFLE_AMMO_TO_CRATE(small,rif,40);
-ADD_RIFLE_AMMO_TO_CRATE(small,ar,8);
-ADD_RIFLE_AMMO_TO_CRATE(small,mk,12);
-ADD_RIFLE_AMMO_TO_CRATE(small,crew,2);
-ADD_RIFLE_GRENADES_TO_CRATE(small,ftl,15);
+ADD_PISTOL_AMMO_TO_CRATE(small,nva_rif,8);
+ADD_RIFLE_AMMO_TO_CRATE(small,nva_rif,40);
+ADD_RIFLE_AMMO_TO_CRATE(small,nva_ar,8);
+ADD_RIFLE_AMMO_TO_CRATE(small,nva_mk,12);
+ADD_RIFLE_GRENADES_TO_CRATE(small,nva_ftl,15);
 
 ADD_ITEMS_TO_CRATE(small,"30Rnd_65x39_caseless_green_mag_Tracer",15);
 ADD_ITEMS_TO_CRATE(small,"ACE_10Rnd_762x54_Tracer_mag",12);
@@ -193,11 +156,8 @@ ADD_SPLINTS_TO_CRATE(small,30);
 ADD_MEDS_TO_CRATE(small,30);
 ADD_BLOOD_TO_CRATE(small,15);
 
-ADD_BACKPACKS_TO_CRATE(small,rif,2);
+ADD_BACKPACKS_TO_CRATE(small,nva_rif,2);
 
-ADD_ITEMS_TO_CRATE(small,"ACRE_PRC343",6);
-ADD_ITEMS_TO_CRATE(small,"ACRE_PRC152",2);
-ADD_ITEMS_TO_CRATE(small,"ACRE_PRC148",2);
 ADD_ITEMS_TO_CRATE(small,"Binocular",2);
 ADD_ITEMS_TO_CRATE(small,"Toolkit",1);
 
@@ -207,17 +167,14 @@ FINALIZE_CRATE(small);
 // Medium crate loadout
 CREATE_CRATE(med);
 
-ADD_RIFLE_TO_CRATE(med,rif,4);
-ADD_LAUNCHER_TO_CRATE(med,lat,1);
-ADD_LAUNCHER_AMMO_TO_CRATE(med,lat,4);
-ADD_PISTOL_TO_CRATE(med,rif,4);
+ADD_RIFLE_TO_CRATE(med,nva_rif,4);
+ADD_PISTOL_TO_CRATE(med,nva_rif,4);
 
-ADD_PISTOL_AMMO_TO_CRATE(med,rif,12);
-ADD_RIFLE_AMMO_TO_CRATE(med,rif,60);
-ADD_RIFLE_AMMO_TO_CRATE(med,ar,12);
-ADD_RIFLE_AMMO_TO_CRATE(med,mk,24);
-ADD_RIFLE_AMMO_TO_CRATE(med,crew,4);
-ADD_RIFLE_GRENADES_TO_CRATE(med,ftl,30);
+ADD_PISTOL_AMMO_TO_CRATE(med,nva_rif,12);
+ADD_RIFLE_AMMO_TO_CRATE(med,nva_rif,60);
+ADD_RIFLE_AMMO_TO_CRATE(med,nva_ar,12);
+ADD_RIFLE_AMMO_TO_CRATE(med,nva_mk,24);
+ADD_RIFLE_GRENADES_TO_CRATE(med,nva_ftl,30);
 
 ADD_ITEMS_TO_CRATE(med,"30Rnd_65x39_caseless_green_mag_Tracer",20);
 ADD_ITEMS_TO_CRATE(med,"ACE_10Rnd_762x54_Tracer_mag",24);
@@ -239,18 +196,151 @@ ADD_SPLINTS_TO_CRATE(med,40);
 ADD_MEDS_TO_CRATE(med,50);
 ADD_BLOOD_TO_CRATE(med,30);
 
-ADD_BACKPACKS_TO_CRATE(med,rif,4);
+ADD_BACKPACKS_TO_CRATE(med,nva_rif,4);
 
-ADD_ITEMS_TO_CRATE(med,"ACRE_PRC343",12);
-ADD_ITEMS_TO_CRATE(med,"ACRE_PRC152",4);
-ADD_ITEMS_TO_CRATE(med,"ACRE_PRC148",4);
 ADD_ITEMS_TO_CRATE(med,"Binocular",4);
 ADD_ITEMS_TO_CRATE(med,"Toolkit",1);
 
 FINALIZE_CRATE(med);
 
+// Vietcong
+
+
+// Rifleman Loadout
+
+_baseLoadout = [["vn_mat49_vc","","","",["vn_mat49_vc_mag",32],[],""],[],["vn_m1895","","","",["vn_m1895_mag",7],[],""],["vn_o_uniform_vc_mf_04_07",[["vn_o_item_firstaidkit",1],["vn_mat49_vc_mag",3,32]]],["vn_o_vest_vc_01",[["vn_m1895_mag",2,7],["vn_rdg2_mag",1,1],["vn_t67_grenade_mag",2,1]]],["vn_o_pack_02_mat49_pl",[["vn_o_item_firstaidkit",2],["vn_mat49_vc_mag",6,32],["vn_rdg2_mag",2,1],["vn_f1_grenade_mag",2,1]]],"vn_o_helmet_vc_03","vn_o_scarf_01_04",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]];
+
+CREATE_LOADOUT(vc_rif,_baseLoadout);
+
+_baseLoadout = [["vn_type56","","","",["vn_type56_t_mag",30],[],""],[],[],["vn_o_uniform_vc_mf_10_07",[["vn_o_item_firstaidkit",1],["vn_type56_t_mag",3,30]]],["vn_o_vest_01",[["vn_rdg2_mag",1,1],["vn_rgd33_grenade_mag",1,1],["vn_t67_grenade_mag",1,1]]],["vn_o_pack_05_type56_pl",[["vn_o_item_firstaidkit",2],["vn_type56_t_mag",8,30],["vn_rdg2_mag",2,1],["vn_rgd5_grenade_mag",2,1],["vn_rkg3_grenade_mag",2,1],["vn_mine_satchel_remote_02_mag",1,1],["vn_mine_punji_01_mag",1,1]]],"vn_o_helmet_vc_03","vn_o_scarf_01_04",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]];
+
+ADD_VARIANT(vc_rif,_baseLoadout);
+
+
+
+// Commander Loadout
+
+_baseLoadout =[["vn_k50m","","","",["vn_ppsh41_35_t_mag",35],[],""],[],["vn_m1895","","","",["vn_m1895_mag",7],[],""],["vn_o_uniform_vc_mf_01_07",[["vn_o_item_firstaidkit",1],["vn_ppsh41_35_t_mag",3,35],["vn_m1895_mag",2,7]]],["vn_o_vest_vc_05",[["vn_rdg2_mag",1,1],["vn_t67_grenade_mag",2,1]]],["vn_o_pack_01_ppsh_pl",[["vn_o_item_firstaidkit",2],["vn_ppsh41_35_t_mag",6,35],["vn_rdg2_mag",2,1],["vn_t67_grenade_mag",2,1]]],"vn_o_helmet_vc_01","vn_o_scarf_01_04",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]];
+
+CREATE_LOADOUT(vc_co,_baseLoadout);
+
+
+// Fireteam lead Loadout
+
+_baseLoadout = [["vn_k50m","","","",["vn_ppsh41_35_t_mag",35],[],""],[],["vn_m1895","","","",["vn_m1895_mag",7],[],""],["vn_o_uniform_vc_mf_01_07",[["vn_o_item_firstaidkit",1],["vn_ppsh41_35_t_mag",3,35],["vn_m1895_mag",2,7]]],["vn_o_vest_vc_05",[["vn_rdg2_mag",1,1],["vn_t67_grenade_mag",2,1]]],["vn_o_pack_01_ppsh_pl",[["vn_o_item_firstaidkit",2],["vn_ppsh41_35_t_mag",6,35],["vn_rdg2_mag",2,1],["vn_t67_grenade_mag",2,1]]],"vn_o_helmet_vc_01","vn_o_scarf_01_04",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]];
+
+CREATE_LOADOUT(vc_ftl,_baseLoadout);
+COPY_ADDONS(vc_ftl,vc_rif);
+
+
+// Squad lead Loadout
+
+COPY_LOADOUT(vc_sl,vc_ftl);
+
+
+// Medic Loadout
+
+_baseLoadout = [["vn_izh54","","","",["vn_izh54_mag",2],[],""],[],[],["vn_o_uniform_vc_mf_12_07",[["vn_o_item_firstaidkit",1],["vn_izh54_mag",3,2],["vn_rdg2_mag",2,1]]],["vn_o_vest_vc_04",[["vn_rdg2_mag",1,1]]],["vn_o_pack_01_medic_ish54_pl",[["vn_b_item_medikit_01",1],["vn_o_item_firstaidkit",2],["vn_izh54_mag",16,2],["vn_rdg2_mag",2,1]]],"vn_o_helmet_vc_02","vn_o_scarf_01_04",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]];
+
+CREATE_LOADOUT(vc__med,_baseLoadout);
+COPY_ADDONS(vc_med,vc_rif);
+
+// Autorifleman Loadout
+
+_baseLoadout = [["vn_rpd","","","",["vn_rpd_100_mag",100],[],""],[],[],["vn_o_uniform_vc_mf_03_07",[["vn_o_item_firstaidkit",1],["vn_rdg2_mag",1,1]]],["vn_o_vest_03",[["vn_rpd_100_mag",2,100],["vn_rg42_grenade_mag",1,1],["vn_t67_grenade_mag",1,1]]],["vn_o_pack_04_rpd_pl",[["vn_o_item_firstaidkit",2],["vn_rpd_100_mag",3,100],["vn_rdg2_mag",2,1],["vn_rg42_grenade_mag",2,1]]],"vn_o_helmet_vc_03","vn_o_scarf_01_04",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]];
+
+CREATE_LOADOUT(vc_ar,_baseLoadout);
+COPY_ADDONS(vc_ar,vc_rif);
+
+// Marksman Loadout
+
+_baseLoadout = [["vn_sks_gl","","","",["vn_sks_t_mag",10],["vn_22mm_m60_frag_mag",1],""],[],[],["vn_o_uniform_vc_mf_11_07",[["vn_o_item_firstaidkit",1],["vn_sks_t_mag",3,10],["vn_22mm_m60_frag_mag",3,1]]],["vn_o_vest_vc_02",[["vn_rdg2_mag",1,1],["vn_rgd33_grenade_mag",2,1]]],["vn_o_pack_04_sks_pl",[["vn_o_item_firstaidkit",2],["vn_sks_t_mag",10,10],["vn_22mm_m60_frag_mag",6,1],["vn_22mm_m60_heat_mag",2,1],["vn_22mm_lume_mag",2,1],["vn_22mm_m22_smoke_mag",2,1],["vn_22mm_m19_wp_mag",2,1],["vn_chicom_grenade_mag",2,1]]],"vn_o_helmet_vc_03","vn_o_scarf_01_04",[],["vn_o_item_map","","vn_o_item_radio_m252","vn_b_item_compass","vn_b_item_watch",""]];
+
+CREATE_LOADOUT(vc_mk,_baseLoadout);
+COPY_ADDONS(vc__mk,vc_rif);
+
+
+// Small crate loadout
+CREATE_CRATE(small);
+
+ADD_RIFLE_TO_CRATE(small,vc_rif,2);
+ADD_PISTOL_TO_CRATE(small,vc_rif,2);
+
+ADD_PISTOL_AMMO_TO_CRATE(small,vc_rif,8);
+ADD_RIFLE_AMMO_TO_CRATE(small,vc_rif,40);
+ADD_RIFLE_AMMO_TO_CRATE(small,vc_ar,8);
+ADD_RIFLE_AMMO_TO_CRATE(small,vc_mk,12);
+ADD_RIFLE_GRENADES_TO_CRATE(small,vc_ftl,15);
+
+ADD_ITEMS_TO_CRATE(small,"30Rnd_65x39_caseless_green_mag_Tracer",15);
+ADD_ITEMS_TO_CRATE(small,"ACE_10Rnd_762x54_Tracer_mag",12);
+ADD_ITEMS_TO_CRATE(small,"150Rnd_762x54_Box_Tracer",4);
+
+ADD_ITEMS_TO_CRATE(small,"1Rnd_HE_Grenade_shell",15);
+ADD_ITEMS_TO_CRATE(small,"1Rnd_Smoke_Grenade_shell",10);
+ADD_ITEMS_TO_CRATE(small,"1Rnd_SmokeRed_Grenade_shell",5);
+ADD_ITEMS_TO_CRATE(small,"1Rnd_SmokeBlue_Grenade_shell",5);
+
+ADD_ITEMS_TO_CRATE(small,"SmokeShellRed",2);
+ADD_ITEMS_TO_CRATE(small,"SmokeShellBlue",2);
+ADD_ITEMS_TO_CRATE(small,"SmokeShell",6);
+
+ADD_ITEMS_TO_CRATE(small,"HandGrenade",8);
+ADD_ITEMS_TO_CRATE(small,"ACE_SpareBarrel",1);
+
+ADD_BANDAGES_TO_CRATE(small,40);
+ADD_SPLINTS_TO_CRATE(small,30);
+ADD_MEDS_TO_CRATE(small,30);
+ADD_BLOOD_TO_CRATE(small,15);
+
+ADD_BACKPACKS_TO_CRATE(small,vc_rif,2);
+
+ADD_ITEMS_TO_CRATE(small,"Binocular",2);
+ADD_ITEMS_TO_CRATE(small,"Toolkit",1);
+
+FINALIZE_CRATE(small);
+
+
+// Medium crate loadout
+CREATE_CRATE(med);
+
+ADD_RIFLE_TO_CRATE(med,vc_rif,4);
+ADD_PISTOL_TO_CRATE(med,vc_rif,4);
+
+ADD_PISTOL_AMMO_TO_CRATE(med,vc_rif,12);
+ADD_RIFLE_AMMO_TO_CRATE(med,vc_rif,60);
+ADD_RIFLE_AMMO_TO_CRATE(med,vc_ar,12);
+ADD_RIFLE_AMMO_TO_CRATE(med,vc_mk,24);
+ADD_RIFLE_GRENADES_TO_CRATE(med,vc_ftl,30);
+
+ADD_ITEMS_TO_CRATE(med,"30Rnd_65x39_caseless_green_mag_Tracer",20);
+ADD_ITEMS_TO_CRATE(med,"ACE_10Rnd_762x54_Tracer_mag",24);
+ADD_ITEMS_TO_CRATE(med,"150Rnd_762x54_Box_Tracer",6);
+
+ADD_ITEMS_TO_CRATE(med,"1Rnd_Smoke_Grenade_shell",20);
+ADD_ITEMS_TO_CRATE(med,"1Rnd_SmokeRed_Grenade_shell",10);
+ADD_ITEMS_TO_CRATE(med,"1Rnd_SmokeBlue_Grenade_shell",10);
+
+ADD_ITEMS_TO_CRATE(med,"SmokeShellRed",6);
+ADD_ITEMS_TO_CRATE(med,"SmokeShellBlue",6);
+ADD_ITEMS_TO_CRATE(med,"SmokeShell",15);
+
+ADD_ITEMS_TO_CRATE(med,"HandGrenade",15);
+ADD_ITEMS_TO_CRATE(med,"ACE_SpareBarrel",25);
+
+ADD_BANDAGES_TO_CRATE(med,80);
+ADD_SPLINTS_TO_CRATE(med,40);
+ADD_MEDS_TO_CRATE(med,50);
+ADD_BLOOD_TO_CRATE(med,30);
+
+ADD_BACKPACKS_TO_CRATE(med,vc_rif,4);
+
+ADD_ITEMS_TO_CRATE(med,"Binocular",4);
+ADD_ITEMS_TO_CRATE(med,"Toolkit",1);
+
+FINALIZE_CRATE(med);
 
 // Default loadout.
 // If Gearscript tries to use an invalid loadout, it will fall-back to this default loadout instead.
 
-COPY_LOADOUT(default,rif);
+COPY_LOADOUT(default,vc_rif);
