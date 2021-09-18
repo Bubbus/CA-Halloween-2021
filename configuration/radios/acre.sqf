@@ -15,7 +15,7 @@ f_radios_settings_acre2_disableFrequencySplit = FALSE;
 // Set a list of units that get a short wave
 // if its nil, that means all units get a radio
 // empty array means that noone gets
-f_radios_settings_acre2_shortRange = nil;
+f_radios_settings_acre2_shortRange = [];
 
 // Set the list of units that get a long range
 f_radios_settings_acre2_longRange = [];
@@ -26,7 +26,7 @@ f_radios_settings_acre2_extraRadios = [];
 
 // Unit types you want to give a backpack radio
 // This backpack radio uses the Extra Long Range radio channel definitions below.
-f_radios_settings_acre2_BackpackRadios = [];
+f_radios_settings_acre2_BackpackRadios = ["rto"];
 
 // Standard Short
 f_radios_settings_acre2_standardSHRadio = "ACRE_PRC343";
@@ -35,7 +35,7 @@ f_radios_settings_acre2_standardLRRadio = "ACRE_PRC152";
 // Extra LR radio
 f_radios_settings_acre2_extraRadio = "ACRE_PRC148";
 // Backpack Radio
-f_radios_settings_acre2_BackpackRadio = "ACRE_PRC117F";
+f_radios_settings_acre2_BackpackRadio = "ACRE_PRC77";
 
 // ====================================================================================
 // BABEL API
@@ -66,10 +66,6 @@ f_radios_settings_acre2_language_indfor = ["opf"];
 // Examples: A1 net composed of FTL, Riflemen, Medic etc.  Partisan/guerrilla comms for localised coordination.
 f_radios_settings_acre2_sr_groups_blufor =
 [
-    ["ALPHA",    ["ALPHA"]],
-    ["BRAVO",    ["BRAVO"]],
-    ["CHARLIE",    ["CHARLIE"]],
-    ["COMMAND",    ["COMMAND"]]
 ];
 
 f_radios_settings_acre2_sr_groups_opfor = f_radios_settings_acre2_sr_groups_blufor;
@@ -82,10 +78,7 @@ f_radios_settings_acre2_sr_groups_indfor = f_radios_settings_acre2_sr_groups_blu
 // Examples: Alpha net composed of ASL, A1, A2.  Section net composed of ASL, A2IC, AMED.  Mechanised team composed of ASL, A-Vic.
 f_radios_settings_acre2_lr_groups_blufor =
 [
-    ["GROUND CMD",    []],
-    ["ALPHA NET",    ["ALPHA"]],
-    ["BRAVO NET",    ["BRAVO"]],
-    ["CHARLIE NET",    ["CHARLIE"]],
+    ["GROUND CMD",    ["COMMAND", "ABLE", "BAKER"]],
     ["HOTLINE ZEUS",    ["ZEUS"]]
 ];
 
@@ -99,10 +92,7 @@ f_radios_settings_acre2_lr_groups_indfor = f_radios_settings_acre2_lr_groups_blu
 // Examples: Ground command net composed of CO, ASL, BSL, CSL.  Vehicle net composed of XO/VC, A-Vic, B-Vic, CAS.  Liason net composed of CO, INDFOR CO.
 f_radios_settings_acre2_xlr_groups_blufor =
 [
-    ["GROUND CMD",    ["ALPHA", "BRAVO", "CHARLIE", "COMMAND", "ZEUS"]],
-    ["ALPHA NET",    []],
-    ["BRAVO NET",    []],
-    ["CHARLIE NET",    []],
+    ["GROUND CMD",    ["COMMAND", "ABLE", "BAKER"]],
     ["HOTLINE ZEUS",    []]
 ];
 
