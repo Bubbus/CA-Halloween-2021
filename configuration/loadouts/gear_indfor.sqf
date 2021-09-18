@@ -103,6 +103,11 @@ COPY_ADDONS(ftl,rif);
 COPY_LOADOUT(sl,ftl);
 
 
+// aar Loadout
+
+COPY_LOADOUT(aar,rif);
+
+
 // Medic Loadout
 
 _baseLoadout = [["vn_m1carbine","","","",["vn_carbine_15_mag",15],[],""],[],[],["U_Simc_OG107_mk1_MC",[["ACE_fieldDressing",5],["ACE_elasticBandage",2],["ACE_packingBandage",1],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_morphine",2],["ACE_salineIV_500",1],["ACE_splint",2],["ACE_tourniquet",2],["vn_m61_grenade_mag",2,1],["SmokeShell",2,1],["vn_carbine_15_t_mag",2,15]]],["V_Simc_mk56_sks",[["vn_m18_white_mag",1,1],["vn_carbine_15_t_mag",13,15]]],["vn_b_pack_m5_01",[["ACE_elasticBandage",15],["ACE_packingBandage",15],["ACE_adenosine",5],["ACE_epinephrine",10],["FSGm_ItemMedicBag",1],["ACE_morphine",10],["ACE_salineIV",10],["ACE_splint",8],["ACE_tourniquet",6]]],"H_Simc_Boon_green_3","",["Binocular","","","",[],[],""],["ItemMap","","","ItemCompass","ItemWatch",""]];
