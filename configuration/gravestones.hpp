@@ -30,7 +30,7 @@
 
 // Enables gravestones only for important corpses (such as players).  Deletion rules remain the same for other corpses, but they will not receive a gravestone.
 // To allow gravestones for all units, comment-out or delete the line below INSTEAD of setting it to 0.
-//#define GRAVESTONES_ALLOW_PRIORITY_ONLY 1
+#define GRAVESTONES_ALLOW_PRIORITY_ONLY 1
 
 // The amount of corpses which can exist before gravestones start to appear.
 #define MAX_CORPSES_BEFORE_GRAVESTONES 20

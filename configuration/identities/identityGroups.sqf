@@ -96,8 +96,8 @@ CREATE_IDENTITY(russian,_speakers,_faces,_names);
 
 
 // Tanoan
-_speakers = ["male02engfre","male01engfre"];
-_faces = ["TanoanHead_A3_05","TanoanHead_A3_08","TanoanHead_A3_06","TanoanHead_A3_07","TanoanHead_A3_02","TanoanHead_A3_03","TanoanHead_A3_01","TanoanHead_A3_04"];
+_speakers = ["male02engfre","male01engfre","male03rus","male02fre","male01fre","male03fre"];
+_faces = ["TanoanHead_A3_05","TanoanHead_A3_08","TanoanHead_A3_06","TanoanHead_A3_07","TanoanHead_A3_02","TanoanHead_A3_03","TanoanHead_A3_01","TanoanHead_A3_04","WhiteHead_16","WhiteHead_03"];
 _names = "TanoanMen";
 
 CREATE_IDENTITY(tanoan,_speakers,_faces,_names);
@@ -109,3 +109,23 @@ _faces = ["WhiteHead_10","WhiteHead_03","WhiteHead_08","WhiteHead_15","LivonianH
 _names = "EnochMen";
 
 CREATE_IDENTITY(polish,_speakers,_faces,_names);
+
+// Colonial French
+_speakers = ["male02fre","male01fre","male03fre","male02engfre","male01engfre","male04eng"];
+_faces = ["Sturrock","WhiteHead_20","WhiteHead_16","WhiteHead_02","TanoanHead_A3_05","WhiteHead_08","TanoanHead_A3_08","WhiteHead_03","WhiteHead_07","Barklem","WhiteHead_17","WhiteHead_12","WhiteHead_18","WhiteHead_09","WhiteHead_10","TanoanHead_A3_04","WhiteHead_15","TanoanHead_A3_06","GreekHead_A3_09","TanoanHead_A3_02","TanoanHead_A3_02","AfricanHead_03","WhiteHead_14","WhiteHead_21","WhiteHead_19","TanoanHead_A3_01","WhiteHead_01","WhiteHead_04","WhiteHead_05","AfricanHead_01","WhiteHead_13"];
+
+_forenames = ["Thomas", "Nicolas", "Julien", "Quentin", "Maxime", "Antoine", "Clement", "Pierre", "Lucas", "Florian", "Guillaume", "Valentin", "Jérémy"];
+_surnames = ["Mercier", "Bernard", "Durand", "Dubois", "Moreau", "Blanc", "Laurent", "Michel", "Roux", "Girard", "Fournier", "Lambert"];
+_names = [_forenames, _surnames];
+
+CREATE_IDENTITY(french_colonial,_speakers,_faces,_names);
+
+// Cultists
+_speakers = ["male03chi","male02rus","male03fre","male03engb","male01engfre","male04eng","male11eng"];
+_faces = ["Sturrock","WhiteHead_20","WhiteHead_16","WhiteHead_02","TanoanHead_A3_05","WhiteHead_08","TanoanHead_A3_08","AsianHead_A3_02","WhiteHead_07","Barklem","WhiteHead_17","AsianHead_A3_01","WhiteHead_18","WhiteHead_09","WhiteHead_10","TanoanHead_A3_04","WhiteHead_15","TanoanHead_A3_06","GreekHead_A3_09","TanoanHead_A3_02","TanoanHead_A3_02","AfricanHead_03","WhiteHead_14","WhiteHead_21","WhiteHead_19","TanoanHead_A3_01","WhiteHead_01","WhiteHead_04","WhiteHead_05","AfricanHead_01","WhiteHead_13"];
+
+_forenames = ["Thomas", "Nicolas", "Julien", "Quentin", "Maxime", "Antoine", "Clement", "Pierre", "Lucas", "Florian", "Guillaume", "Valentin", "Jérémy"];
+_surnames = ["Mercier", "Bernard", "Durand", "Dubois", "Moreau", "Blanc", "Laurent", "Michel", "Roux", "Girard", "Fournier", "Lambert"];
+_names = [_forenames, _surnames];
+
+CREATE_IDENTITY(cultist,_speakers,_faces,_names);
