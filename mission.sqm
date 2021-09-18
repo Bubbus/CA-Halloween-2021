@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3672.5972,118.59016,10091.995};
-		dir[]={-0.050879959,-0.56216562,0.82545811};
-		up[]={-0.034585383,0.82702476,0.56110072};
-		aside[]={0.99810582,3.7252903e-009,0.061521702};
+		pos[]={3698.7012,110.96391,10100.398};
+		dir[]={-0.088569924,-0.5305264,0.84303272};
+		up[]={-0.055433031,0.84766436,0.52762705};
+		aside[]={0.99453104,3.8271537e-008,0.10448615};
 	};
 };
 binarizationWanted=0;
@@ -9352,15 +9352,39 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3724.4202,42.253727,10190.258};
-				angles[]={-0,5.6335845,0};
+				angles[]={0,5.6335912,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				lock="LOCKED";
 			};
 			id=1518;
 			type="CUP_C_DC3_TanoAir_CIV";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit"",""Medikit""],[10,1]],[[""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[2,2,2]],[[""ToolKit""],[1]],[[""B_Parachute""],[16]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item49
 		{
@@ -9368,15 +9392,39 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3694.1638,42.253727,10195.919};
-				angles[]={-0,5.6335845,0};
+				angles[]={0,5.6335912,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				lock="LOCKED";
 			};
 			id=1519;
 			type="CUP_C_DC3_TanoAir_CIV";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit"",""Medikit""],[10,1]],[[""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[2,2,2]],[[""ToolKit""],[1]],[[""B_Parachute""],[16]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item50
 		{
@@ -9384,15 +9432,39 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3661.7021,42.253727,10201.172};
-				angles[]={-0,5.6335845,0};
+				angles[]={0,5.6335912,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				lock="LOCKED";
 			};
 			id=1520;
 			type="CUP_C_DC3_TanoAir_CIV";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""FirstAidKit"",""Medikit""],[10,1]],[[""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[2,2,2]],[[""ToolKit""],[1]],[[""B_Parachute""],[16]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item51
 		{
