@@ -28,9 +28,9 @@ class Header
 // ============================================================================================
 
 
-onLoadName = "*** Insert mission name here. ***";
-onLoadMission = "Made with the CA2 Framework";
-author = "*** Insert mission author name here. ***";
+onLoadName = "Part 2";
+onLoadMission = "Montana Miller and the Heart of Darkness";
+author = "Gibbusfilm Games LLC";
 loadScreen = "ca_logo_large.jpg";
 
 
@@ -175,8 +175,8 @@ class CfgDebriefing
 {
 	class End1
 	{
-		title = "Ending #1";
-		subtitle = "";
+		title = "Escaped the Heart";
+		subtitle = "But where will you emerge?";
 		description = "Please post to the AAR thread!";
 		// pictureBackground = "";
 		// picture = "";
@@ -185,8 +185,8 @@ class CfgDebriefing
 
 	class End2
 	{
-		title = "Ending #2";
-		subtitle = "";
+		title = "Heart stopped";
+		subtitle = "can it truly be killed?";
 		description = "Please post to the AAR thread!";
 		// pictureBackground = "";
 		// picture = "";
@@ -195,8 +195,8 @@ class CfgDebriefing
 
 	class End3
 	{
-		title = "Ending #3";
-		subtitle = "";
+		title = "Party perished";
+		subtitle = "there won't be a sequel";
 		description = "Please post to the AAR thread!";
 		// pictureBackground = "";
 		// picture = "";
