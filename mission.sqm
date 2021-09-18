@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3698.7012,110.96391,10100.398};
-		dir[]={-0.088569924,-0.5305264,0.84303272};
-		up[]={-0.055433031,0.84766436,0.52762705};
-		aside[]={0.99453104,3.8271537e-008,0.10448615};
+		pos[]={3491.1802,142.27495,10165.377};
+		dir[]={0.87806433,-0.47837955,0.013130293};
+		up[]={0.47833467,0.87814796,0.007152441};
+		aside[]={0.014950769,7.4302079e-008,-0.99989957};
 	};
 };
 binarizationWanted=0;
@@ -8245,7 +8245,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=53;
+		items=52;
 		class Item0
 		{
 			dataType="Logic";
@@ -8784,19 +8784,6 @@ class Mission
 		};
 		class Item12
 		{
-			dataType="Trigger";
-			position[]={3607.8457,40.018715,10263.301};
-			class Attributes
-			{
-				condition="thisList call f_fnc_ignoreZeus";
-				activationBy="ANY";
-			};
-			id=1282;
-			type="EmptyDetectorAreaR50";
-			atlOffset=3.8146973e-006;
-		};
-		class Item13
-		{
 			dataType="Object";
 			class PositionInfo
 			{
@@ -8812,7 +8799,7 @@ class Mission
 			id=1337;
 			type="B_Kitbag_rgr";
 		};
-		class Item14
+		class Item13
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -8823,7 +8810,7 @@ class Mission
 			type="AdvancedAICommand_Commanders";
 			atlOffset=5.8341713;
 		};
-		class Item15
+		class Item14
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8862,7 +8849,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item16
+		class Item15
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -8876,7 +8863,7 @@ class Mission
 			type="HeadlessClient_F";
 			atlOffset=4.321022;
 		};
-		class Item17
+		class Item16
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -8890,7 +8877,7 @@ class Mission
 			type="HeadlessClient_F";
 			atlOffset=4.7376862;
 		};
-		class Item18
+		class Item17
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -8904,7 +8891,7 @@ class Mission
 			type="HeadlessClient_F";
 			atlOffset=4.5242729;
 		};
-		class Item19
+		class Item18
 		{
 			dataType="Object";
 			class PositionInfo
@@ -8994,7 +8981,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item20
+		class Item19
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9011,7 +8998,7 @@ class Mission
 			id=1381;
 			type="B_AssaultPack_mcamo";
 		};
-		class Item21
+		class Item20
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9029,7 +9016,7 @@ class Mission
 			id=1382;
 			type="B_AssaultPack_ocamo";
 		};
-		class Item22
+		class Item21
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9046,7 +9033,7 @@ class Mission
 			id=1383;
 			type="B_AssaultPack_dgtl";
 		};
-		class Item23
+		class Item22
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9063,7 +9050,7 @@ class Mission
 			id=1385;
 			type="B_CivilianBackpack_01_Everyday_IDAP_F";
 		};
-		class Item24
+		class Item23
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9075,7 +9062,7 @@ class Mission
 			description="Players start here (or land here in later iterations).  Minor airport setpiece work needed.";
 			id=1493;
 		};
-		class Item25
+		class Item24
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9087,7 +9074,7 @@ class Mission
 			description="AHHH! All of our people here are dead! Bodies, blood, idols, etc.";
 			id=1494;
 		};
-		class Item26
+		class Item25
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9100,7 +9087,7 @@ class Mission
 			id=1495;
 			atlOffset=0.00030899048;
 		};
-		class Item27
+		class Item26
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9113,7 +9100,7 @@ class Mission
 			id=1496;
 			atlOffset=5.3405762e-005;
 		};
-		class Item28
+		class Item27
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9125,7 +9112,7 @@ class Mission
 			id=1497;
 			atlOffset=3.8606262;
 		};
-		class Item29
+		class Item28
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9136,7 +9123,7 @@ class Mission
 			description="Set piece work for cultist base. Potential spawn point for players, maybe?";
 			id=1498;
 		};
-		class Item30
+		class Item29
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9148,7 +9135,7 @@ class Mission
 			id=1499;
 			atlOffset=0.00024414063;
 		};
-		class Item31
+		class Item30
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9160,7 +9147,7 @@ class Mission
 			id=1500;
 			atlOffset=3.0517578e-005;
 		};
-		class Item32
+		class Item31
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9172,7 +9159,7 @@ class Mission
 			id=1502;
 			atlOffset=7.6293945e-006;
 		};
-		class Item33
+		class Item32
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9184,7 +9171,7 @@ class Mission
 			id=1503;
 			atlOffset=1.5258789e-005;
 		};
-		class Item34
+		class Item33
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9196,7 +9183,7 @@ class Mission
 			id=1504;
 			atlOffset=-7.6293945e-005;
 		};
-		class Item35
+		class Item34
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9208,7 +9195,7 @@ class Mission
 			id=1505;
 			atlOffset=0.0001373291;
 		};
-		class Item36
+		class Item35
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9220,7 +9207,7 @@ class Mission
 			id=1506;
 			atlOffset=-9.1552734e-005;
 		};
-		class Item37
+		class Item36
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9231,7 +9218,7 @@ class Mission
 			description="Supply cache with period-appropriate weapons. Should be signposted in some way.";
 			id=1507;
 		};
-		class Item38
+		class Item37
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9242,7 +9229,7 @@ class Mission
 			description="Supply cache with period-appropriate weapons. Should be signposted in some way.";
 			id=1508;
 		};
-		class Item39
+		class Item38
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9253,7 +9240,7 @@ class Mission
 			description="Supply cache with period-appropriate weapons. Should be signposted in some way.";
 			id=1509;
 		};
-		class Item40
+		class Item39
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9264,7 +9251,7 @@ class Mission
 			description="Supply cache with period-appropriate weapons. Should be signposted in some way.";
 			id=1510;
 		};
-		class Item41
+		class Item40
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9276,7 +9263,7 @@ class Mission
 			id=1511;
 			atlOffset=-1.5258789e-005;
 		};
-		class Item42
+		class Item41
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9288,7 +9275,7 @@ class Mission
 			id=1512;
 			atlOffset=-8.392334e-005;
 		};
-		class Item43
+		class Item42
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9300,7 +9287,7 @@ class Mission
 			id=1513;
 			atlOffset=-3.0517578e-005;
 		};
-		class Item44
+		class Item43
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9311,7 +9298,7 @@ class Mission
 			description="Player spawn point. Make sure radar station is visible from here.";
 			id=1514;
 		};
-		class Item45
+		class Item44
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9323,7 +9310,7 @@ class Mission
 			id=1515;
 			atlOffset=-1.5258789e-005;
 		};
-		class Item46
+		class Item45
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9334,7 +9321,7 @@ class Mission
 			description="Supply cache with period-appropriate weapons. Should be signposted in some way.";
 			id=1516;
 		};
-		class Item47
+		class Item46
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -9346,7 +9333,7 @@ class Mission
 			id=1517;
 			atlOffset=0.00039672852;
 		};
-		class Item48
+		class Item47
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9386,7 +9373,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item49
+		class Item48
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9426,7 +9413,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item50
+		class Item49
 		{
 			dataType="Object";
 			class PositionInfo
@@ -9466,7 +9453,7 @@ class Mission
 				nAttributes=1;
 			};
 		};
-		class Item51
+		class Item50
 		{
 			dataType="Layer";
 			name="sogchamps";
@@ -14957,7 +14944,7 @@ class Mission
 			};
 			id=1589;
 		};
-		class Item52
+		class Item51
 		{
 			dataType="Group";
 			side="West";
