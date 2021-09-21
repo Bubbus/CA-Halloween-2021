@@ -68,23 +68,54 @@ class CA_ZeusUI_Units
 
 		class M2A4_Slammer_UP
 		{
-			unitName = "M54 Truck";		// This is the name of the vehicle which will be shown in-game.
-			vehicle = "vn_b_wheeled_m54_01";		// This is the classname of the vehicle. You can get it by right-clicking a vehicle in 3DEN and selecting "Log > Log classes to clipboard"
-			units[] = {"rif"};		// This is the crew of the vehicle.  The first unit in the list is always the commander.
+			unitName = "M2A4 Slammer UP";		// This is the name of the vehicle which will be shown in-game.
+			vehicle = "B_MBT_01_TUSK_F";		// This is the classname of the vehicle. You can get it by right-clicking a vehicle in 3DEN and selecting "Log > Log classes to clipboard"
+			units[] = {"crew", "crew", "crew"};		// This is the crew of the vehicle.  The first unit in the list is always the commander.
 		};
 
 		class AMV7_Marshall		// Classnames can't contain '-'
 		{
-			unitName = "Willys Jeep";
-			vehicle = "vn_i_wheeled_m151_01";
-			units[] = {"rif"};
+			unitName = "AMV-7 Marshall";
+			vehicle = "B_APC_Wheeled_01_cannon_F";
+			units[] = {"crew", "crew", "crew"};
+		};
+
+		class AMV_7_Reinforcements
+		{
+			unitName = "AMV-7 Marshall + Squad 6x"
+			vehicle = "B_APC_Wheeled_01_cannon_F";
+			units[] = {"crew", "crew", "crew"};
+			reinforcements[] = {"ftl", "ar", "aar", "lat", "rif", "mk"}; // When defined, this group spawns in the cargo space of the vehicle. The vehicle gets a TR unload waypoint and a RTB waypoint (only if it's unarmed), the group a Move waypoint. The vehicle will also despawn on RTB. If the vehicle is a Heli, it will spawn flying and always RTB
 		};
 
 		class IFV6C_Panther
 		{
-			unitName = "Repair Truck";
-			vehicle = "vn_i_wheeled_m54_repair";
-			units[] = {"rif"};
+			unitName = "IFV-6C Panther";
+			vehicle = "B_APC_Tracked_01_rcws_F";
+			units[] = {"crew", "crew", "crew"};
+		};
+
+		class IFV6C_Panther_Reinforcements
+		{
+			unitName = "IFV-6C Panther + Squad 6x";
+			vehicle = "B_APC_Tracked_01_rcws_F";
+			units[] = {"crew", "crew", "crew"};
+			reinforcements[] = {"ftl", "ar", "aar", "lat", "rif", "mk"};
+		};
+
+		class Hunter_HMG
+		{
+			unitName = "Hunter HMG";
+			vehicle = "B_MRAP_01_HMG_F";
+			units[] = {"ftl", "rif", "rif"};
+		};
+
+		class HEMTT_Reinforcements
+		{
+			unitName = "HEMTT Transport + Section 9x";
+			vehicle = "B_Truck_01_covered_F";
+			units[] = {"rif", "rif"};
+			reinforcements[] = {"ftl", "ar", "aar", "lat", "med", "mk", "rif", "rif", "rif"};
 		};
 	};
 
@@ -146,119 +177,141 @@ class CA_ZeusUI_Units
 
 		class T100_Varsuk		// Classnames can't contain '-'
 		{
-			unitName = "Jeep Transport";
-			vehicle = "vn_c_wheeled_m151_01";
-			units[] = {"rif", "ar", "aar"};
+			unitName = "T-100 Varsuk";
+			vehicle = "O_MBT_02_cannon_F";
+			units[] = {"crew", "crew", "crew"};
 		};
 
 		class MSE3_Marid
 		{
-			unitName = "Truck (DShK)";
-			vehicle = "vn_o_wheeled_z157_mg_01_vcmf";
-			units[] = {"rif", "rif", "rif"};
+			unitName = "MSE-3 Marid";
+			vehicle = "O_APC_Wheeled_02_rcws_F";
+			units[] = {"crew", "crew", "crew"};
 		};
 
 		class MSE3_Marid_Reinforcements
 		{
-			unitName = "Truck + Section 9x";
-			vehicle = "vn_o_wheeled_z157_01_vcmf";
-			units[] = {"rif"};
-			reinforcements[] = {"ftl", "ar", "aar", "lat", "rif", "rif", "rif", "rif", "mk"};
+			unitName = "MSE-3 Marid + Squad 6x";
+			vehicle = "O_APC_Wheeled_02_rcws_F";
+			units[] = {"crew", "crew", "crew"};
+			reinforcements[] = {"ftl", "ar", "aar", "lat", "rif", "mk"};
 		};
 
+		class BTRK_Kamysh
+		{
+			unitName = "BTR-K Kamysh";
+			vehicle = "O_APC_Tracked_02_cannon_F";
+			units[] = {"crew", "crew", "crew"};
+		};
+
+		class BTRK_Kamysh_Reinforcements
+		{
+			unitName = "BTR-K Kamysh + Squad 6x";
+			vehicle = "O_APC_Tracked_02_cannon_F";
+			units[] = {"crew", "crew", "crew"};
+			reinforcements[] = {"ftl", "ar", "aar", "lat", "rif", "mk"};
+		};
+
+		class Ifrit_HMG
+		{
+			unitName = "Ifrit HMG";
+			vehicle = "O_MRAP_02_HMG_F";
+			units[] = {"ftl", "rif", "rif"};
+		};
+
+		class Tempest_Reinforcements
+		{
+			unitName = "Tempest Transport + Section 9x";
+			vehicle = "O_Truck_03_covered_F";
+			units[] = {"rif", "rif"};
+			reinforcements[] = {"ftl", "ar", "aar", "lat", "med", "mk", "rif", "rif", "rif"};
+		};
 	};
 
 	class INDFOR_Infantry
 	{
-		categoryName = "INDFOR Infantry";
+		categoryName = "Mike Force Infantry";
 		gear = "ind_f";
 		side = "resistance";
 
 		// Units definition
 		class Rifleman
 		{
-			unitName = "INDFOR Rifleman";		// This is the name of the squad which will be shown in-game.
+			unitName = "MF Rifleman";		// This is the name of the squad which will be shown in-game.
 			units[] = {"rif"};			// This is the squad which will spawn - this just spawns one rifleman.
 		};
 
 		class Fireteam_4x
 		{
-			unitName = "INDFOR Fireteam 4x";
+			unitName = "MF Fireteam 4x";
 			units[] = {"ftl", "ar", "lat", "rif"};
 		};
 
 		class Squad_6x
 		{
-			unitName = "INDFOR Squad 6x";
+			unitName = "MF Squad 6x";
 			units[] = {"ftl", "ar", "aar", "lat", "rif", "mk"};	// This spawns a full 6-man fireteam. You can have as many or as few units in a squad as you want.
 		};
 
 		class Section_9x
 		{
-			unitName = "INDFOR Section 9x";
-			units[] = {"ftl", "ar", "aar", "lat", "med", "mk", "rif", "rif", "rif"};
+			unitName = "MF Section 9x";
+			units[] = {"ftl", "ar", "aar", "ar", "med", "mk", "aar", "rif", "rif"};
 		};
 
 		class LAT_Team
 		{
-			unitName = "INDFOR LAT Team";
+			unitName = "MF LAT Team";
 			units[] = {"rif", "lat"};
 		};
 
 		class AR_Team
 		{
-			unitName = "INDFOR AR Team";
+			unitName = "MF AR Team";
 			units[] = {"aar", "ar"};
 		};
 
 		class MK_Team
 		{
-			unitName = "INDFOR MK Team";
+			unitName = "MF MK Team";
 			units[] = {"rif", "mk"};
 		};
 	};
 
 	class INDFOR_Vehicles
 	{
-		categoryName = "INDFOR Vehicles";
+		categoryName = "Mike Force Vehicles";
 		gear = "ind_f";
 		side = "resistance";
 
 		class MBT52_Kuma		// Classnames can't contain '-'
 		{
-			unitName = "Jeep Transport";
-			vehicle = "vn_i_wheeled_m151_01";
+			unitName = "Jeep (50 Cal)";
+			vehicle = "vn_b_wheeled_m151_mg_03";
+			units[] = {"rif", "rif"};
+		};
+
+		class AFV4_Gorgon
+		{
+			unitName = "Jeep (Unarmed)";
+			vehicle = "vn_b_wheeled_m151_02";
 			units[] = {"rif", "rif", "rif"};
 		};
 
-		class MBT52_Coomer		// Classnames can't contain '-'
-		{
-			unitName = "Jeep MMG";
-			vehicle = "vn_i_wheeled_m151_mg_01";
-			units[] = {"rif", "rif", "rif"};
-		};
-
-		class AFV4_Gorgon_Reinforcements
-		{
-			unitName = "Truck + Section 9x";
-			vehicle = "vn_i_wheeled_m54_01";
-			units[] = {"rif"};
-			reinforcements[] = {"ftl", "ar", "aar", "lat", "rif", "rif", "rif", "rif", "mk"};
-		};
-
-		class Huey_Reinforcements
+		class FV720_Mora_Reinforcements
 		{
 			unitName = "Huey + Squad 6x";
-			vehicle = "vn_b_air_uh1c_07_06";
+			vehicle = "vn_b_air_uh1c_07_07";
 			units[] = {"rif", "rif", "rif"};
 			reinforcements[] = {"ftl", "ar", "aar", "lat", "rif", "mk"};
 		};
 
-		class BTRK_Kamysh_Reinforcements
+		class Zamak_Reinforcements
 		{
-			unitName = "Huey";
-			vehicle = "vn_b_air_uh1c_07_06";
-			units[] = {"rif", "rif", "rif"};
+			unitName = "Truck + Section 9x";
+			vehicle = "vn_b_wheeled_m54_01";
+			units[] = {"rif", "rif"};
+			reinforcements[] = {"ftl", "ar", "aar", "ar", "med", "mk", "rif", "rif", "rif"};
 		};
 	};
 };
