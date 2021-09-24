@@ -75,8 +75,14 @@ private _emptyColArray = [1, 1, 0, [0, 0, 0, 0], [1, 1, 1, 1], [0.299, 0.587, 0.
         (_this#2) ppEffectEnable true;
         (_this#2) ppEffectAdjust (_this#3);
         (_this#2) ppEffectCommit 0.2;
+
+        if (_this#4) then
+        {
+            private _modelLocalForcePos = player selectionPosition "pelvis";
+            player addForce [[0, -1000, 0], _modelLocalForcePos];
+        };
     },
-    [_painEffect, _chromArray, _painFade, _colArray],
+    [_painEffect, _chromArray, _painFade, _colArray, _doKnockout],
     _soundDelay + (_painTimings#0)
 
 ] call CBA_fnc_waitAndExecute;
@@ -127,7 +133,7 @@ if (_doKnockout) then
             (_this#2) ppEffectCommit 5;
         },
         [_painEffect, _emptyChromArray, _painFade, _emptyColArray],
-        _soundDelay + (_painTimings#1) + 10
+        _soundDelay + (_painTimings#1) + 10.3
 
     ] call CBA_fnc_waitAndExecute;
 
@@ -136,7 +142,7 @@ if (_doKnockout) then
             ppEffectDestroy _this;
         },
         [_painEffect, _painFade],
-        _soundDelay + (_painTimings#1) + 15.1
+        _soundDelay + (_painTimings#1) + 15.4
 
     ] call CBA_fnc_waitAndExecute;
 }

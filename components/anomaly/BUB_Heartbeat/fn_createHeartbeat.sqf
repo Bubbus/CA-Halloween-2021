@@ -21,15 +21,15 @@ uiSleep 15;
 
 [_baseObj, 1] spawn f_fnc_doHeartbeatPulse;
 
-uiSleep 13;
+uiSleep 11.5;
 
 [_baseObj, 2] spawn f_fnc_doHeartbeatPulse;
 
-uiSleep 13;
+uiSleep 11.5;
 
 [_baseObj, 3] spawn f_fnc_doHeartbeatPulse;
 
-uiSleep 13;
+uiSleep 11.5;
 
 [_baseObj, 4, true] spawn f_fnc_doHeartbeatPulse;
 
