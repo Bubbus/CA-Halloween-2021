@@ -1,4 +1,6 @@
 // by ALIAS
+// Heavily modified by Bubbus
+
 var_sparkyAnomaly_visibleDistance = 450;
 
 private ["_obiect_orb","_mark_orig"];
@@ -235,9 +237,9 @@ _sparkyAttack =
 
 if (hasInterface) then
 {
-	[_obiect_orb, _sparkyAttack] spawn
+	[_obiect_orb, _sparkyAttack, _baseObj] spawn
 	{
-		params ["_obiect_orb", "_sparkyAttack"];
+		params ["_obiect_orb", "_sparkyAttack", "_baseObj"];
 
 		while {alive _obiect_orb} do
 	    {
@@ -246,12 +248,12 @@ if (hasInterface) then
 	        {
 	            sleep (_distance / 100) max 0.1;
 	            _distance = (player distance _obiect_orb);
-	            (_distance < 10)
+	            (_distance < 8)
 	        };
 
-	        if !(((isDamageAllowed player) and {!(player getVariable ["anomalyIgnore", false])}) or {uniform player == "U_B_CBRN_Suit_01_MTP_F"}) then
+	        if (((isDamageAllowed player) and {!(player getVariable ["anomalyIgnore", false])}) and {(uniform player) isNotEqualTo "U_B_CBRN_Suit_01_MTP_F"}) then
 	        {
-	            [[player], (getpos _obiect_orb)] call _sparkyAttack;
+				_baseObj setVariable ["playerTriggeredAttack", true, true];
 	        };
 
 	        sleep 2;
@@ -266,21 +268,37 @@ if (hasInterface) then
 
 if (isServer) then
 {
-	[_obiect_orb, _sparkyAttack] spawn
+	[_obiect_orb, _sparkyAttack, _baseObj] spawn
 	{
-		params ["_obiect_orb", "_sparkyAttack"];
+		params ["_obiect_orb", "_sparkyAttack", "_baseObj"];
 
-		while {alive _obiect_orb} do
-		{
+		while {(alive _obiect_orb) and {alive _baseObj}} do
+		{			
+			private _attackWasTriggered = _baseObj getVariable ["playerTriggeredAttack", false];
+			_baseObj setVariable ["playerTriggeredAttack", false, true];
+
 			_list_units_in_range = (getPos _obiect_orb) nearEntities ["CAManBase", 10];
-			_list_units_in_range = _list_units_in_range select {(!(isPlayer _x)) and {!(uniform _x == "U_B_CBRN_Suit_01_MTP_F")}};
+			_list_units_in_range = _list_units_in_range select {((isDamageAllowed _x) and {!(_x getVariable ["anomalyIgnore", false])}) and {(uniform _x) isNotEqualTo "U_B_CBRN_Suit_01_MTP_F"}};
 
-			if (count _list_units_in_range > 0) then
+			private _attackOccurred = false;
+			if (_attackWasTriggered or {count _list_units_in_range > 0}) then
 			{
 				[_list_units_in_range, (getpos _obiect_orb)] call _sparkyAttack;
+				_attackOccurred = true;
 			};
 
-			sleep 3;
+			if (_attackOccurred) then
+			{
+				sleep 3;
+			}
+			else
+			{
+				private _nextIterTime = CBA_missionTime + 3;
+				waitUntil
+				{
+					(CBA_missionTime > _nextIterTime) or {(alive _baseObj) and {_baseObj getVariable ["playerTriggeredAttack", false]}}
+				};
+			};		
 
 		};
 

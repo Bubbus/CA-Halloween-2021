@@ -8,3 +8,4 @@
 #include "AL_screamer\functions.hpp"
 #include "AL_swarmer\functions.hpp"
 #include "AL_twins\functions.hpp"
+#include "BUB_Heartbeat\functions.hpp"

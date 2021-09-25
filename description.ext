@@ -1349,6 +1349,38 @@ class CfgSounds
 
 	// END: Twins
 
+	// START: Heartbeat
+
+	class BUB_Heartbeat_heart1
+	{
+		name = "heart1";
+		sound[] = {"\sounds\BUB_Heartbeat\heart_1.wav", db+30, 1};
+		titles[] = {};
+	};
+
+	class BUB_Heartbeat_heart2
+	{
+		name = "heart1";
+		sound[] = {"\sounds\BUB_Heartbeat\heart_2.wav", db+30, 1};
+		titles[] = {};
+	};
+
+	class BUB_Heartbeat_heart3
+	{
+		name = "heart1";
+		sound[] = {"\sounds\BUB_Heartbeat\heart_3.wav", db+30, 1};
+		titles[] = {};
+	};
+
+	class BUB_Heartbeat_heart4
+	{
+		name = "heart1";
+		sound[] = {"\sounds\BUB_Heartbeat\heart_4.wav", db+30, 1};
+		titles[] = {};
+	};
+
+	// END: Heartbeat
+
 };
 
 
