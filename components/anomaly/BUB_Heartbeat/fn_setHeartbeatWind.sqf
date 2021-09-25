@@ -19,9 +19,9 @@ if (_isOn) then
 
         while {_wind > -100} do
         {
-            sleep 1;
-            _wind = _wind - (100 / _time);
-            setWind [_wind, 0, true];
+            sleep 0.5;
+            _wind = _wind - (200 / _time);
+            setWind [0, _wind, true];
         };
 
     };
@@ -36,9 +36,9 @@ else
 
         while {_wind < 0} do
         {
-            sleep 1;
-            _wind = _wind + (100 / _time);
-            setWind [_wind, 0, true];
+            sleep 0.5;
+            _wind = _wind + (200 / _time);
+            setWind [0, _wind, true];
         };
 
         _wind = f_var_heartbeatOriginalWind;

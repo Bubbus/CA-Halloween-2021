@@ -19,7 +19,7 @@ missionNamespace setVariable ["heartbeat_trackingObj", _baseObj, true];
 
 uiSleep 15;
 
-[_baseObj, 1] spawn f_fnc_doHeartbeatPulse;
+[_baseObj, 1, false, true] spawn f_fnc_doHeartbeatPulse;
 
 uiSleep 12;
 
