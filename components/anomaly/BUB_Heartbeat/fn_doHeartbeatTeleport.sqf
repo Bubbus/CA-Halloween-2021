@@ -45,7 +45,7 @@ CLIENT_ONLY;
         player setCaptive true;
         [player, true] call ACE_captives_fnc_setHandcuffed;
 
-        [player] call f_fnc_removeAllWeapons;
+        [player, true] call f_fnc_removeAllWeapons;
 
         private _telePoint = selectRandom ["tele_1","tele_2","tele_3","tele_4","tele_5","tele_6","tele_7","tele_8"];
 
@@ -60,6 +60,9 @@ CLIENT_ONLY;
 [
     {
 		"HeartbeatFade" cutFadeOut 1;
+        
+        1 fadeSound 1;
+        1 fadeSpeech 1;
     },
     [],
     8

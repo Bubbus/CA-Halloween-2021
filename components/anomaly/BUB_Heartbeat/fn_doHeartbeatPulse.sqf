@@ -4,14 +4,15 @@ CLIENT_ONLY;
 
 params ["_baseObj", ["_strength", 4], ["_doKnockout", false]];
 
+private _visEffectStrength = _strength;
+
+if (player getVariable ["anomalyIgnore", false]) then
+{
+    _visEffectStrength = 1;
+    _doKnockout = false;
+};
+
 // create sound source in near distance towards heart point
-
-// start heat wave rolling - set drop interval to 10s in between beats for two-step wave.
-
-// iter 1: static timings based on no movement
-// iter 1: coordinate sound effect with visual pain effect - lub dub.
-
-// if do knockout, special effect where 2nd visual is intense and leads to blackout.
 
 // Begin Blastwaves
 
@@ -25,6 +26,9 @@ private _soundClass = "BUB_Heartbeat_heart" + (str _strength);
 _attck_pos = (getposasl player) vectorAdd [0,_offset,0];
 _voice_attk = "Land_HelipadEmpty_F" createVehiclelocal _attck_pos;
 _voice_attk setPosAsL _attck_pos;
+
+private _earthquakeSound = f_arr_earthquakeSounds # (_strength - 1);
+_voice_attk say3D [_earthquakeSound, 2000];
 
 _bule_spark = "#particlesource" createVehicleLocal _attck_pos;
 _bule_spark setParticleCircle [0, [0, 0, 0]];
@@ -50,6 +54,8 @@ private _haltEffectDuration = 0.25;
 [{_this setDropInterval 0.0025}, _bule_spark2, _timings#1] call CBA_fnc_waitAndExecute;
 [{deleteVehicle _this}, _bule_spark2, _timings#2] call CBA_fnc_waitAndExecute;
 
+[{deleteVehicle _this}, _voice_attk, (_timings#2) + 10] call CBA_fnc_waitAndExecute;
+
 // End Blastwaves
 
 
@@ -58,11 +64,11 @@ private _haltEffectDuration = 0.25;
 private _painEffect = ppEffectCreate ["ChromAberration", 7182];
 private _painFade = ppEffectCreate ["ColorCorrections", 7183];
 
-private _chromIntensity = linearConversion [1, 4, _strength, 0.08, 0.32, true];
+private _chromIntensity = linearConversion [1, 4, _visEffectStrength, 0.08, 0.32, true];
 private _chromArray = [_chromIntensity, _chromIntensity, true];
 private _emptyChromArray = [0, 0, true];
 
-private _colIntensity = linearConversion [1, 4, _strength, 0.15, 1, true];
+private _colIntensity = linearConversion [1, 4, _visEffectStrength, 0.15, 1, true];
 private _colArray = [1 - _colIntensity, 1, 0, [0, 0, 0, 0], [1, 1, 1, 1], [0.299, 0.587, 0.114, 0], [-1, -1, 0, 0, 0, 0, 0]];
 private _emptyColArray = [1, 1, 0, [0, 0, 0, 0], [1, 1, 1, 1], [0.299, 0.587, 0.114, 0], [-1, -1, 0, 0, 0, 0, 0]];
 

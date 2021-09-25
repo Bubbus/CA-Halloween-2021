@@ -17,3 +17,5 @@ f_arr_heartbeatPainTimings =
     [0, 2],
     [0, 2]
 ];
+
+f_arr_earthquakeSounds = ["Earthquake_03","Earthquake_03","Earthquake_03","Earthquake_04"];
