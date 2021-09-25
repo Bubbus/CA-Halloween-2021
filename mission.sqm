@@ -8,26 +8,26 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2038;
+		nextID=2050;
 	};
 	class MarkerIDProvider
 	{
-		nextID=5;
+		nextID=6;
 	};
 	class LayerIndexProvider
 	{
-		nextID=2;
+		nextID=6;
 	};
 	class Camera
 	{
-		pos[]={2883.2202,184.00993,13043.203};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={3654.3359,108.38672,10085.179};
+		dir[]={0.80483717,-0.47227028,0.35944128};
+		up[]={0.43122017,0.88145381,0.19258347};
+		aside[]={0.40778232,0,-0.91307926};
 	};
 };
 binarizationWanted=0;
-sourceName="CA-Halloween-2021-Part-2";
+sourceName="Halloween2021Part2";
 addons[]=
 {
 	"A3_Modules_F_Curator_Curator",
@@ -52,13 +52,24 @@ addons[]=
 	"A3_Structures_F_Civ_Camping",
 	"A3_Missions_F_Oldman",
 	"A3_Structures_F_Items_Vessels",
-	"cba_xeh"
+	"cba_xeh",
+	"characters_f_vietnam_c",
+	"A3_Weapons_F",
+	"CUP_Creatures_Military_PMC",
+	"A3_Characters_F_Exp",
+	"acre_sys_prc343",
+	"acre_sys_prc152",
+	"ace_medical_treatment",
+	"ace_maptools",
+	"ace_flashlights",
+	"cfp_vests",
+	"wheeled_f_vietnam_c"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=20;
+		items=30;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -189,13 +200,82 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item20
+		{
+			className="characters_f_vietnam_c";
+			name="characters_f_vietnam_c";
+			author="Savage Game Design";
+			url="https://www.arma3.com";
+		};
+		class Item21
+		{
+			className="CUP_Creatures_Military_PMC";
+			name="CUP_Creatures_Military_PMC";
+		};
+		class Item22
+		{
+			className="A3_Characters_F_Exp";
+			name="Arma 3 Apex - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item23
+		{
+			className="acre_sys_prc343";
+			name="ACRE2 - AN/PRC-343";
+			author="ACRE2Team";
+			url="https://github.com/IDI-Systems/acre2";
+		};
+		class Item24
+		{
+			className="acre_sys_prc152";
+			name="ACRE2 - AN/PRC-152";
+			author="ACRE2Team";
+			url="https://github.com/IDI-Systems/acre2";
+		};
+		class Item25
+		{
+			className="ace_medical_treatment";
+			name="ACE3 - Medical Treatment";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item26
+		{
+			className="ace_maptools";
+			name="ACE3 - Map Tools";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item27
+		{
+			className="ace_flashlights";
+			name="ACE3 - Flashlights";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item28
+		{
+			className="cfp_vests";
+			name="cfp_vests";
+			author="CFP Team";
+		};
+		class Item29
+		{
+			className="wheeled_f_vietnam_c";
+			name="wheeled_f_vietnam_c";
+			author="Savage Game Design";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
 {
 	"3den_objects_mod",
 	"AoW",
-	"CUP_Vehicles"
+	"CUP_Vehicles",
+	"CUP_Units",
+	"Expansion"
 };
 randomSeed=1116085;
 class ScenarioData
@@ -8310,7 +8390,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=104;
+		items=115;
 		class Item0
 		{
 			dataType="Logic";
@@ -14994,7 +15074,6 @@ class Mission
 						init="[""zeus"", this] call f_fnc_assignGear;";
 						name="zeus_ply";
 						description="Zeus Player@Zeus";
-						isPlayer=1;
 						isPlayable=1;
 					};
 					id=1970;
@@ -15354,13 +15433,13 @@ class Mission
 				angles[]={6.1815381,0,6.1973953};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				init="[""crate_mike"", this, ""blu_f""] call f_fnc_assignGear;";
 			};
 			id=1973;
 			type="vn_b_ammobox_full_07";
+			atlOffset=0.40066528;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15441,6 +15520,7 @@ class Mission
 			};
 			id=1975;
 			type="vn_b_ammobox_full_07";
+			atlOffset=0.097442627;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15481,6 +15561,7 @@ class Mission
 			};
 			id=1976;
 			type="vn_b_ammobox_full_07";
+			atlOffset=0.0013427734;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15521,6 +15602,7 @@ class Mission
 			};
 			id=1977;
 			type="vn_b_ammobox_full_07";
+			atlOffset=-0.075164795;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15561,6 +15643,7 @@ class Mission
 			};
 			id=1978;
 			type="vn_b_ammobox_full_07";
+			atlOffset=-0.013595581;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15640,6 +15723,7 @@ class Mission
 			};
 			id=1980;
 			type="vn_b_ammobox_full_07";
+			atlOffset=-0.3989563;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -15934,7 +16018,7 @@ class Mission
 			flags=1;
 			id=1989;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=0.00054931641;
+			atlOffset=0.0016174316;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -16115,7 +16199,7 @@ class Mission
 			};
 			id=1994;
 			type="vn_o_prop_t102e_01";
-			atlOffset=0.022827148;
+			atlOffset=0.031799316;
 		};
 		class Item69
 		{
@@ -16296,7 +16380,7 @@ class Mission
 			};
 			id=2010;
 			type="vn_air_uh1d_01_wreck";
-			atlOffset=-0.50115967;
+			atlOffset=-0.57211304;
 		};
 		class Item81
 		{
@@ -16313,6 +16397,7 @@ class Mission
 			};
 			id=2011;
 			type="vn_campfire_burning_f";
+			atlOffset=-0.0026245117;
 		};
 		class Item82
 		{
@@ -16346,6 +16431,7 @@ class Mission
 			};
 			id=2015;
 			type="vn_campfire_burning_f";
+			atlOffset=0.00044250488;
 		};
 		class Item84
 		{
@@ -16379,6 +16465,7 @@ class Mission
 			};
 			id=2017;
 			type="vn_campfire_burning_f";
+			atlOffset=-0.0002746582;
 		};
 		class Item86
 		{
@@ -16538,6 +16625,7 @@ class Mission
 			};
 			id=2027;
 			type="MetalBarrel_burning_F";
+			atlOffset=-0.00076293945;
 		};
 		class Item96
 		{
@@ -16618,6 +16706,7 @@ class Mission
 			};
 			id=2033;
 			type="vn_o_prop_t884_01";
+			atlOffset=0.0010528564;
 		};
 		class Item101
 		{
@@ -16634,6 +16723,7 @@ class Mission
 			};
 			id=2034;
 			type="vn_o_prop_t884_01";
+			atlOffset=-9.1552734e-005;
 		};
 		class Item102
 		{
@@ -16666,6 +16756,246 @@ class Mission
 			};
 			id=2037;
 			type="vn_o_prop_t884_01";
+		};
+		class Item104
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2666.75,267.44943,12799.301};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="U_B_T_FullGhillie_tna_F";
+								isBackpack=0;
+								class ItemCargo
+								{
+									items=10;
+									class Item0
+									{
+										name="ACRE_PRC343";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACRE_PRC152";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_elasticBandage";
+										count=4;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=2;
+									};
+									class Item4
+									{
+										name="ACE_splint";
+										count=2;
+									};
+									class Item5
+									{
+										name="ACE_tourniquet";
+										count=2;
+									};
+									class Item6
+									{
+										name="ACE_MapTools";
+										count=1;
+									};
+									class Item7
+									{
+										name="ACE_Flashlight_XL50";
+										count=1;
+									};
+									class Item8
+									{
+										name="ACE_bloodIV_500";
+										count=1;
+									};
+									class Item9
+									{
+										name="ACE_packingBandage";
+										count=3;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="CFP_TakJacket_M81";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							goggles="CUP_PMC_Facewrap_Skull";
+						};
+					};
+					id=2039;
+					type="vn_b_men_sog_07";
+					atlOffset=3.0517578e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male02ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2038;
+			atlOffset=3.0517578e-005;
+		};
+		class Item105
+		{
+			dataType="Marker";
+			position[]={4356.27,131.812,13241.033};
+			name="tele_1";
+			type="Empty";
+			id=2040;
+			atlOffset=0.00019836426;
+		};
+		class Item106
+		{
+			dataType="Marker";
+			position[]={4617.54,204.94099,12710.979};
+			name="tele_2";
+			type="Empty";
+			id=2041;
+			atlOffset=0.00019836426;
+		};
+		class Item107
+		{
+			dataType="Marker";
+			position[]={4006.0127,166.52478,12555.969};
+			name="tele_3";
+			type="Empty";
+			id=2042;
+			atlOffset=0.00019836426;
+		};
+		class Item108
+		{
+			dataType="Marker";
+			position[]={3465.9707,223.1255,12421.909};
+			name="tele_4";
+			type="Empty";
+			id=2043;
+			atlOffset=0.00019836426;
+		};
+		class Item109
+		{
+			dataType="Marker";
+			position[]={2755.5342,117.37059,12322.446};
+			name="tele_5";
+			type="Empty";
+			id=2044;
+			atlOffset=0.00019836426;
+		};
+		class Item110
+		{
+			dataType="Marker";
+			position[]={2091.304,91.605515,12587.163};
+			name="tele_6";
+			type="Empty";
+			id=2045;
+			atlOffset=0.00019836426;
+		};
+		class Item111
+		{
+			dataType="Marker";
+			position[]={1754.9877,98.838875,12926.05};
+			name="tele_7";
+			type="Empty";
+			id=2046;
+			atlOffset=0.00019836426;
+		};
+		class Item112
+		{
+			dataType="Marker";
+			position[]={1736.1285,201.33334,13592.295};
+			name="tele_8";
+			type="Empty";
+			id=2047;
+			atlOffset=0.00019836426;
+		};
+		class Item113
+		{
+			dataType="Marker";
+			position[]={2658.783,267.16125,12799.848};
+			name="tele_9";
+			type="Empty";
+			id=2048;
+			atlOffset=0.010131836;
+		};
+		class Item114
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3724.1931,40.94577,10142.827};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=2049;
+			type="vn_b_wheeled_m54_03";
 		};
 	};
 };
