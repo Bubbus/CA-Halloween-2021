@@ -2,7 +2,7 @@
 
 CLIENT_ONLY;
 
-params ["_baseObj", ["_strength", 4], ["_doKnockout", false]];
+params ["_baseObj", ["_strength", 4], ["_doKnockout", false], ["_doKillVic", false]];
 
 private _visEffectStrength = _strength;
 
@@ -11,8 +11,6 @@ if (player getVariable ["anomalyIgnore", false]) then
     _visEffectStrength = 1;
     _doKnockout = false;
 };
-
-// create sound source in near distance towards heart point
 
 // Begin Blastwaves
 
@@ -87,8 +85,18 @@ private _emptyColArray = [1, 1, 0, [0, 0, 0, 0], [1, 1, 1, 1], [0.299, 0.587, 0.
             private _modelLocalForcePos = player selectionPosition "pelvis";
             player addForce [[0, -1000, 0], _modelLocalForcePos];
         };
+
+        if (_this#5) then
+        {
+            private _isInVic = (vehicle player) isNotEqualTo player;
+
+            if (_isInVic and (local vehicle player)) then
+            {
+                (vehicle player) setFuel 0;
+            };
+        };
     },
-    [_painEffect, _chromArray, _painFade, _colArray, _doKnockout],
+    [_painEffect, _chromArray, _painFade, _colArray, _doKnockout, _doKillVic],
     _soundDelay + (_painTimings#0)
 
 ] call CBA_fnc_waitAndExecute;

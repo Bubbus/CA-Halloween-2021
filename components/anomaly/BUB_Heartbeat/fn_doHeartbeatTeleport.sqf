@@ -47,7 +47,7 @@ CLIENT_ONLY;
 
         [player, true] call f_fnc_removeAllWeapons;
 
-        private _telePoint = selectRandom ["tele_1","tele_2","tele_3","tele_4","tele_5","tele_6","tele_7","tele_8"];
+        private _telePoint = selectRandom ["tele_1","tele_2","tele_3","tele_4","tele_5","tele_6","tele_7","tele_8","tele_9"];
 
         player setPos (getMarkerPos _telePoint);
         player setVariable ["heartbeat_telePoint", _telePoint, true];
