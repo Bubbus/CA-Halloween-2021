@@ -33,6 +33,18 @@ switch (_side) do
 
 
 {
+	_type = _x;
+	
+	if (_type in ["cultist", "cultleader"]) then
+	{
+		switch (_side) do
+		{
+			case west: { _unittype = selectRandom ["B_soldier_Melee", "B_soldier_Melee_RUSH"]; };
+			case east: { _unittype = selectRandom ["O_soldier_Melee", "O_soldier_Melee_RUSH"]; };
+		};
+
+	};
+
     _unit = "";
 	_unit = _group createUnit [_unittype, _spawnpos, [], 0, "FORM"];
 
@@ -41,7 +53,6 @@ switch (_side) do
         _faction = faction _unit;
     };
 
-	_type = _x;
 	[_type,_unit,_faction] call f_fnc_assignGear;
 
 } forEach _unitarray;
