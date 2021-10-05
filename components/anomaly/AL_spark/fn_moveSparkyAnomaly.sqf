@@ -47,11 +47,13 @@ if (hasInterface) then
 			_ele setParticleParams [["\A3\data_f\blesk1", 1, 0, 1], "", "SpaceObject", 1, 0.15, [0, 0, 0], [0, 0, 0], 0.3, 11, 7.9, 0.075, [0.003, 0.003, 0.003], [[0.1, 0.1, 0.1, 0.5], [0.25, 0.25, 0.25, 0.5], [0.5, 0.5, 0.5, 0]], [0.08], 1, 0, "", "", _obiect_orb];
 			_ele setDropInterval 0.01;
 
+/*
 			_halo = "#particlesource" createVehicleLocal (getPosATL _obiect_orb);
 			_halo setParticleCircle [0, [0, 0, 0]];
 			_halo setParticleRandom [0, [0, 0, 0], [0, 0, 0], 0, 0, [0, 0, 0, 0], 0, 0];
 			_halo setParticleParams [["\A3\data_f\proxies\muzzle_flash\mf_sparks_01.p3d", 1, 0, 1], "", "SpaceObject", 1, 0.1, [0, 0, 0], [0, 0, 0.75], 13, 10, 7.9, 0.075, [0.5, 0.5], [[1, 1, 1, 1], [1, 1, 1, 1]], [0.08], 1, 0, "", "", _obiect_orb];
 			_halo setDropInterval 0.0033;
+			*/
 
 			_orb_lit = "#lightpoint" createVehiclelocal (getPosATL _obiect_orb);
 			_orb_lit lightAttachObject [_obiect_orb, [0,0,0]];
@@ -66,7 +68,7 @@ if (hasInterface) then
 			waitUntil {sleep 1; (!alive _obiect_orb) or {player distance _obiect_orb > var_sparkyAnomaly_visibleDistance}};
 
 			deleteVehicle _ele;
-			deleteVehicle _halo;
+			//deleteVehicle _halo;
 			deleteVehicle _orb_lit;
 
 			if !(alive _obiect_orb) exitWith {};

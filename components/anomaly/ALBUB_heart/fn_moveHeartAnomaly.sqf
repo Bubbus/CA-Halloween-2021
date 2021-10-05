@@ -1,14 +1,13 @@
 // by ALIAS
-var_megaSparkyAnomaly_visibleDistance = 2500;
-
-private ["_obiect_orb","_mark_orig"];
+var_heartAnomaly_visibleDistance = 1000;
 
 _baseObj = _this select 0;
-_radius = _this select 1;
+_radius = 1;
 
 if !(alive _baseObj) exitWith {};
 
-_obiect_orb = objNull;
+private _obiect_orb = objNull;
+
 if (isServer) then
 {
 	_obiect_orb = "Sign_Sphere10cm_F" createVehicle (getPos _baseObj);
@@ -38,27 +37,15 @@ if (hasInterface) then
 
 		while {alive _obiect_orb} do
 		{
-			waitUntil {sleep 1; (!alive _obiect_orb) or {player distance _obiect_orb < var_megaSparkyAnomaly_visibleDistance}};
+			waitUntil {sleep 1; (!alive _obiect_orb) or {player distance _obiect_orb < var_heartAnomaly_visibleDistance}};
 
 			if !(alive _obiect_orb) exitWith {};
 
 			_ele = "#particlesource" createVehicleLocal (getPosATL _obiect_orb);
 			_ele setParticleCircle [0, [0, 0, 0]];
 			_ele setParticleRandom [0, [0, 0, 0], [0, 0, 0], 0, 0, [0, 0, 0, 0], 0, 0];
-			_ele setParticleParams [["\A3\data_f\blesk1", 1, 0, 1], "", "SpaceObject", 1, 0.15, [0, 0, 0], [0, 0, 0], 0.3, 11, 7.9, 0.075, [0.11, 0.12, 0.13], [[0.1, 0.1, 0.1, 0.5], [0.25, 0.25, 0.25, 0.5], [0.5, 0.5, 0.5, 0]], [0.08], 1, 0, "", "", _obiect_orb];
-			_ele setDropInterval 0.005;
-
-			_ele2 = "#particlesource" createVehicleLocal (getPosATL _obiect_orb);
-			_ele2 setParticleCircle [0, [0, 0, 0]];
-			_ele2 setParticleRandom [0, [0, 0, 0], [0, 0, 0], 0, 0, [0, 0, 0, 0], 0, 0];
-			_ele2 setParticleParams [["\A3\data_f\blesk1", 1, 0, 1], "", "SpaceObject", 1, 0.15, [0, 0, 0], [0, 0, 0], 0.3, 11, 7.9, 0.075, [0.11, 0.12, 0.13], [[0.1, 0.1, 0.1, 0.5], [0.25, 0.25, 0.25, 0.5], [0.5, 0.5, 0.5, 0]], [0.08], 1, 0, "", "", _obiect_orb];
-			_ele2 setDropInterval 0.005;
-
-			_halo = "#particlesource" createVehicleLocal (getPosATL _obiect_orb);
-			_halo setParticleCircle [0, [0, 0, 0]];
-			_halo setParticleRandom [0, [0, 0, 0], [0, 0, 0], 0, 0, [0, 0, 0, 0], 0, 0];
-			_halo setParticleParams [["\A3\data_f\proxies\muzzle_flash\mf_sparks_01.p3d", 1, 0, 1], "", "SpaceObject", 1, 0.1, [0, 0, 0], [0, 0, 0.75], 13, 10, 7.9, 0.075, [0.5, 0.5], [[1, 1, 1, 1], [1, 1, 1, 1]], [0.08], 1, 0, "", "", _obiect_orb];
-			_halo setDropInterval 0.0033;
+			_ele setParticleParams [["\A3\data_f\blesk1", 1, 0, 1], "", "SpaceObject", 1, 0.6, [0, 0, 0], [0, 0, 0], 0.15, 11, 7.9, 0.075, [0.18, 0.24, 0.28], [[0.1, 0.1, 0.1, 0.5], [0.25, 0.25, 0.25, 0.5], [0.5, 0.5, 0.5, 0]], [0.08], 1, 0, "", "", _obiect_orb];
+			_ele setDropInterval 0.015;
 
 			_orb_lit = "#lightpoint" createVehiclelocal (getPosATL _obiect_orb);
 			_orb_lit lightAttachObject [_obiect_orb, [0,0,0]];
@@ -80,29 +67,12 @@ if (hasInterface) then
 
 			};
 
-			waitUntil {sleep 1; (!alive _obiect_orb) or {player distance _obiect_orb > var_megaSparkyAnomaly_visibleDistance}};
+			waitUntil {sleep 1; (!alive _obiect_orb) or {player distance _obiect_orb > var_heartAnomaly_visibleDistance}};
 
 			deleteVehicle _ele;
-			deleteVehicle _ele2;
-			deleteVehicle _halo;
 			deleteVehicle _orb_lit;
 
 			if !(alive _obiect_orb) exitWith {};
-
-		};
-
-	};
-
-
-
-	[_obiect_orb] spawn
-	{
-		_orb_obj = _this select 0;
-
-		while {!isNull _orb_obj} do
-		{
-			_orb_obj say3D ["magnetic_pulse_mega", 2500, 0.7];
-			sleep 12;
 
 		};
 
@@ -152,10 +122,10 @@ if (hasInterface) then
 			private _yCycle = cos (_time * (_yMod + _curYFreqSkew));
 
 			private _basePos = getPosATL _posSmoother;
-			_obiect_orb setPosATL [(_basePos#0) + (_xCycle * _radius), (_basePos#1) + (_yCycle * _radius), (_basePos#2) + (sin (_time * _zMod)) + 60];
+			_obiect_orb setPosATL [(_basePos#0) + (_xCycle * _radius), (_basePos#1) + (_yCycle * _radius), (_basePos#2) + (sin (_time * _zMod)) + 4];
 
 			private _distance = _obiect_orb distance player;
-			sleep ((((_distance - var_megaSparkyAnomaly_visibleDistance) * 0.01666) max 0.0333) min 2);
+			sleep ((((_distance - var_heartAnomaly_visibleDistance) * 0.01666) max 0.0333) min 2);
 
 		};
 	}
@@ -191,7 +161,7 @@ if (hasInterface) then
 	params ["_baseObj", "_posSmoother", "_radius"];
 
 	_lastRun = CBA_missionTime;
-	_maxVel = _radius * 0.25;
+	_maxVel = 10;
 
 	if (hasInterface) then
 	{
@@ -262,7 +232,7 @@ _sparkyAttack =
 	_objPos spawn
 	{
 		sleep 0.3;
-		_boom = "Sh_82mm_AMOS" createVehicle [_this#0, _this#1, 0];
+		_boom = "rhs_rpg7v2_tbg7v" createVehicle [_this#0, _this#1, 0];
 		_boom setVectorDir [0, 0, -1];
 		_boom setVelocity [0, 0, -1000];
 		_boom setDamage 1;

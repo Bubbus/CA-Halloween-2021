@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1493;
+		nextID=1499;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={202.40784,46.85965,131.52609};
-		dir[]={0.43788877,-0.3408567,0.8319121};
-		up[]={0.15876564,0.94011492,0.30162728};
-		aside[]={0.88490599,1.587905e-007,-0.46578252};
+		pos[]={230.86545,36.250328,67.048546};
+		dir[]={0.87642485,-0.32615259,0.35437831};
+		up[]={0.30237415,0.94530189,0.12226406};
+		aside[]={0.37487867,-4.5518391e-008,-0.92712533};
 	};
 };
 binarizationWanted=0;
-sourceName="CA2";
+sourceName="Halloween2021Base";
 addons[]=
 {
 	"A3_Modules_F_Curator_Curator",
@@ -36,17 +36,21 @@ addons[]=
 	"A3_Characters_F",
 	"3den_Objects",
 	"A3_Supplies_F_AoW_Bags",
+	"Desert",
 	"ace_explosives",
 	"A3_Soft_F_Gamma_Truck_01",
 	"A3_Soft_F_Exp_Truck_01",
+	"Blastcore_MainCore",
+	"USAF_ServiceMenu",
 	"ace_refuel",
-	"ace_repair"
+	"ace_repair",
+	"CUP_Editor_Rocks_Config"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=15;
+		items=19;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -115,38 +119,59 @@ class AddonsMetaData
 		};
 		class Item10
 		{
+			className="Desert";
+			name="Desert";
+		};
+		class Item11
+		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item11
+		class Item12
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item12
+		class Item13
 		{
 			className="A3_Soft_F_Exp";
 			name="Arma 3 Apex - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item13
+		class Item14
+		{
+			className="Blastcore_MainCore";
+			name="Blastcore_MainCore";
+		};
+		class Item15
+		{
+			className="USAF_ServiceMenu";
+			name="USAF_ServiceMenu";
+			author="USAF Mod Team";
+		};
+		class Item16
 		{
 			className="ace_refuel";
 			name="ACE3 - Refuel";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item14
+		class Item17
 		{
 			className="ace_repair";
 			name="ACE3 - Repair";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
+		};
+		class Item18
+		{
+			className="CUP_Editor_Rocks_Config";
+			name="CUP_Editor_Rocks_Config";
 		};
 	};
 };
@@ -8269,7 +8294,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=54;
+		items=55;
 		class Item0
 		{
 			dataType="Logic";
@@ -12278,6 +12303,21 @@ class Mission
 			title="Logistics Vehicles";
 			description="This HEMTT is configured to allow an engineer in the command group to spawn new vehicles from it." \n "" \n "You can change the configuration and the permissions around it.  See the ""logiVehicles.sqf"" file in the configuration folder for more information.";
 			id=1486;
+		};
+		class Item54
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={301.51831,31.392391,102.24114};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=1496;
+			type="CUP_R_Rock_01_EP1";
+			atlOffset=22.509766;
 		};
 	};
 };
