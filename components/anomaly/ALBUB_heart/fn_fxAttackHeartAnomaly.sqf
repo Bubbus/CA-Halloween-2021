@@ -7,8 +7,10 @@ _voice_attk setPosATL _attck_pos;
 
 enableCamShake true;
 
-private _playerDistanceFactor = (_voice_attk distance2D player) - 200;
+private _playerDistanceFactor = (_voice_attk distance2D player);
 private _distanceFactor = 4 - (ceil (_playerDistanceFactor / 100));
+//hint (str _playerDistanceFactor);
+hint (str _distanceFactor);
 
 if (_distanceFactor >= 1) then
 {

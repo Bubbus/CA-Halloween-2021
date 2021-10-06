@@ -6,22 +6,45 @@ _radius = 1;
 
 if !(alive _baseObj) exitWith {};
 
-private _obiect_orb = objNull;
+private _obiect_orb = (typeOf _baseObj) createVehicle (getPos _baseObj);
+_obiect_orb enableSimulation false;
 
 if (isServer) then
 {
-	_obiect_orb = "Sign_Sphere10cm_F" createVehicle (getPos _baseObj);
+    _baseObj hideObjectGlobal true;
 	[_obiect_orb, random [400, 500, 600], 0, 0, 0, 0, 0] call kyk_ew_fnc_broadcastJammerAdd;
-}
-else
-{
-	_obiect_orb = "Sign_Sphere10cm_F" createVehiclelocal (getPos _baseObj);
 };
 
-_obiect_orb hideObject true;
+if (hasInterface) then
+{
+    _obiect_orb setVectorDirAndUp [vectorDir _baseObj, vectorUp _baseObj];
 
-_posSmoother = "Land_HelipadEmpty_F" createVehiclelocal (getPos _baseObj);
-_posSmoother hideObject true;
+    [_obiect_orb, _baseObj] spawn
+    {
+        params ["_obiect_orb", "_baseObj"];
+
+        _xMod = 8;
+        _yMod = 8;
+        _zMod = 12;
+        _ang = 0;
+
+		_basePos = getPosASL _baseObj;
+
+        while {alive _baseObj} do
+        {            
+            _obiect_orb setPosWorld [_basePos#0 + (sin (CBA_missionTime * _xMod)) * 1.5, _basePos#1 + (cos (CBA_missionTime * _yMod)) * 1.5, _basePos#2 + (sin (CBA_missionTime * _zMod)) * 1.5];
+
+            _dir = [cos _ang, sin _ang, 0];
+            _ang = (CBA_missionTime * 2) mod 360;
+            _obiect_orb setVectorDir _dir;
+
+            _distance = _obiect_orb distance player;
+            sleep ((((_distance - 150) * 0.001666) max 0.0333) min 2);
+        };
+
+    };
+
+};
 
 
 
@@ -50,13 +73,13 @@ if (hasInterface) then
 			_glow = "#particlesource" createVehicleLocal (getPosATL _obiect_orb);
 			_glow setParticleCircle [0, [0, 0, 0]];
 			_glow setParticleRandom [0, [0, 0, 0], [0, 0, 0], 0, 0, [0, 0, 0, 0], 0, 0];
-			_glow setParticleParams [["\A3\data_f\kouleSvetlo", 1, 0, 1], "", "Billboard", 1, 0.5, [0, 0, 0], [0, 0, 0.75], 0, 10, 7.9, 0.075, [30, 30, 20], [[0.8, 0.02, 0.015, 1], [1, 0.12, 0.1, 1], [1, 0.24, 0.2, 0]], [0.08], 1, 0, "", "", _obiect_orb];
-			_glow setDropInterval 0.15;
+			_glow setParticleParams [["\A3\data_f\kouleSvetlo", 1, 0, 1], "", "Billboard", 1, 1, [0, 0, 0], [0, 0, 0.75], 0, 10, 7.9, 0.075, [30, 30, 20], [[0.8, 0.02, 0.015, 0.3], [1, 0.12, 0.1, 0.2], [1, 0.24, 0.2, 0]], [0.08], 1, 0, "", "", _obiect_orb];
+			_glow setDropInterval 0.3;
 
 			_heat = "#particlesource" createVehicleLocal (getPosATL _obiect_orb);
 			_heat setParticleCircle [0, [0, 0, 0]];
 			_heat setParticleRandom [0, [11, 11, 11], [0.175, 0.175, 0], 0, 0.25, [0, 0, 0, 0.1], 0, 0];
-			_heat setParticleParams [["\A3\data_f\ParticleEffects\Universal\Refract.p3d", 1, 0, 1], "", "Billboard", 1, 12.5, [0, 0, 0], [0, 0, 0.25], 0, 14.6, 11, 0.3, [4, 6, 8], [[0.1, 0.1, 0.1, 0.1], [0.25, 0.25, 0.25, 1], [0.5, 0.5, 0.5, 0.5]], [0.08], 1, 0, "", "", _obiect_orb];
+			_heat setParticleParams [["\A3\data_f\ParticleEffects\Universal\Refract.p3d", 1, 0, 1], "", "Billboard", 1, 12.5, [0, 0, 0], [0, 0, 0.25], 0, 14.6, 11, 0, [4, 6, 8], [[0.1, 0.1, 0.1, 0.1], [0.25, 0.25, 0.25, 1], [0.5, 0.5, 0.5, 0.5]], [0.08], 1, 0, "", "", _obiect_orb];
 			_heat setDropInterval 0.015;
 
 			_orb_lit = "#lightpoint" createVehiclelocal (getPosATL _obiect_orb);
@@ -97,130 +120,6 @@ if (hasInterface) then
 
 
 
-
-[_baseObj, _obiect_orb, _posSmoother, _radius] spawn
-{
-	params ["_baseObj", "_obiect_orb", "_posSmoother", "_radius"];
-
-	if (isServer) then
-	{
-		private _xMod = 3 + random 3;
-		private _yMod = 3 + random 3;
-		private _zMod = random 10;
-
-		_baseObj setVariable ["spark_xMod", _xMod, true];
-		_baseObj setVariable ["spark_yMod", _yMod, true];
-		_baseObj setVariable ["spark_zMod", _zMod, true];
-
-	};
-
-	private _xyFreqSkew = 8;
-
-	if (hasInterface) then
-	{
-		waitUntil
-		{
-			sleep 0.25;
-			(!(alive _baseObj)) or {(_baseObj getVariable ["spark_zMod", -1]) >= 0}
-		};
-
-		private _xMod = _baseObj getVariable ["spark_xMod", 0];
-		private _yMod = _baseObj getVariable ["spark_yMod", 0];
-		private _zMod = _baseObj getVariable ["spark_zMod", 0];
-
-		while {alive _posSmoother and {alive _obiect_orb}} do
-		{
-			private _time = CBA_missionTime;
-			private _curXFreqSkew = ((sin _time) * _xyFreqSkew) / _time;
-			private _curYFreqSkew = ((cos _time) * _xyFreqSkew) / _time;
-			private _xCycle = sin (_time * (_xMod + _curXFreqSkew));
-			private _yCycle = cos (_time * (_yMod + _curYFreqSkew));
-
-			private _basePos = getPosATL _posSmoother;
-			_obiect_orb setPosATL [(_basePos#0) + (_xCycle * _radius), (_basePos#1) + (_yCycle * _radius), (_basePos#2) + (sin (_time * _zMod)) + 3];
-
-			private _distance = _obiect_orb distance player;
-			sleep ((((_distance - var_heartAnomaly_visibleDistance) * 0.01666) max 0.0333) min 2);
-
-		};
-	}
-	else
-	{
-		private _xMod = _baseObj getVariable ["spark_xMod", 0];
-		private _yMod = _baseObj getVariable ["spark_yMod", 0];
-		private _zMod = _baseObj getVariable ["spark_zMod", 0];
-
-		while {alive _posSmoother and {alive _obiect_orb}} do
-		{
-			private _time = CBA_missionTime;
-			private _curFreqSkew = (sin _time) * _xyFreqSkew;
-			private _xCycle = sin (_time * (_xMod + _curFreqSkew));
-			private _yCycle = cos (_time * (_yMod + _curFreqSkew));
-
-			private _basePos = getPosASL _posSmoother;
-			_obiect_orb setPosASL [(_basePos#0) + (_xCycle * _radius), (_basePos#1) + (_yCycle * _radius), (_basePos#2) + sin (_time * _zMod)];
-
-			sleep 0.5;
-
-		};
-
-	};
-
-};
-
-
-
-
-[_baseObj, _posSmoother, _radius] spawn
-{
-	params ["_baseObj", "_posSmoother", "_radius"];
-
-	_lastRun = CBA_missionTime;
-	_maxVel = 10;
-
-	if (hasInterface) then
-	{
-		while {alive _baseObj and {alive _posSmoother}} do
-		{
-			_movement = _maxVel * (CBA_missionTime - _lastRun);
-			_smootherPos = getPosASL _posSmoother;
-			_dirVec = _smootherPos vectorFromTo (getPosASL _baseObj);
-			_distance = (_posSmoother distance _baseObj) min _movement;
-			_moveVec = _dirVec vectorMultiply _distance;
-
-			_posSmoother setPosASL (_smootherPos vectorAdd _moveVec);
-
-			_lastRun = CBA_missionTime;
-			_plyDist = _posSmoother distance player;
-			sleep (((_plyDist * 0.0004) max 0.0333) min 2);
-
-		};
-
-	}
-	else
-	{
-		while {alive _baseObj and {alive _posSmoother}} do
-		{
-			_movement = _maxVel * (CBA_missionTime - _lastRun);
-			_smootherPos = getPosASL _posSmoother;
-			_dirVec = _smootherPos vectorFromTo (getPosASL _baseObj);
-			_distance = (_posSmoother distance _baseObj) min _movement;
-			_moveVec = _dirVec vectorMultiply _distance;
-
-			_posSmoother setPosASL (_smootherPos vectorAdd _moveVec);
-
-			_lastRun = CBA_missionTime;
-			sleep 0.5;
-
-		};
-
-	};
-
-};
-
-
-
-
 _sparkyAttack =
 {
 	params ["_units", "_objPos"];
@@ -244,15 +143,6 @@ _sparkyAttack =
 
 	} forEach _units;
 
-	_objPos spawn
-	{
-		sleep 0.3;
-		_boom = "rhs_rpg7v2_tbg7v" createVehicle [_this#0, _this#1, 0];
-		_boom setVectorDir [0, 0, -1];
-		_boom setVelocity [0, 0, -1000];
-		_boom setDamage 1;
-	};
-
 };
 
 
@@ -273,7 +163,7 @@ if (isServer) then
 			if (count _list_units_in_range > 0) then
 			{
 				[_list_units_in_range, (getPosATL _obiect_orb)] call _sparkyAttack;
-				sleep 7;
+				sleep 20;
 			};
 
 			sleep 2;
@@ -303,7 +193,7 @@ waitUntil
 
 	sleep 1;
 
-	(!(alive _baseObj)) or {!(alive _obiect_orb)} or {!(alive _posSmoother)}
+	(!(alive _baseObj)) or {!(alive _obiect_orb)}
 
 };
 
@@ -318,4 +208,3 @@ if (isServer) then
 
 deleteVehicle _baseObj;
 deleteVehicle _obiect_orb;
-deleteVehicle _posSmoother;
