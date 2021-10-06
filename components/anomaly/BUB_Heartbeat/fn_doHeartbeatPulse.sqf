@@ -142,7 +142,8 @@ if (_doKnockout) then
 {
     [
         {
-            [] call f_fnc_doHeartbeatTeleport;
+            private _finalBossPhase = missionNamespace getVariable ["finalBossPhase", false];
+            [_finalBossPhase] call f_fnc_doHeartbeatTeleport;
         },
         [_painEffect, _emptyChromArray, _painFade, _emptyColArray],
         _soundDelay + (_painTimings#1) + 0.3

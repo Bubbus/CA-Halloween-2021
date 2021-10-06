@@ -2,6 +2,8 @@
 
 CLIENT_ONLY;
 
+params ["_doKnockoutOnly", false];
+
 // fade sound, apply "unconscious" effect.
 // iter 2: try to fade acre sound
 // iter 2: try to mute player
@@ -40,22 +42,26 @@ CLIENT_ONLY;
 
 ] call CBA_fnc_waitAndExecute;
 
-[
-    {
-        player setCaptive true;
-        [player, true] call ACE_captives_fnc_setHandcuffed;
+if !(_doKnockoutOnly) then
+{
+    [
+        {
+            player setCaptive true;
+            [player, true] call ACE_captives_fnc_setHandcuffed;
 
-        [player, true] call f_fnc_removeAllWeapons;
+            [player, true] call f_fnc_removeAllWeapons;
 
-        private _telePoint = selectRandom ["tele_1","tele_2","tele_3","tele_4","tele_5","tele_6","tele_7","tele_8","tele_9"];
+            private _telePoint = selectRandom ["tele_1","tele_2","tele_3","tele_4","tele_5","tele_6","tele_7","tele_8","tele_9"];
 
-        player setPos (getMarkerPos _telePoint);
-        player setVariable ["heartbeat_telePoint", _telePoint, true];
-    },
-    [],
-    2
+            player setPos (getMarkerPos _telePoint);
+            player setVariable ["heartbeat_telePoint", _telePoint, true];
+        },
+        [],
+        2
 
-] call CBA_fnc_waitAndExecute;
+    ] call CBA_fnc_waitAndExecute;
+    
+};
 
 [
     {
