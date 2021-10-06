@@ -44,12 +44,25 @@ if (hasInterface) then
 			_ele = "#particlesource" createVehicleLocal (getPosATL _obiect_orb);
 			_ele setParticleCircle [0, [0, 0, 0]];
 			_ele setParticleRandom [0, [0, 0, 0], [0, 0, 0], 0, 0, [0, 0, 0, 0], 0, 0];
-			_ele setParticleParams [["\A3\data_f\blesk1", 1, 0, 1], "", "SpaceObject", 1, 0.6, [0, 0, 0], [0, 0, 0], 0.15, 11, 7.9, 0.075, [0.18, 0.24, 0.28], [[0.1, 0.1, 0.1, 0.5], [0.25, 0.25, 0.25, 0.5], [0.5, 0.5, 0.5, 0]], [0.08], 1, 0, "", "", _obiect_orb];
+			_ele setParticleParams [["\A3\data_f\blesk1", 1, 0, 1], "", "SpaceObject", 1, 0.6, [0, 0, 0], [0, 0, 0], 0.15, 11, 7.9, 0.075, [0.16, 0.20, 0.12], [[0.1, 0.1, 0.1, 0.5], [0.25, 0.25, 0.25, 0.5], [0.5, 0.5, 0.5, 0]], [0.08], 1, 0, "", "", _obiect_orb];
 			_ele setDropInterval 0.015;
+
+			_glow = "#particlesource" createVehicleLocal (getPosATL _obiect_orb);
+			_glow setParticleCircle [0, [0, 0, 0]];
+			_glow setParticleRandom [0, [0, 0, 0], [0, 0, 0], 0, 0, [0, 0, 0, 0], 0, 0];
+			_glow setParticleParams [["\A3\data_f\kouleSvetlo", 1, 0, 1], "", "Billboard", 1, 0.5, [0, 0, 0], [0, 0, 0.75], 0, 10, 7.9, 0.075, [30, 30, 20], [[0.8, 0.02, 0.015, 1], [1, 0.12, 0.1, 1], [1, 0.24, 0.2, 0]], [0.08], 1, 0, "", "", _obiect_orb];
+			_glow setDropInterval 0.15;
+
+			_heat = "#particlesource" createVehicleLocal (getPosATL _obiect_orb);
+			_heat setParticleCircle [0, [0, 0, 0]];
+			_heat setParticleRandom [0, [11, 11, 11], [0.175, 0.175, 0], 0, 0.25, [0, 0, 0, 0.1], 0, 0];
+			_heat setParticleParams [["\A3\data_f\ParticleEffects\Universal\Refract.p3d", 1, 0, 1], "", "Billboard", 1, 12.5, [0, 0, 0], [0, 0, 0.25], 0, 14.6, 11, 0.3, [4, 6, 8], [[0.1, 0.1, 0.1, 0.1], [0.25, 0.25, 0.25, 1], [0.5, 0.5, 0.5, 0.5]], [0.08], 1, 0, "", "", _obiect_orb];
+			_heat setDropInterval 0.015;
 
 			_orb_lit = "#lightpoint" createVehiclelocal (getPosATL _obiect_orb);
 			_orb_lit lightAttachObject [_obiect_orb, [0,0,0]];
-			_orb_lit setLightColor [0.92,0.95,1];
+			_orb_lit setLightColor [1,0.61,0.55];
+			_orb_lit setLightAmbient [1,0.31,0.27];
 			_orb_lit setLightIntensity 1500;
 			_orb_lit setLightUseFlare true;
 			_orb_lit setLightFlareSize 20;
@@ -61,7 +74,7 @@ if (hasInterface) then
 			{
 				while {alive _this} do
 				{
-					_this setLightIntensity (1000 + random 500);
+					_this setLightIntensity (1000 + ((sin (CBA_missionTime * 45)) * 500) + random 250);
 					sleep 0.016;
 				};
 
@@ -70,6 +83,8 @@ if (hasInterface) then
 			waitUntil {sleep 1; (!alive _obiect_orb) or {player distance _obiect_orb > var_heartAnomaly_visibleDistance}};
 
 			deleteVehicle _ele;
+			deleteVehicle _glow;
+			deleteVehicle _heat;
 			deleteVehicle _orb_lit;
 
 			if !(alive _obiect_orb) exitWith {};
@@ -122,7 +137,7 @@ if (hasInterface) then
 			private _yCycle = cos (_time * (_yMod + _curYFreqSkew));
 
 			private _basePos = getPosATL _posSmoother;
-			_obiect_orb setPosATL [(_basePos#0) + (_xCycle * _radius), (_basePos#1) + (_yCycle * _radius), (_basePos#2) + (sin (_time * _zMod)) + 4];
+			_obiect_orb setPosATL [(_basePos#0) + (_xCycle * _radius), (_basePos#1) + (_yCycle * _radius), (_basePos#2) + (sin (_time * _zMod)) + 3];
 
 			private _distance = _obiect_orb distance player;
 			sleep ((((_distance - var_heartAnomaly_visibleDistance) * 0.01666) max 0.0333) min 2);
@@ -210,7 +225,7 @@ _sparkyAttack =
 {
 	params ["_units", "_objPos"];
 
-	[_objPos] remoteExec ["f_fnc_fxAttackMegaSparkyAnomaly", 0];
+	[ATLToASL _objPos] remoteExec ["f_fnc_fxAttackHeartAnomaly", 0];
 
 	sleep 0.2;
 
