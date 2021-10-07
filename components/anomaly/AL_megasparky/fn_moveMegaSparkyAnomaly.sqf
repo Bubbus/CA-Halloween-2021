@@ -1,6 +1,12 @@
 // by ALIAS
 var_megaSparkyAnomaly_visibleDistance = 2500;
 
+#include "..\macros.hpp"
+
+RUN_AS_ASYNC(f_fnc_moveMegaSparkyAnomaly);
+
+WAIT_UNTIL_MISSION_STARTED();
+
 private ["_obiect_orb","_mark_orig"];
 
 _baseObj = _this select 0;
@@ -12,7 +18,11 @@ _obiect_orb = objNull;
 if (isServer) then
 {
 	_obiect_orb = "Sign_Sphere10cm_F" createVehicle (getPos _baseObj);
-	[_obiect_orb, random [400, 500, 600], 0, 0, 0, 0, 0] call kyk_ew_fnc_broadcastJammerAdd;
+
+	if !(isNil 'kyk_ew_fnc_broadcastJammerAdd') then
+	{
+		[_obiect_orb, random [400, 500, 600], 0, 0, 0, 0, 0] call kyk_ew_fnc_broadcastJammerAdd;
+	};
 }
 else
 {
@@ -262,7 +272,7 @@ _sparkyAttack =
 	_objPos spawn
 	{
 		sleep 0.3;
-		_boom = "rhs_rpg7v2_tbg7v" createVehicle [_this#0, _this#1, 0];
+		_boom = "Sh_82mm_AMOS" createVehicle [_this#0, _this#1, 0];
 		_boom setVectorDir [0, 0, -1];
 		_boom setVelocity [0, 0, -1000];
 		_boom setDamage 1;

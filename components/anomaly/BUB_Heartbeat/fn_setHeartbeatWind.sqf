@@ -19,8 +19,8 @@ if (_isOn) then
 
         while {_wind > -100} do
         {
-            sleep 0.1;
-            _wind = _wind - (10 / _time);
+            sleep 0.15;
+            _wind = _wind - (15 / _time);
             setWind [0, _wind, true];
         };
 
@@ -36,8 +36,8 @@ else
 
         while {_wind < 0} do
         {
-            sleep 0.1;
-            _wind = _wind + (10 / _time);
+            sleep 0.15;
+            _wind = _wind + (15 / _time);
             setWind [0, _wind, true];
         };
 
