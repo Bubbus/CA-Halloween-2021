@@ -1,8 +1,13 @@
+#include "..\macros.hpp"
+
+RUN_AS_ASYNC(f_fnc_moveHeartAnomaly);
+
+WAIT_UNTIL_MISSION_STARTED();
+
 // by ALIAS
 var_heartAnomaly_visibleDistance = 1000;
 
 _baseObj = _this select 0;
-_radius = 1;
 
 if !(alive _baseObj) exitWith {};
 
@@ -12,7 +17,11 @@ _obiect_orb enableSimulation false;
 if (isServer) then
 {
     _baseObj hideObjectGlobal true;
-	[_obiect_orb, random [400, 500, 600], 0, 0, 0, 0, 0] call kyk_ew_fnc_broadcastJammerAdd;
+
+	if !(isNil 'kyk_ew_fnc_broadcastJammerAdd') then
+	{
+		[_obiect_orb, random [400, 500, 600], 0, 0, 0, 0, 0] call kyk_ew_fnc_broadcastJammerAdd;
+	};
 };
 
 if (hasInterface) then
@@ -133,7 +142,7 @@ _sparkyAttack =
 
 		if (_x isKindOf "CAManBase") then
 		{
-			[_x, 18 - _distance, nil, nil, [0.8, 0.9, 1]] call f_fnc_woundUnitRandomly;
+			[_x, 12 - _distance, nil, nil, [0.5, 0.6, 0.7]] call f_fnc_woundUnitRandomly;
 		}
 		else
 		{
@@ -173,16 +182,6 @@ if (isServer) then
 	};
 
 };
-
-
-
-
-if (isServer) then
-{
-	waitUntil { sleep 0.5; _baseObj distance _obiect_orb > 5; };
-	[[], getPosATL _obiect_orb] call _sparkyAttack;
-};
-
 
 
 _lastPos = getPosATL _obiect_orb;

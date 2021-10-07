@@ -2,7 +2,7 @@
 
 CLIENT_ONLY;
 
-params ["_doKnockoutOnly", false];
+params [["_doKnockoutOnly", false]];
 
 // fade sound, apply "unconscious" effect.
 // iter 2: try to fade acre sound

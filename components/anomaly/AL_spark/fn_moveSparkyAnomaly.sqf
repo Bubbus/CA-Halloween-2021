@@ -1,6 +1,12 @@
 // by ALIAS
 // Heavily modified by Bubbus
 
+#include "..\macros.hpp"
+
+RUN_AS_ASYNC(f_fnc_moveSparkyAnomaly);
+
+WAIT_UNTIL_MISSION_STARTED();
+
 var_sparkyAnomaly_visibleDistance = 450;
 
 private ["_obiect_orb","_mark_orig"];
@@ -14,7 +20,11 @@ _obiect_orb = objNull;
 if (isServer) then
 {
 	_obiect_orb = "Sign_Sphere10cm_F" createVehicle (getPos _baseObj);
-	[_obiect_orb, random [50, 75, 100], 0, 0, 0, 0, 0] call kyk_ew_fnc_broadcastJammerAdd;
+
+	if !(isNil 'kyk_ew_fnc_broadcastJammerAdd') then
+	{
+		[_obiect_orb, random [50, 75, 100], 0, 0, 0, 0, 0] call kyk_ew_fnc_broadcastJammerAdd;
+	};
 }
 else
 {
