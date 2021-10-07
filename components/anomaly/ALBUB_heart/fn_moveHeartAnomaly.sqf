@@ -13,6 +13,7 @@ if !(alive _baseObj) exitWith {};
 
 private _obiect_orb = (typeOf _baseObj) createVehicle (getPos _baseObj);
 _obiect_orb enableSimulation false;
+missionNamespace setVariable ["heart_floater_obj", _obiect_orb];
 
 if (isServer) then
 {

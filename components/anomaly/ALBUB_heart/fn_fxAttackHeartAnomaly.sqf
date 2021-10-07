@@ -53,9 +53,10 @@ _doi_lum spawn
 };
 
 _bule_spark = "#particlesource" createVehicleLocal _attck_pos;
+_bule_spark setPosASL _attck_pos;
 _bule_spark setParticleCircle [0, [0, 0, 0]];
 _bule_spark setParticleRandom [0, [0.25, 0.25, 0], [160, 160, 20], 180, 0.1, [0, 0, 0, 0.1], 0, 0];
-_bule_spark setParticleParams [["\A3\data_f\blesk1", 1, 0, 1], "", "SpaceObject", 1, 1, [0, 0, 0], [0, 0, 0.75], 13, 10, 7.9, 0.075, [0.48, 0.04], [[1, 1, 1, 1], [1, 1, 1, 1]], [0.08], 1, 0, "", "", _voice_attk];
+_bule_spark setParticleParams [["\A3\data_f\blesk1", 1, 0, 1], "", "SpaceObject", 1, 1, [0, 0, 0], [0, 0, 0.75], 13, 10, 7.9, 0.075, [0.48, 0.04], [[1, 1, 1, 1], [1, 1, 1, 1]], [0.08], 1, 0, "", "", nil];
 _bule_spark setDropInterval 0.01;
 
 _gasBlast = "#particlesource" createVehicleLocal (ASLToATL _attck_pos);
@@ -85,9 +86,10 @@ deleteVehicle _gasBlast2;
 uisleep (1.9 - 0.6);
 
 _bule_spark = "#particlesource" createVehicleLocal _attck_pos;
+_bule_spark setPosASL _attck_pos;
 _bule_spark setParticleCircle [0, [0, 0, 0]];
 _bule_spark setParticleRandom [0, [0.25, 0.25, 0], [160, 160, 20], 180, 0.1, [0, 0, 0, 0.1], 0, 0];
-_bule_spark setParticleParams [["\A3\data_f\blesk1", 1, 0, 1], "", "SpaceObject", 1, 1, [0, 0, 0], [0, 0, 0.75], 13, 10, 7.9, 0.075, [0.48, 0.04], [[1, 1, 1, 1], [1, 1, 1, 1]], [0.08], 1, 0, "", "", _voice_attk];
+_bule_spark setParticleParams [["\A3\data_f\blesk1", 1, 0, 1], "", "SpaceObject", 1, 1, [0, 0, 0], [0, 0, 0.75], 13, 10, 7.9, 0.075, [0.48, 0.04], [[1, 1, 1, 1], [1, 1, 1, 1]], [0.08], 1, 0, "", "", nil];
 _bule_spark setDropInterval 0.015;
 
 _gasBlast = "#particlesource" createVehicleLocal (ASLToATL _attck_pos);
