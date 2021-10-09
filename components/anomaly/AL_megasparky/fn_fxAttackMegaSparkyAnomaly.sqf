@@ -57,12 +57,14 @@ _bule_spark_2 setDropInterval 0.001;
 sleep random 0.1;
 sleep 0.1;
 
+/*
 _bule_space = "#particlesource" createVehicleLocal _attck_pos;
 _bule_space setParticleCircle [0, [0, 0, 0]];
 _bule_space setParticleRandom [0, [0.25, 0.25, 0], [0.175, 0.175, 0], 0, 0.25, [0, 0, 0, 0.1], 0, 0];
 _bule_space setParticleParams [["\A3\data_f\ParticleEffects\Universal\Refract.p3d", 1, 0, 1], "", "Billboard", 1, 0.5, [0, 0, 0], [0, 0, 0.75], 0, 10, 7.9, 0.075, [1, 150], [[1, 1, 1, 1], [1, 1, 1, 1]], [0.08], 1, 0, "", "", _voice_attk];
 _bule_space setDropInterval 0.05;
 sleep 0.1;
+*/
 
 _plyDistance = (player distance _attck_pos);
 _shake = 1 / ((_plyDistance * 0.01) max 0.5);
@@ -76,7 +78,7 @@ deletevehicle _bule_spark_2;
 
 sleep 0.1;
 
-deletevehicle _bule_space;
+//deletevehicle _bule_space;
 
 sleep 10;
 

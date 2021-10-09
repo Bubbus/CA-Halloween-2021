@@ -1,5 +1,15 @@
 call
 {
+    _createHeartbeat =
+    {
+        params ["_pos"];
+
+        [_pos] remoteExec ["f_fnc_createHeartbeat", 2];
+    };
+
+    ["[CA-BOO] Anomalies", "HEARTBEAT (TELEPORT)", _createHeartbeat] call zen_custom_modules_fnc_register;
+
+
     _createBurper =
     {
     	params ["_pos"];
