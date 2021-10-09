@@ -23,13 +23,13 @@ while {alive _obj_sursa} do
 	};
 
 	player setVariable ["inFartyAnomaly", true, true];
-	player setVariable ["lastOkInFarty", serverTime, true];
+	player setVariable ["lastOkInFarty", CBA_missionTime, true];
 
 	while {_isInRadius and {alive _obj_sursa}} do
 	{
-		if ((isDamageAllowed _x) and {!(_x getVariable ["anomalyIgnore", false])}) then
+		if !((isDamageAllowed player) and {!(player getVariable ["anomalyIgnore", false])}) then
 		{
-			player setVariable ["lastOkInFarty", serverTime, true];
+			player setVariable ["lastOkInFarty", CBA_missionTime, true];
 			sleep (1.2 + random 1)
 		}
 		else
@@ -56,10 +56,14 @@ while {alive _obj_sursa} do
 				enableCamShake true;
 				addCamShake [0.5, 3, 17];
 
-				_afect = ["NoSound","NoSound","NoSound","01_breat_toxic","NoSound","NoSound","NoSound","NoSound","02_breat_toxic","NoSound","NoSound","NoSound","NoSound","03_breat_toxic","NoSound","NoSound","NoSound","04_breat_toxic"] call BIS_fnc_selectRandom;
+				_afect = ["NoSound","NoSound","01_breat_toxic","NoSound","NoSound","02_breat_toxic","NoSound","NoSound","03_breat_toxic","NoSound","NoSound","04_breat_toxic"] call BIS_fnc_selectRandom;
 				playsound _afect;
 				playsound "puls_1";
 
+				if (_afect isNotEqualTo "NoSound") then
+				{					
+					[player, 1, nil, ["body"], [0.2, 0.3, 0.5]] call f_fnc_woundUnitRandomly;
+				};
 
 				waitUntil {ppEffectCommitted _handle};
 				uiSleep 1;
@@ -74,10 +78,10 @@ while {alive _obj_sursa} do
 
 			};
 
-			if ((serverTime - (player getVariable ["lastOkInFarty", serverTime])) > (random [20, 25, 30])) then
+			if ((CBA_missionTime - (player getVariable ["lastOkInFarty", CBA_missionTime])) > (random [20, 25, 30])) then
 			{
 				[player, true, 20, true] call ace_medical_fnc_setUnconscious;
-				player setVariable ["lastOkInFarty", serverTime + 20, true];
+				player setVariable ["lastOkInFarty", CBA_missionTime + 20, true];
 			};
 
 			sleep 4;

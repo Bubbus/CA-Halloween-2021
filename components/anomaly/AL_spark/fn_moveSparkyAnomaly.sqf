@@ -1,4 +1,12 @@
 // by ALIAS
+// Heavily modified by Bubbus
+
+#include "..\macros.hpp"
+
+RUN_AS_ASYNC(f_fnc_moveSparkyAnomaly);
+
+WAIT_UNTIL_MISSION_STARTED();
+
 var_sparkyAnomaly_visibleDistance = 450;
 
 private ["_obiect_orb","_mark_orig"];
@@ -12,7 +20,11 @@ _obiect_orb = objNull;
 if (isServer) then
 {
 	_obiect_orb = "Sign_Sphere10cm_F" createVehicle (getPos _baseObj);
-	[_obiect_orb, random [50, 75, 100], 0, 0, 0, 0, 0] call kyk_ew_fnc_broadcastJammerAdd;
+
+	if !(isNil 'kyk_ew_fnc_broadcastJammerAdd') then
+	{
+		[_obiect_orb, random [50, 75, 100], 0, 0, 0, 0, 0] call kyk_ew_fnc_broadcastJammerAdd;
+	};
 }
 else
 {
@@ -45,11 +57,13 @@ if (hasInterface) then
 			_ele setParticleParams [["\A3\data_f\blesk1", 1, 0, 1], "", "SpaceObject", 1, 0.15, [0, 0, 0], [0, 0, 0], 0.3, 11, 7.9, 0.075, [0.003, 0.003, 0.003], [[0.1, 0.1, 0.1, 0.5], [0.25, 0.25, 0.25, 0.5], [0.5, 0.5, 0.5, 0]], [0.08], 1, 0, "", "", _obiect_orb];
 			_ele setDropInterval 0.01;
 
+/*
 			_halo = "#particlesource" createVehicleLocal (getPosATL _obiect_orb);
 			_halo setParticleCircle [0, [0, 0, 0]];
 			_halo setParticleRandom [0, [0, 0, 0], [0, 0, 0], 0, 0, [0, 0, 0, 0], 0, 0];
 			_halo setParticleParams [["\A3\data_f\proxies\muzzle_flash\mf_sparks_01.p3d", 1, 0, 1], "", "SpaceObject", 1, 0.1, [0, 0, 0], [0, 0, 0.75], 13, 10, 7.9, 0.075, [0.5, 0.5], [[1, 1, 1, 1], [1, 1, 1, 1]], [0.08], 1, 0, "", "", _obiect_orb];
 			_halo setDropInterval 0.0033;
+			*/
 
 			_orb_lit = "#lightpoint" createVehiclelocal (getPosATL _obiect_orb);
 			_orb_lit lightAttachObject [_obiect_orb, [0,0,0]];
@@ -64,7 +78,7 @@ if (hasInterface) then
 			waitUntil {sleep 1; (!alive _obiect_orb) or {player distance _obiect_orb > var_sparkyAnomaly_visibleDistance}};
 
 			deleteVehicle _ele;
-			deleteVehicle _halo;
+			//deleteVehicle _halo;
 			deleteVehicle _orb_lit;
 
 			if !(alive _obiect_orb) exitWith {};
@@ -235,9 +249,9 @@ _sparkyAttack =
 
 if (hasInterface) then
 {
-	[_obiect_orb, _sparkyAttack] spawn
+	[_obiect_orb, _sparkyAttack, _baseObj] spawn
 	{
-		params ["_obiect_orb", "_sparkyAttack"];
+		params ["_obiect_orb", "_sparkyAttack", "_baseObj"];
 
 		while {alive _obiect_orb} do
 	    {
@@ -246,12 +260,12 @@ if (hasInterface) then
 	        {
 	            sleep (_distance / 100) max 0.1;
 	            _distance = (player distance _obiect_orb);
-	            (_distance < 10)
+	            (_distance < 8)
 	        };
 
-	        if !(((isDamageAllowed player) and {!(player getVariable ["anomalyIgnore", false])}) or {uniform player == "U_B_CBRN_Suit_01_MTP_F"}) then
+	        if (((isDamageAllowed player) and {!(player getVariable ["anomalyIgnore", false])}) and {(uniform player) isNotEqualTo "U_B_CBRN_Suit_01_MTP_F"}) then
 	        {
-	            [[player], (getpos _obiect_orb)] call _sparkyAttack;
+				_baseObj setVariable ["playerTriggeredAttack", true, true];
 	        };
 
 	        sleep 2;
@@ -266,21 +280,37 @@ if (hasInterface) then
 
 if (isServer) then
 {
-	[_obiect_orb, _sparkyAttack] spawn
+	[_obiect_orb, _sparkyAttack, _baseObj] spawn
 	{
-		params ["_obiect_orb", "_sparkyAttack"];
+		params ["_obiect_orb", "_sparkyAttack", "_baseObj"];
 
-		while {alive _obiect_orb} do
-		{
+		while {(alive _obiect_orb) and {alive _baseObj}} do
+		{			
+			private _attackWasTriggered = _baseObj getVariable ["playerTriggeredAttack", false];
+			_baseObj setVariable ["playerTriggeredAttack", false, true];
+
 			_list_units_in_range = (getPos _obiect_orb) nearEntities ["CAManBase", 10];
-			_list_units_in_range = _list_units_in_range select {(!(isPlayer _x)) and {!(uniform _x == "U_B_CBRN_Suit_01_MTP_F")}};
+			_list_units_in_range = _list_units_in_range select {((isDamageAllowed _x) and {!(_x getVariable ["anomalyIgnore", false])}) and {(uniform _x) isNotEqualTo "U_B_CBRN_Suit_01_MTP_F"}};
 
-			if (count _list_units_in_range > 0) then
+			private _attackOccurred = false;
+			if (_attackWasTriggered or {count _list_units_in_range > 0}) then
 			{
 				[_list_units_in_range, (getpos _obiect_orb)] call _sparkyAttack;
+				_attackOccurred = true;
 			};
 
-			sleep 3;
+			if (_attackOccurred) then
+			{
+				sleep 3;
+			}
+			else
+			{
+				private _nextIterTime = CBA_missionTime + 3;
+				waitUntil
+				{
+					(CBA_missionTime > _nextIterTime) or {(alive _baseObj) and {_baseObj getVariable ["playerTriggeredAttack", false]}}
+				};
+			};		
 
 		};
 
