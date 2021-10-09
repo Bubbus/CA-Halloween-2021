@@ -54,6 +54,19 @@ if (hasInterface) then
 
     };
 
+	[_obiect_orb] spawn
+	{
+		_orb_obj = _this select 0;
+
+		while {!isNull _orb_obj} do
+		{
+			_orb_obj say3D ["magnetic_pulse_mega", 1500, 0.6];
+			sleep 12;
+
+		};
+
+	};
+
 };
 
 
@@ -165,10 +178,10 @@ if (isServer) then
 
 		params ["_obiect_orb", "_sparkyAttack"];
 
-		while {alive _obiect_orb} do
+		while {(alive _obiect_orb) and {!(missionNamespace getVariable ["destroyingHeart", false])}} do
 		{
 			_list_units_in_range = (getPosATL _obiect_orb) nearEntities [["CAManBase", "Air", "Car", "Motorcycle", "Tank"], 90];
-			_list_units_in_range = _list_units_in_range select {(isDamageAllowed _x) and {!(_x getVariable ["anomalyIgnore", false])}};
+			_list_units_in_range = _list_units_in_range select {(isDamageAllowed _x) and {!(_x getVariable ["anomalyIgnore", false])} and {!(_x getVariable ["hasHammer", false])}};
 
 			if (count _list_units_in_range > 0) then
 			{
@@ -196,14 +209,6 @@ waitUntil
 	(!(alive _baseObj)) or {!(alive _obiect_orb)}
 
 };
-
-
-
-if (isServer) then
-{
-	[[], _lastPos] call _sparkyAttack;
-};
-
 
 
 deleteVehicle _baseObj;

@@ -186,7 +186,7 @@ class CfgDebriefing
 	class End2
 	{
 		title = "Heart stopped";
-		subtitle = "can it truly be killed?";
+		subtitle = "But can such a power truly die?";
 		description = "Please post to the AAR thread!";
 		// pictureBackground = "";
 		// picture = "";
