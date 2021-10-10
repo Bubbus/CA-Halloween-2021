@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={230.86545,36.250328,67.048546};
-		dir[]={0.87642485,-0.32615259,0.35437831};
-		up[]={0.30237415,0.94530189,0.12226406};
-		aside[]={0.37487867,-4.5518391e-008,-0.92712533};
+		pos[]={206.83617,61.4478,150.64632};
+		dir[]={0.49802807,-0.26438004,0.82587725};
+		up[]={0.13652653,0.96441823,0.22640115};
+		aside[]={0.85634702,-7.4971467e-008,-0.51640207};
 	};
 };
 binarizationWanted=0;
@@ -8287,7 +8287,7 @@ class Mission
 		year=2035;
 		month=7;
 		day=6;
-		hour=8;
+		hour=19;
 		minute=15;
 		startFogDecay=0;
 		forecastFogDecay=0;
@@ -12309,15 +12309,16 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={301.51831,31.392391,102.24114};
+				position[]={301.51801,31.392626,102.241};
 			};
 			side="Empty";
 			class Attributes
 			{
+				init="[this] call f_fnc_createHeartAnomaly;";
 			};
 			id=1496;
 			type="CUP_R_Rock_01_EP1";
-			atlOffset=22.509766;
+			atlOffset=22.51;
 		};
 	};
 };

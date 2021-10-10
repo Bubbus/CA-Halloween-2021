@@ -13,10 +13,12 @@ if !(alive _baseObj) exitWith {};
 
 private _obiect_orb = (typeOf _baseObj) createVehicle (getPos _baseObj);
 _obiect_orb enableSimulation false;
+missionNamespace setVariable ["heart_floater_obj", _obiect_orb];
 
 if (isServer) then
 {
     _baseObj hideObjectGlobal true;
+	_obiect_orb hideObjectGlobal true;
 
 	if !(isNil 'kyk_ew_fnc_broadcastJammerAdd') then
 	{
@@ -25,7 +27,8 @@ if (isServer) then
 };
 
 if (hasInterface) then
-{
+{	
+	_obiect_orb hideObject false;
     _obiect_orb setVectorDirAndUp [vectorDir _baseObj, vectorUp _baseObj];
 
     [_obiect_orb, _baseObj] spawn
@@ -41,7 +44,7 @@ if (hasInterface) then
 
         while {alive _baseObj} do
         {            
-            _obiect_orb setPosWorld [_basePos#0 + (sin (CBA_missionTime * _xMod)) * 1.5, _basePos#1 + (cos (CBA_missionTime * _yMod)) * 1.5, _basePos#2 + (sin (CBA_missionTime * _zMod)) * 1.5];
+            _obiect_orb setPosASL [_basePos#0 + (sin (CBA_missionTime * _xMod)) * 1.5, _basePos#1 + (cos (CBA_missionTime * _yMod)) * 1.5, _basePos#2 + (sin (CBA_missionTime * _zMod)) * 1.5];
 
             _dir = [cos _ang, sin _ang, 0];
             _ang = (CBA_missionTime * 2) mod 360;
@@ -131,14 +134,14 @@ if (hasInterface) then
 
 _sparkyAttack =
 {
-	params ["_units", "_objPos"];
+	params ["_units", "_objPosASL"];
 
-	[ATLToASL _objPos] remoteExec ["f_fnc_fxAttackHeartAnomaly", 0];
+	[_objPosASL] remoteExec ["f_fnc_fxAttackHeartAnomaly", 0];
 
 	sleep 0.2;
 
 	{
-		_distance = floor (_x distance _objPos) / 10;
+		_distance = floor ((getPosASL _x) vectorDistance _objPosASL) / 10;
 
 		if (_x isKindOf "CAManBase") then
 		{
@@ -166,12 +169,12 @@ if (isServer) then
 
 		while {alive _obiect_orb} do
 		{
-			_list_units_in_range = (getPosATL _obiect_orb) nearEntities [["CAManBase", "Air", "Car", "Motorcycle", "Tank"], 90];
+			_list_units_in_range = _obiect_orb nearEntities [["CAManBase", "Air", "Car", "Motorcycle", "Tank"], 90];
 			_list_units_in_range = _list_units_in_range select {(isDamageAllowed _x) and {!(_x getVariable ["anomalyIgnore", false])}};
 
 			if (count _list_units_in_range > 0) then
 			{
-				[_list_units_in_range, (getPosATL _obiect_orb)] call _sparkyAttack;
+				[_list_units_in_range, (getPosASL _obiect_orb)] call _sparkyAttack;
 				sleep 20;
 			};
 
@@ -184,11 +187,11 @@ if (isServer) then
 };
 
 
-_lastPos = getPosATL _obiect_orb;
+_lastPos = getPosASL _obiect_orb;
 
 waitUntil
 {
-	if (alive _obiect_orb) then {_lastPos = getPosATL _obiect_orb;};
+	if (alive _obiect_orb) then {_lastPos = getPosASL _obiect_orb;};
 
 	sleep 1;
 

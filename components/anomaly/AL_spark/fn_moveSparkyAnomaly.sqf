@@ -9,17 +9,17 @@ WAIT_UNTIL_MISSION_STARTED();
 
 var_sparkyAnomaly_visibleDistance = 450;
 
-private ["_obiect_orb","_mark_orig"];
-
 _baseObj = _this select 0;
 _radius = _this select 1;
 
 if !(alive _baseObj) exitWith {};
 
-_obiect_orb = objNull;
+private _obiect_orb = objNull;
+
 if (isServer) then
 {
 	_obiect_orb = "Sign_Sphere10cm_F" createVehicle (getPos _baseObj);
+	_obiect_orb hideObjectGlobal true;
 
 	if !(isNil 'kyk_ew_fnc_broadcastJammerAdd') then
 	{
@@ -29,9 +29,8 @@ if (isServer) then
 else
 {
 	_obiect_orb = "Sign_Sphere10cm_F" createVehiclelocal (getPos _baseObj);
+	_obiect_orb hideObject true;
 };
-
-_obiect_orb hideObject true;
 
 _posSmoother = "Land_HelipadEmpty_F" createVehiclelocal (getPos _baseObj);
 _posSmoother hideObject true;
@@ -57,14 +56,6 @@ if (hasInterface) then
 			_ele setParticleParams [["\A3\data_f\blesk1", 1, 0, 1], "", "SpaceObject", 1, 0.15, [0, 0, 0], [0, 0, 0], 0.3, 11, 7.9, 0.075, [0.003, 0.003, 0.003], [[0.1, 0.1, 0.1, 0.5], [0.25, 0.25, 0.25, 0.5], [0.5, 0.5, 0.5, 0]], [0.08], 1, 0, "", "", _obiect_orb];
 			_ele setDropInterval 0.01;
 
-/*
-			_halo = "#particlesource" createVehicleLocal (getPosATL _obiect_orb);
-			_halo setParticleCircle [0, [0, 0, 0]];
-			_halo setParticleRandom [0, [0, 0, 0], [0, 0, 0], 0, 0, [0, 0, 0, 0], 0, 0];
-			_halo setParticleParams [["\A3\data_f\proxies\muzzle_flash\mf_sparks_01.p3d", 1, 0, 1], "", "SpaceObject", 1, 0.1, [0, 0, 0], [0, 0, 0.75], 13, 10, 7.9, 0.075, [0.5, 0.5], [[1, 1, 1, 1], [1, 1, 1, 1]], [0.08], 1, 0, "", "", _obiect_orb];
-			_halo setDropInterval 0.0033;
-			*/
-
 			_orb_lit = "#lightpoint" createVehiclelocal (getPosATL _obiect_orb);
 			_orb_lit lightAttachObject [_obiect_orb, [0,0,0]];
 			_orb_lit setLightColor [0.92,0.95,1];
@@ -78,7 +69,6 @@ if (hasInterface) then
 			waitUntil {sleep 1; (!alive _obiect_orb) or {player distance _obiect_orb > var_sparkyAnomaly_visibleDistance}};
 
 			deleteVehicle _ele;
-			//deleteVehicle _halo;
 			deleteVehicle _orb_lit;
 
 			if !(alive _obiect_orb) exitWith {};
@@ -86,8 +76,6 @@ if (hasInterface) then
 		};
 
 	};
-
-
 
 	[_obiect_orb] spawn
 	{
@@ -162,12 +150,13 @@ if (hasInterface) then
 		while {alive _posSmoother and {alive _obiect_orb}} do
 		{
 			private _time = CBA_missionTime;
-			private _curFreqSkew = (sin _time) * _xyFreqSkew;
-			private _xCycle = sin (_time * (_xMod + _curFreqSkew));
-			private _yCycle = cos (_time * (_yMod + _curFreqSkew));
+			private _curXFreqSkew = ((sin _time) * _xyFreqSkew) / _time;
+			private _curYFreqSkew = ((cos _time) * _xyFreqSkew) / _time;
+			private _xCycle = sin (_time * (_xMod + _curXFreqSkew));
+			private _yCycle = cos (_time * (_yMod + _curYFreqSkew));
 
-			private _basePos = getPosASL _posSmoother;
-			_obiect_orb setPosASL [(_basePos#0) + (_xCycle * _radius), (_basePos#1) + (_yCycle * _radius), (_basePos#2) + sin (_time * _zMod)];
+			private _basePos = getPosATL _posSmoother;
+			_obiect_orb setPosATL [(_basePos#0) + (_xCycle * _radius), (_basePos#1) + (_yCycle * _radius), (_basePos#2) + (sin (_time * _zMod)) + 1.25];
 
 			sleep 0.5;
 
@@ -184,23 +173,23 @@ if (hasInterface) then
 {
 	params ["_baseObj", "_posSmoother", "_radius"];
 
-	_lastRun = CBA_missionTime;
-	_maxVel = _radius * 0.1;
+	private _lastRun = CBA_missionTime;
+	private _maxVel = _radius * 0.1;
 
 	if (hasInterface) then
 	{
 		while {alive _baseObj and {alive _posSmoother}} do
 		{
-			_movement = _maxVel * (CBA_missionTime - _lastRun);
-			_smootherPos = getPosASL _posSmoother;
-			_dirVec = _smootherPos vectorFromTo (getPosASL _baseObj);
-			_distance = (_posSmoother distance _baseObj) min _movement;
-			_moveVec = _dirVec vectorMultiply _distance;
+			private _movement = _maxVel * (CBA_missionTime - _lastRun);
+			private _smootherPos = getPosASL _posSmoother;
+			private _dirVec = _smootherPos vectorFromTo (getPosASL _baseObj);
+			private _distance = (_posSmoother distance _baseObj) min _movement;
+			private _moveVec = _dirVec vectorMultiply _distance;
 
 			_posSmoother setPosASL (_smootherPos vectorAdd _moveVec);
 
 			_lastRun = CBA_missionTime;
-			_plyDist = _posSmoother distance player;
+			private _plyDist = _posSmoother distance player;
 			sleep ((((_plyDist - var_sparkyAnomaly_visibleDistance) * 0.01666) max 0.0333) min 2);
 
 		};
@@ -210,11 +199,11 @@ if (hasInterface) then
 	{
 		while {alive _baseObj and {alive _posSmoother}} do
 		{
-			_movement = _maxVel * (CBA_missionTime - _lastRun);
-			_smootherPos = getPosASL _posSmoother;
-			_dirVec = _smootherPos vectorFromTo (getPosASL _baseObj);
-			_distance = (_posSmoother distance _baseObj) min _movement;
-			_moveVec = _dirVec vectorMultiply _distance;
+			private _movement = _maxVel * (CBA_missionTime - _lastRun);
+			private _smootherPos = getPosASL _posSmoother;
+			private _dirVec = _smootherPos vectorFromTo (getPosASL _baseObj);
+			private _distance = (_posSmoother distance _baseObj) min _movement;
+			private _moveVec = _dirVec vectorMultiply _distance;
 
 			_posSmoother setPosASL (_smootherPos vectorAdd _moveVec);
 
@@ -235,13 +224,13 @@ sleep 3;
 
 _sparkyAttack =
 {
-	params ["_units", "_objPos"];
+	params ["_units", "_objPosASL"];
 
 	{
 	    [_x, 3, nil, nil, [0.2, 0.4, 0.6]] call f_fnc_woundUnitRandomly;
 	} forEach _units;
 
-	[_objPos] remoteExec ["f_fnc_fxAttackSparkyAnomaly", 0];
+	[_objPosASL] remoteExec ["f_fnc_fxAttackSparkyAnomaly", 0];
 
 };
 
@@ -249,9 +238,9 @@ _sparkyAttack =
 
 if (hasInterface) then
 {
-	[_obiect_orb, _sparkyAttack, _baseObj] spawn
+	[_obiect_orb, _baseObj] spawn
 	{
-		params ["_obiect_orb", "_sparkyAttack", "_baseObj"];
+		params ["_obiect_orb", "_baseObj"];
 
 		while {alive _obiect_orb} do
 	    {
@@ -289,13 +278,13 @@ if (isServer) then
 			private _attackWasTriggered = _baseObj getVariable ["playerTriggeredAttack", false];
 			_baseObj setVariable ["playerTriggeredAttack", false, true];
 
-			_list_units_in_range = (getPos _obiect_orb) nearEntities ["CAManBase", 10];
-			_list_units_in_range = _list_units_in_range select {((isDamageAllowed _x) and {!(_x getVariable ["anomalyIgnore", false])}) and {(uniform _x) isNotEqualTo "U_B_CBRN_Suit_01_MTP_F"}};
+			_list_units_in_range = _obiect_orb nearEntities ["CAManBase", 10];
+			_list_units_in_range = _list_units_in_range select {(isDamageAllowed _x) and {!(_x getVariable ["anomalyIgnore", false])}};
 
 			private _attackOccurred = false;
 			if (_attackWasTriggered or {count _list_units_in_range > 0}) then
 			{
-				[_list_units_in_range, (getpos _obiect_orb)] call _sparkyAttack;
+				[_list_units_in_range, (getPosASL _obiect_orb)] call _sparkyAttack;
 				_attackOccurred = true;
 			};
 
