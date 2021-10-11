@@ -35,16 +35,16 @@ if (hasInterface) then
     {
         params ["_obiect_orb", "_baseObj"];
 
-        _xMod = 8;
-        _yMod = 8;
-        _zMod = 12;
-        _ang = 0;
+        private _xMod = 8;
+        private _yMod = 8;
+        private _zMod = 12;
+        private _ang = 0;
 
-		_basePos = getPosASL _baseObj;
+		private _basePosASL = getPosASL _baseObj;
 
         while {alive _baseObj} do
         {            
-            _obiect_orb setPosASL [_basePos#0 + (sin (CBA_missionTime * _xMod)) * 1.5, _basePos#1 + (cos (CBA_missionTime * _yMod)) * 1.5, _basePos#2 + (sin (CBA_missionTime * _zMod)) * 1.5];
+            _obiect_orb setPosASL [_basePosASL#0 + (sin (CBA_missionTime * _xMod)) * 1.5, _basePosASL#1 + (cos (CBA_missionTime * _yMod)) * 1.5, _basePosASL#2 + (sin (CBA_missionTime * _zMod)) * 1.5];
 
             _dir = [cos _ang, sin _ang, 0];
             _ang = (CBA_missionTime * 2) mod 360;
@@ -60,10 +60,6 @@ if (hasInterface) then
 
 
 
-//sleep 3;
-
-
-
 if (hasInterface) then
 {
 	[_obiect_orb] spawn
@@ -76,25 +72,25 @@ if (hasInterface) then
 
 			if !(alive _obiect_orb) exitWith {};
 
-			_ele = "#particlesource" createVehicleLocal (getPosATL _obiect_orb);
+			private _ele = "#particlesource" createVehicleLocal (getPosATL _obiect_orb);
 			_ele setParticleCircle [0, [0, 0, 0]];
 			_ele setParticleRandom [0, [0, 0, 0], [0, 0, 0], 0, 0, [0, 0, 0, 0], 0, 0];
 			_ele setParticleParams [["\A3\data_f\blesk1", 1, 0, 1], "", "SpaceObject", 1, 0.6, [0, 0, 0], [0, 0, 0], 0.15, 11, 7.9, 0.075, [0.16, 0.20, 0.12], [[0.1, 0.1, 0.1, 0.5], [0.25, 0.25, 0.25, 0.5], [0.5, 0.5, 0.5, 0]], [0.08], 1, 0, "", "", _obiect_orb];
 			_ele setDropInterval 0.015;
 
-			_glow = "#particlesource" createVehicleLocal (getPosATL _obiect_orb);
+			private _glow = "#particlesource" createVehicleLocal (getPosATL _obiect_orb);
 			_glow setParticleCircle [0, [0, 0, 0]];
 			_glow setParticleRandom [0, [0, 0, 0], [0, 0, 0], 0, 0, [0, 0, 0, 0], 0, 0];
 			_glow setParticleParams [["\A3\data_f\kouleSvetlo", 1, 0, 1], "", "Billboard", 1, 1, [0, 0, 0], [0, 0, 0.75], 0, 10, 7.9, 0.075, [30, 30, 20], [[0.8, 0.02, 0.015, 0.3], [1, 0.12, 0.1, 0.2], [1, 0.24, 0.2, 0]], [0.08], 1, 0, "", "", _obiect_orb];
 			_glow setDropInterval 0.3;
 
-			_heat = "#particlesource" createVehicleLocal (getPosATL _obiect_orb);
+			private _heat = "#particlesource" createVehicleLocal (getPosATL _obiect_orb);
 			_heat setParticleCircle [0, [0, 0, 0]];
 			_heat setParticleRandom [0, [11, 11, 11], [0.175, 0.175, 0], 0, 0.25, [0, 0, 0, 0.1], 0, 0];
 			_heat setParticleParams [["\A3\data_f\ParticleEffects\Universal\Refract.p3d", 1, 0, 1], "", "Billboard", 1, 12.5, [0, 0, 0], [0, 0, 0.25], 0, 14.6, 11, 0, [4, 6, 8], [[0.1, 0.1, 0.1, 0.1], [0.25, 0.25, 0.25, 1], [0.5, 0.5, 0.5, 0.5]], [0.08], 1, 0, "", "", _obiect_orb];
 			_heat setDropInterval 0.015;
 
-			_orb_lit = "#lightpoint" createVehiclelocal (getPosATL _obiect_orb);
+			private _orb_lit = "#lightpoint" createVehiclelocal (getPosATL _obiect_orb);
 			_orb_lit lightAttachObject [_obiect_orb, [0,0,0]];
 			_orb_lit setLightColor [1,0.61,0.55];
 			_orb_lit setLightAmbient [1,0.31,0.27];
@@ -141,7 +137,7 @@ _sparkyAttack =
 	sleep 0.2;
 
 	{
-		_distance = floor ((getPosASL _x) vectorDistance _objPosASL) / 10;
+		private _distance = floor ((getPosASL _x) vectorDistance _objPosASL) / 10;
 
 		if (_x isKindOf "CAManBase") then
 		{
@@ -149,7 +145,7 @@ _sparkyAttack =
 		}
 		else
 		{
-			_damage = damage _x;
+			private _damage = damage _x;
 			_x setDamage _damage + (1 - _distance * 0.05);
 		};
 
@@ -169,7 +165,7 @@ if (isServer) then
 
 		while {alive _obiect_orb} do
 		{
-			_list_units_in_range = _obiect_orb nearEntities [["CAManBase", "Air", "Car", "Motorcycle", "Tank"], 90];
+			private _list_units_in_range = _obiect_orb nearEntities [["CAManBase", "Air", "Car", "Motorcycle", "Tank"], 90];
 			_list_units_in_range = _list_units_in_range select {(isDamageAllowed _x) and {!(_x getVariable ["anomalyIgnore", false])}};
 
 			if (count _list_units_in_range > 0) then
@@ -187,7 +183,7 @@ if (isServer) then
 };
 
 
-_lastPos = getPosASL _obiect_orb;
+private _lastPos = getPosASL _obiect_orb;
 
 waitUntil
 {

@@ -278,7 +278,7 @@ if (isServer) then
 			private _attackWasTriggered = _baseObj getVariable ["playerTriggeredAttack", false];
 			_baseObj setVariable ["playerTriggeredAttack", false, true];
 
-			_list_units_in_range = _obiect_orb nearEntities ["CAManBase", 10];
+			private _list_units_in_range = _obiect_orb nearEntities ["CAManBase", 10];
 			_list_units_in_range = _list_units_in_range select {(isDamageAllowed _x) and {!(_x getVariable ["anomalyIgnore", false])}};
 
 			private _attackOccurred = false;
