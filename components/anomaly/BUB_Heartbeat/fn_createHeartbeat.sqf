@@ -35,6 +35,8 @@ uiSleep 13.5;
 
 uiSleep 10;
 
+setDate [1964, 10, 31, 17, 05];
+setTimeMultiplier 0.1;
 [false, 5] call f_fnc_setHeartbeatWind;
 
 //[false, 5] remoteExec ["f_fnc_fxSetHeartbeatWindParticles"];
