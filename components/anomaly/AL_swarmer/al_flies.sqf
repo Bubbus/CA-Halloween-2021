@@ -1,22 +1,31 @@
 // by ALIAS
 
-if ((!alive swarmer_public) or (player distance swarmer_public > 1000)) exitWith {};
+if ((!alive swarmer_public) or {player distance swarmer_public > 1000}) exitWith {};
 
 if (isNil {swarmer_public getVariable "tgt"}) then
 {
-	flow_back = (_this vectorFromTo [(getposasl swarmer_public # 0)+random (selectrandom [1,-1]),(getposasl swarmer_public # 1)+random (selectrandom [1,-1]),random 2])
+	private _posASL = getposasl swarmer_public;
+	flow_back = _this vectorFromTo [(_posASL # 0) + random (selectrandom [1, -1]), (_posASL # 1) + random (selectrandom [1, -1]), random 2]
 }
 else
 {
 	if (atak_swarmer) then
 	{
-		_tgt_sw = swarmer_public getVariable "tgt";
-		flow_back = (_this vectorFromTo [getposasl _tgt_sw # 0,getposasl _tgt_sw # 1,0.5+random 1]) vectorMultiply (3+random 5);
-		if ((!atinge)and(_this vectorDistance (getposasl _tgt_sw) < 1)) then {atinge=true; publicVariable "atinge"};
+		private _tgt_sw = swarmer_public getVariable ["tgt", objNull];
+		private _posASL = getposasl _tgt_sw;
+
+		flow_back = (_this vectorFromTo [_posASL # 0, _posASL # 1, 0.5 + random 1]) vectorMultiply (3 + random 5);
+
+		if ((!atinge) and {_this vectorDistance _posASL < 1}) then 
+		{
+			atinge = true; 
+			publicVariable "atinge";
+		};
 	}
 	else
 	{
-		flow_back = (_this vectorFromTo [(getposasl swarmer_public # 0)+random 2,(getposasl swarmer_public # 1)+random 2,0.5+random 1]) vectorMultiply (3+random 5)
+		private _posASL = getposasl swarmer_public;
+		flow_back = (_this vectorFromTo [(_posASL # 0) + random 2, (_posASL # 1) + random 2, 0.5+random 1]) vectorMultiply (3 + random 5)
 	};
 };
 
