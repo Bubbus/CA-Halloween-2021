@@ -7,7 +7,12 @@ private _loadout = getUnitLoadout player;
 
 _loadout set [0, []];
 _loadout set [1, []];
-_loadout set [2, []];
+
+private _sidearm = _loadout#2;
+if ((count _sidearm < 1) or {_sidearm#0 isNotEqualTo "vn_m_hammer"}) then
+{
+	_loadout set [2, []];
+};
 
 private _uniform = _loadout#3;
 private _uniformContent = _uniform#1;
@@ -52,7 +57,10 @@ private _removeAllWeapons =
 		if !(isNull (_configMags >> _name)) then {continue};
 		if !(isNull (_configWeapons >> _name)) then 
 		{
-			if ((_disallowedBaseClasses findIf {_name isKindOf [_x, _configWeapons]}) >= 0) then {continue};
+			if ((_disallowedBaseClasses findIf {_name isKindOf [_x, _configWeapons]}) >= 0) then 
+			{
+				if (_name isNotEqualTo "vn_m_hammer") then {continue};				
+			};
 		};
 		
 		_returnArray pushBack _originalX;

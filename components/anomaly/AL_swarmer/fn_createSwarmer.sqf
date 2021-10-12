@@ -20,7 +20,7 @@ fnc_find_target_hiv =
 {
 	params ["_hiver", "_teritoriu"];
 
-	private _neartargets = (ASLToAGL getPosASL _hiver) nearEntities ["CAManBase", _teritoriu];
+	private _neartargets = _hiver nearEntities ["CAManBase", _teritoriu];
 	_neartargets = _neartargets select {(isDamageAllowed _x) and {!(_x getVariable ["anomalyIgnore", false])}};
 
 	_neartargets
@@ -28,22 +28,21 @@ fnc_find_target_hiv =
 
 fnc_move_swarm =
 {
-	params ["_swarmerAgent","_tgt_hiv"];
-	private ["_swarmerAgent","_tgt_hiv"];
+	params ["_swarmerAgent", "_tgt_hiv"];
+
 	_swarmerAgent setdir ([_swarmerAgent,_tgt_hiv] call BIS_fnc_dirTo);
-	_swarmerAgent moveTo AGLToASL (_tgt_hiv modelToWorld [0,7,0])
+	_swarmerAgent moveTo (ASLToATL (_tgt_hiv modelToWorldWorld [0,7,0]));
 };
 
 fnc_ajust_poz =
 {
-	params ["_swarmerAgent","_tgt_hiv"];
-	private ["_swarmerAgent","_tgt_hiv"];
+	params ["_swarmerAgent", "_tgt_hiv"];
+	
 	_swarmerAgent setdir ([_swarmerAgent,_tgt_hiv] call BIS_fnc_dirTo);
-	_swarmerAgent moveTo AGLToASL (_tgt_hiv modelToWorld [0,0,0])
+	_swarmerAgent moveTo (ASLToATL (_tgt_hiv modelToWorldWorld [0,0,0]));
 };
 
 private ["_tgt_hiv"];
-
 
 _startingPositionASL = _this select 0;
 _territoryRadius = _this select 1;
@@ -72,7 +71,6 @@ _swarmerAgent setVariable ["ace_medical_allowDamage", false, true];
 
 [_swarmerAgent] remoteExec ["f_fnc_fxSwarmerSounds"];
 [_swarmerAgent] remoteExec ["f_fnc_fxSwarmerFlies"];
-//[_swarmerAgent] execVM "AL_swarmer\smoke_detect.sqf";
 
 swarmer_public = _swarmerAgent;
 publicVariable "swarmer_public";
@@ -102,10 +100,10 @@ while {alive _swarmerAgent} do
 	if (count _list_unit_range_hiv > 0) then
 	{
 		_tgt_hiv = selectRandom _list_unit_range_hiv;
-		_swarmerAgent setVariable ["tgt",_tgt_hiv,true];
+		_swarmerAgent setVariable ["tgt", _tgt_hiv, true];
 
 		{
-			[_swarmerAgent,_x] spawn fnc_avoid_hive
+			[_swarmerAgent, _x] spawn fnc_avoid_hive
 
 		} foreach _list_unit_range_hiv;
 
@@ -115,7 +113,7 @@ while {alive _swarmerAgent} do
 		{
 			if (_tgt_hiv distance _swarmerAgent > 10) then
 			{
-				_swarmerAgent moveTo AGLToASL (_tgt_hiv modelToWorld [0,7,0])
+				_swarmerAgent moveTo (ASLToATL (_tgt_hiv modelToWorldWorld [0,5,0]));
 			};
 
 			sleep 4;
@@ -125,14 +123,14 @@ while {alive _swarmerAgent} do
 				atak_swarmer = true;
 				publicVariable "atak_swarmer";// hint str atak_swarmer;
 
-				_swarmerAgent moveTo AGLToASL (_tgt_hiv modelToWorld [0,0,0]);
+				_swarmerAgent moveTo (ASLToATL (_tgt_hiv modelToWorldWorld [0,0,0]));
 
-				atinge=false;
+				atinge = false;
 				publicVariable "atinge";
 
 				waitUntil {atinge};
 
-				_swarmerAgent moveTo AGLToASL (_tgt_hiv modelToWorld [0,0,0]);
+				_swarmerAgent moveTo (ASLToATL (_tgt_hiv modelToWorldWorld [0,0,0]));
 
 				if (alive _swarmerAgent) then
 				{
@@ -144,8 +142,7 @@ while {alive _swarmerAgent} do
 					[_tgt_hiv, _woundCount, nil, nil, _harmDistribution] call f_fnc_woundUnitRandomly;
 				};
 
-				//_swarmerAgent moveTo AGLToASL (_tgt_hiv modelToWorld [0,0,0]);
-				{[_swarmerAgent,_x] spawn fnc_avoid_hive} foreach _list_unit_range_hiv;
+				{[_swarmerAgent, _x] spawn fnc_avoid_hive} foreach _list_unit_range_hiv;
 
 				//for "_i" from 0 to 3 do	{[_swarmerAgent,_tgt_hiv] spawn fnc_ajust_poz; sleep 3};
 				sleep 10;
@@ -159,7 +156,7 @@ while {alive _swarmerAgent} do
 				//{[_swarmerAgent,_x] spawn fnc_avoid_hive} foreach _list_unit_range_hiv;
 				_balta_sange = createVehicle [selectrandom ["BloodPool_01_Large_New_F","BloodSplatter_01_Large_New_F"], [0,0,0], [], 0, "CAN_COLLIDE"];
 				_balta_sange setDir (round (random 360));
-				_balta_sange setposATL [getPosATL _tgt_hiv # 0,getPosATL _tgt_hiv # 1,0];
+				_balta_sange setposATL [getPosATL _tgt_hiv # 0, getPosATL _tgt_hiv # 1, 0.05];
 				_balta_sange setVectorUp surfaceNormal getPosASL _balta_sange;
 
 				_swarmerAgent setpos (position _balta_sange);
