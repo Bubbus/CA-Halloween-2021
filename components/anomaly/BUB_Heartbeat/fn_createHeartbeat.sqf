@@ -19,19 +19,19 @@ missionNamespace setVariable ["heartbeat_trackingObj", _baseObj, true];
 
 uiSleep 15;
 
-[objNull, 1, false, true] spawn f_fnc_doHeartbeatPulse;
+[objNull, 1, false, true] remoteExec ["f_fnc_doHeartbeatPulse"];
 
 uiSleep 12;
 
-[objNull, 2] spawn f_fnc_doHeartbeatPulse;
+[objNull, 2] remoteExec ["f_fnc_doHeartbeatPulse"];
 
 uiSleep 12.5;
 
-[objNull, 3] spawn f_fnc_doHeartbeatPulse;
+[objNull, 3] remoteExec ["f_fnc_doHeartbeatPulse"];
 
 uiSleep 13.5;
 
-[objNull, 4, true] spawn f_fnc_doHeartbeatPulse;
+[objNull, 4, true] remoteExec ["f_fnc_doHeartbeatPulse"];
 
 uiSleep 10;
 
