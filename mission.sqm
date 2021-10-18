@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=2089;
+		nextID=2091;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7208.77,94.879997,14913.331};
-		dir[]={-0.53031391,-0.82878578,0.17855738};
-		up[]={-0.78545874,0.55956501,0.26446494};
-		aside[]={0.31909913,-3.707828e-008,0.94772142};
+		pos[]={7191.5942,72.846634,14906.149};
+		dir[]={-0.83638597,-0.50605899,0.2106366};
+		up[]={-0.4907364,0.86249799,0.12358774};
+		aside[]={0.24421625,-3.0209776e-008,0.96972358};
 	};
 };
 binarizationWanted=0;
@@ -46,13 +46,14 @@ addons[]=
 	"characters_f_vietnam_c",
 	"static_f_vietnam_c",
 	"A3_Modules_F",
-	"lambs_wp"
+	"lambs_wp",
+	"Ryanzombies"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=17;
+		items=18;
 		class Item0
 		{
 			className="A3_Modules_F_Curator";
@@ -164,6 +165,12 @@ class AddonsMetaData
 			className="lambs_wp";
 			name="LAMBS Danger WP";
 			author="LAMBS Danger Dev Team";
+		};
+		class Item17
+		{
+			className="Ryanzombies";
+			name="Ryanzombies";
+			author="Ryan";
 		};
 	};
 };
@@ -8285,7 +8292,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=100;
+		items=102;
 		class Item0
 		{
 			dataType="Logic";
@@ -15491,7 +15498,6 @@ class Mission
 			};
 			id=1994;
 			type="Land_vn_b_helipad_01";
-			atlOffset=0.0071258545;
 		};
 		class Item61
 		{
@@ -15502,12 +15508,12 @@ class Mission
 				angles[]={0,1.2806321,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 			};
 			id=1995;
 			type="vn_o_prop_r311_01";
+			atlOffset=0.51233673;
 		};
 		class Item62
 		{
@@ -17171,6 +17177,124 @@ class Mission
 			{
 			};
 			id=2065;
+		};
+		class Item100
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7193.8892,71.668129,14908.238};
+				angles[]={-0,1.1918854,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this] call f_fnc_hellPortal;";
+			};
+			id=2089;
+			type="invisibleblock1m";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item101
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7189.8203,71.666336,14906.602};
+				angles[]={-0,4.2969308,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="[this] call f_fnc_hellPortal;";
+			};
+			id=2090;
+			type="invisibleblock1m";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="hideObject";
+					expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
+			};
 		};
 	};
 	class Connections

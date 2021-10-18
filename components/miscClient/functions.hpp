@@ -9,6 +9,7 @@ class miscClient
     class removeRadios{};
     class generateRadioList{};
     class onlyRadioTalkers{};
+    class hellPortal{};
 };
 class miscClient_ui
 {
