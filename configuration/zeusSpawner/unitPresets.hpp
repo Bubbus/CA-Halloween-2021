@@ -382,7 +382,7 @@ class CA_ZeusUI_Units
 			reinforcements[] = {"nva_ftl", "nva_ar", "nva_rif", "nva_rif", "nva_rif", "nva_mk"};
 		};
 
-		class FV720_Mora_Reinforcements
+		class FV720_Mora_Reinforcementssdffsd
 		{
 			unitName = "Mi-2 + Squad 6x";
 			vehicle = "vn_o_air_mi2_01_01";
@@ -479,5 +479,5 @@ class CA_ZeusUI_Units
 	// 		reinforcements[] = {"vc_ftl", "vc_ar", "vc_rif", "vc_rif", "vc_rif", "vc_mk"};
 	// 	};
 
-	};	
+	//};	
 };
