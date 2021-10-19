@@ -38,4 +38,5 @@ class miscShared
     class healWounds{};
     class fixOverdose{};
     class removeAllWeapons{};
+    class addActionDig{};
 };
