@@ -46,7 +46,7 @@ call
     {
     	params ["_pos"];
 
-    	[_pos, 200, false, 50, true] remoteExec ["f_fnc_createTwins", 2];
+    	[_pos, 200, 50, true] remoteExec ["f_fnc_createTwins", 2];
     };
 
     ["[CA-BOO] Anomalies", "Totem", _createTwins] call zen_custom_modules_fnc_register;

@@ -3,7 +3,7 @@
 if (!hasInterface) exitWith {};
 
 params ["_swarmer"];
-private ["_swarmer"];
+
 enableCamShake true;
 
 sleep 5;
@@ -27,7 +27,7 @@ while {alive _swarmer} do
 		playSound _baz_c;
 	};
 
-	if ((player == _swarmer getVariable "tgt") and (player distance _swarmer < 5)) then
+	if ((player distance _swarmer < 5) and {player isEqualTo (_swarmer getVariable ["tgt", objNull])}) then
 	{
 		addCamShake [5,2,5];
 		[60] call BIS_fnc_bloodEffect;
