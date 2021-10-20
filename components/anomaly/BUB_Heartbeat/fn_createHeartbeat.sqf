@@ -35,7 +35,9 @@ uiSleep 13.5;
 
 uiSleep 10;
 
-setDate [1964, 10, 31, 17, 05];
+missionNamespace setVariable ["missionPhase2", true, true];
+missionNamespace setVariable ["f_var_hideSquadMarkers", true, true];
+setDate [1964, 10, 31, 17, 06];
 setTimeMultiplier 0.1;
 [false, 5] call f_fnc_setHeartbeatWind;
 
@@ -45,3 +47,9 @@ sleep 6;
 
 deleteVehicle _baseObj;
 missionNamespace setVariable ["heartbeat_trackingObj", nil, true];
+
+sleep 12;
+
+{
+	[getMarkerPos _x] call f_fnc_freeRandomPrisoner;
+} forEach ["tele_1","tele_2","tele_3","tele_4","tele_5","tele_6","tele_7","tele_8","tele_9"];

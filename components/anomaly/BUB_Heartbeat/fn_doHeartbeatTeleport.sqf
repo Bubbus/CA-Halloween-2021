@@ -47,7 +47,7 @@ if !(_doKnockoutOnly) then
     [
         {
             player setCaptive true;
-            [player, true] call ACE_captives_fnc_setHandcuffed;
+            [player] call f_fnc_makePrisoner;
 
             [player, true] call f_fnc_removeAllWeapons;
 

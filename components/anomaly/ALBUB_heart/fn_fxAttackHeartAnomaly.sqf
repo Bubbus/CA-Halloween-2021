@@ -9,11 +9,16 @@ enableCamShake true;
 
 private _playerDistance = (_voice_attk distance2D player);
 private _distanceFactor = round (1 / ((_playerDistance*0.0007) + (1/4.499)));
-hint (str _distanceFactor);
 
 if (_distanceFactor >= 1 and {_playerDistance <= 1500}) then
 {
     private _blastStrength = 1 max _distanceFactor min 4;
+
+    if (_playerDistance > 70) then 
+    {
+        _blastStrength = 1 max _blastStrength min 3;
+    };
+
     private _doKnockout = (_blastStrength >= 4);
     [_voice_attk, _blastStrength, _doKnockout, true, false, 160] call f_fnc_doHeartbeatPulse;
 };

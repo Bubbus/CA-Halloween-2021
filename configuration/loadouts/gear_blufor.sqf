@@ -136,6 +136,15 @@ _baseLoadout = [["vn_m14","","vn_b_m14","",["vn_m14_mag",20],[],""],[],["vn_m191
 CREATE_LOADOUT(ftl,_baseLoadout);
 COPY_ADDONS(ftl,rif);   // FTLs will now get the random uniforms and hats from the Rifleman class.
 
+
+// pistol Loadout
+
+_baseLoadout = [[],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["CFP_GUER_M81Tee",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1],["vn_m1911_mag",1,7]]],["CUP_V_OI_TKI_Jacket6_01",[]],["grcb_rus_patrol_bag_khaki",[["ACE_EntrenchingTool",1],["ACE_HandFlare_Red",2,1]]],"vn_b_boonie_05_01","",["Binocular","","","",[],[],""],["vn_b_item_map","","","ItemCompass","ItemWatch",""]];
+
+CREATE_LOADOUT(pistol,_baseLoadout);
+COPY_ADDONS(pistol,rif);   // FTLs will now get the random uniforms and hats from the Rifleman class.
+
+
 // Squad lead Loadout
 
 COPY_LOADOUT(sl,ftl);   // SLs will be identical to FTLs.  Because FTLs get the random Rifleman stuff, SLs will get it too.

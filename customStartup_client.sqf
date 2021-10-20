@@ -65,8 +65,6 @@ private _removeNaughtyHat =
 
 		_unit setDamage 0;
 
-		hint ((str _instigator) + (currentWeapon _instigator));
-
 		if !(isPlayer _instigator) exitWith {0};
 
 		if !(currentWeapon _instigator isEqualTo "vn_m_hammer") exitWith {0};

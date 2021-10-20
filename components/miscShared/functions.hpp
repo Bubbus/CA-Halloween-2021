@@ -38,4 +38,6 @@ class miscShared
     class healWounds{};
     class fixOverdose{};
     class removeAllWeapons{};
+    class freeRandomPrisoner{};
+    class makePrisoner{};
 };

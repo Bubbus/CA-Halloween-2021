@@ -54,8 +54,6 @@ if !(hasInterface) then
 		{
 			params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint"];
 
-			hint ((str _instigator) + (currentWeapon _instigator));
-
 			if !(isPlayer _instigator) exitWith {0};
 
 			if !(currentWeapon _instigator isEqualTo "vn_m_hammer") exitWith {0};
