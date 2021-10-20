@@ -6,7 +6,7 @@ params [["_baseObj", objNull], ["_strength", 4], ["_doKnockout", false], ["_doKi
 
 private _visEffectStrength = _strength;
 
-if (player getVariable ["anomalyIgnore", false]) then
+if ((player getVariable ["anomalyIgnore", false]) and {_doKnockout isNotEqualTo 2}) then
 {
     _visEffectStrength = 1;
     _doKnockout = false;
@@ -91,7 +91,7 @@ private _emptyColArray = [1, 1, 0, [0, 0, 0, 0], [1, 1, 1, 1], [0.299, 0.587, 0.
         (_this#2) ppEffectAdjust (_this#3);
         (_this#2) ppEffectCommit 0.2;
 
-        if (_this#4) then
+        if ((_this#4) isNotEqualTo false) then
         {
             private _modelLocalForcePos = player selectionPosition "pelvis";
             player addForce [[0, -1000, 0], _modelLocalForcePos];
@@ -138,7 +138,7 @@ private _emptyColArray = [1, 1, 0, [0, 0, 0, 0], [1, 1, 1, 1], [0.299, 0.587, 0.
 
 ] call CBA_fnc_waitAndExecute;
 
-if (_doKnockout) then
+if (_doKnockout isNotEqualTo false) then
 {
     [
         {
