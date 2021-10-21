@@ -119,7 +119,6 @@ private _checkIfUnconscious =
 		{
 			if !IS_TRUE(f_deathFadedIn) then
 			{
-				systemChat "wooot";
 				f_deathFadedIn = true;
 				"DeathFade" cutText ["", "BLACK OUT", 3, false];
 				3 fadeSound 0;

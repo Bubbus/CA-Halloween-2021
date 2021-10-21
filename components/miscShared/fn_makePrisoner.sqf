@@ -29,11 +29,9 @@ if (!alive _unit or {!local _unit}) exitWith {};
 
 
 // Start by handcuffing the unit
-[_unit, true] call ACE_captives_fnc_setHandcuffed;
-[_unit] joinSilent grpNull;
+[_unit, true] call ace_captives_fnc_setHandcuffed;
 
 // Delay the remaining code (setHandcuffed sleeps for 0.01 seconds)
-/*
 [
 	{
 		params ["_unit"];
@@ -49,10 +47,23 @@ if (!alive _unit or {!local _unit}) exitWith {};
 
 		// Overwrite ACE's animation
 		private _anim = animationState _unit;
-		if (_anim == "ace_amovpercmstpscapwnondnon" or {_anim == "ace_amovpercmstpsnonwnondnon_amovpercmstpscapwnondnon"}) then {
-			_unit switchMove "";
+		private _prisonerAnim = format ["Acts_AidlPsitMstpSsurWnonDnon0%1", 1 + floor random 5];
+		switch (_anim) do {
+			case "ace_amovpercmstpsnonwnondnon_amovpercmstpscapwnondnon";
+			case "ace_amovpercmstpscapwnondnon": {
+				[_unit, ""] remoteExecCall ["switchMove", 0, false];
+				_unit playMoveNow _prisonerAnim;
+			};
+
+			default {
+				if (_unit getVariable ["ace_isunconscious", false] or {lifeState _unit == "INCAPACITATED"}) then {
+					[_unit, _prisonerAnim] remoteExecCall ["switchMove", 0, false];
+				} else {
+					_unit playMoveNow _prisonerAnim;
+				}
+			};
 		};
-		_unit playMoveNow format ["Acts_AidlPsitMstpSsurWnonDnon0%1", 1 + floor random 5];
+		_unit setVariable [QGVAR(prisonerAnim), _prisonerAnim, false];
 
 		// Attach a custom EH to smooth out the freeing animation
 		_EH = _unit getVariable [QGVAR(EH_makePrisoner), -1];
@@ -62,21 +73,39 @@ if (!alive _unit or {!local _unit}) exitWith {};
 		_unit setVariable [QGVAR(EH_makePrisoner), _unit addEventHandler ["AnimChanged", {
 			params ["_unit", "_anim"];
 
-			private _validAnims = [
-				"amovpercmstpsraswrfldnon",
-				"amovpercmstpsraswpstdnon",
-				"amovpercmstpsnonwnondnon"
-			];
+			private _prisonerAnim = _unit getVariable [QGVAR(prisonerAnim), ""];
 
-			if (_validAnims find _anim >= 0) then {
-				_unit switchMove "Acts_AidlPsitMstpSsurWnonDnon01";
-				_unit playMoveNow "Acts_AidlPsitMstpSsurWnonDnon_out";
+			switch (_anim) do {
 
-				_unit removeEventHandler ["AnimChanged", _unit getVariable [QGVAR(EH_makePrisoner), -1]];
+				// Handle unconsciousness
+				case "ace_amovpercmstpscapwnondnon": {
+					[_unit, _prisonerAnim] remoteExecCall ["switchMove", 0, false];
+					_unit playMoveNow _prisonerAnim;
+				};
+
+				// Outro animation
+				case "amovpercmstpsraswrfldnon";
+				case "amovpercmstpsraswpstdnon";
+				case "amovpercmstpsnonwnondnon_turnl";	// Only used by AI, but I needed this for testing
+				case "amovpercmstpsnonwnondnon_turnr";	// Same as above
+				case "amovppnemstpsnonwnondnon";
+				case "amovpercmstpsnonwnondnon": {
+
+					[_unit, _prisonerAnim] remoteExecCall ["switchMove", 0, false];
+
+					if (_unit getVariable ["ace_captives_isHandcuffed", false]) then {
+						_unit playMoveNow _prisonerAnim;
+
+					} else {
+						_unit playMoveNow "Acts_AidlPsitMstpSsurWnonDnon_out";
+
+						_unit removeEventHandler ["AnimChanged", _unit getVariable [QGVAR(EH_makePrisoner), -1]];
+					};
+				};
 			};
+
 		}], false];
 	},
 	[_unit],
 	0.5
 ] call CBA_fnc_waitAndExecute;
-//*/

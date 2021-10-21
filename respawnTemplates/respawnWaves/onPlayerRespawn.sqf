@@ -32,7 +32,6 @@ _doRespawn =
         player setVariable ["f_var_mayTeleportToGroup", true, true];
     };
 
-    systemChat "what";
     f_deathFadedIn = false;
     "DeathFade" cutFadeOut 3;
     3 fadeSound 1;
