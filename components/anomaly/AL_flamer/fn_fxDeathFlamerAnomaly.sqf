@@ -22,10 +22,10 @@ enableCamShake true;
 	params ["_coord"];
 
 	sleep 2;
-	playSound3D [eko_sharp, "", false, [_coord select 0, _coord select 1, 500], 8, 1, 3000];
+	playSound3D [eko_sharp, "", false, [_coord select 0, _coord select 1, 500], 8, 1, 3000, 0, true];
 
 	sleep 1.5;
-	playSound3D [eko_bomb, "", false, [_coord select 0, _coord select 1, 500], 4, 1, 3000];
+	playSound3D [eko_bomb, "", false, [_coord select 0, _coord select 1, 500], 4, 1, 3000, 0, true];
 
 };
 
