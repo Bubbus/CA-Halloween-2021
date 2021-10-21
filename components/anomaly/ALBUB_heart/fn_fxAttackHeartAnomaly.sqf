@@ -14,12 +14,13 @@ if (_distanceFactor >= 1 and {_playerDistance <= 1500}) then
 {
     private _blastStrength = 1 max _distanceFactor min 4;
 
-    if (_playerDistance > 70) then 
+    if ((_playerDistance > 70) or {player getVariable ["hasHammer", false]} or {player getVariable ["anomalyIgnore", false]}) then 
     {
         _blastStrength = 1 max _blastStrength min 3;
     };
 
     private _doKnockout = (_blastStrength >= 4);
+
     [_voice_attk, _blastStrength, _doKnockout, true, false, 160] call f_fnc_doHeartbeatPulse;
 };
 
