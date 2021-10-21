@@ -227,7 +227,7 @@ _sparkyAttack =
 	params ["_units", "_objPosASL"];
 
 	{
-	    [_x, 3, nil, nil, [0.2, 0.4, 0.6]] call f_fnc_woundUnitRandomly;
+	    [_x, 3, nil, nil, [0.2, 0.4, 0.6]] remoteExec ["f_fnc_woundUnitRandomly", _x, false];
 	} forEach _units;
 
 	[_objPosASL] remoteExec ["f_fnc_fxAttackSparkyAnomaly", 0];

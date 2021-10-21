@@ -13,7 +13,7 @@ while {alive _electr_viz} do
 	_pos_run = [getPosATL _electr_viz, 1000, random 360] call BIS_fnc_relPos;
 
 	{
-		[_x, 2, nil, nil, [0.3, 0.4, 0.6]] call f_fnc_woundUnitRandomly;
+		[_x, 2, nil, nil, [0.3, 0.4, 0.6]] remoteExec ["f_fnc_woundUnitRandomly", _x, false];
 
 		_x doMove _pos_run;
 		_x setSkill ["commanding", 1];

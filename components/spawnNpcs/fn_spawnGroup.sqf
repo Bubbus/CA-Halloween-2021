@@ -33,20 +33,21 @@ switch (_side) do
 
 
 {
-	_type = _x;
+	private _type = _x;
+	private _thisUnitType = _unittype;
 	
 	if (_type in ["cultist", "cultleader"]) then
 	{
 		switch (_side) do
 		{
-			case west: { _unittype = selectRandom ["B_soldier_Melee", "B_soldier_Melee_RUSH"]; };
-			case east: { _unittype = selectRandom ["O_soldier_Melee", "O_soldier_Melee_RUSH"]; };
+			case west: { _thisUnitType = selectRandom ["B_soldier_Melee", "B_soldier_Melee_RUSH"]; };
+			case east: { _thisUnitType = selectRandom ["O_soldier_Melee", "O_soldier_Melee_RUSH"]; };
 		};
 
 	};
 
     _unit = "";
-	_unit = _group createUnit [_unittype, _spawnpos, [], 0, "FORM"];
+	_unit = _group createUnit [_thisUnitType, _spawnpos, [], 0, "FORM"];
 
     if (_faction == "") then
     {
