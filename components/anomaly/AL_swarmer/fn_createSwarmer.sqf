@@ -139,7 +139,7 @@ while {alive _swarmerAgent} do
 					private _woundCount = (ceil (_damageToDeal * 6)) max 1;
 					private _harmDistribution = [0.7, 0.8, 1.2] vectorMultiply (_damageToDeal max 0.3);
 
-					[_tgt_hiv, _woundCount, nil, nil, _harmDistribution] call f_fnc_woundUnitRandomly;
+					[_tgt_hiv, _woundCount, nil, nil, _harmDistribution] remoteExec ["f_fnc_woundUnitRandomly", _tgt_hiv, false];
 				};
 
 				{[_swarmerAgent, _x] spawn fnc_avoid_hive} foreach _list_unit_range_hiv;

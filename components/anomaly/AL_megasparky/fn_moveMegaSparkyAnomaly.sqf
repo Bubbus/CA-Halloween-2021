@@ -247,7 +247,7 @@ _sparkyAttack =
 
 		if (_x isKindOf "CAManBase") then
 		{
-			[_x, (18 - _distance), nil, nil, [0.6, 0.7, 0.9]] call f_fnc_woundUnitRandomly;
+			[_x, (18 - _distance), nil, nil, [0.6, 0.7, 0.9]] remoteExec ["f_fnc_woundUnitRandomly", _x, false];
 		}
 		else
 		{

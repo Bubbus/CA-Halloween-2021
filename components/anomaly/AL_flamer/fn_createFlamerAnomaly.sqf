@@ -186,7 +186,7 @@ _flamer call fnc_flamerAnomaly_hide_flamer;
 				_nearflamer = (ASLToAGL getPosASL _flamer) nearEntities ["CAManBase",5];
 
 				{
-					[_x, 5, nil, nil, [0.2, 0.4, 0.6]] call f_fnc_woundUnitRandomly;
+					[_x, 5, nil, nil, [0.2, 0.4, 0.6]] remoteExec ["f_fnc_woundUnitRandomly", _x, false];
 					_tip = selectrandom ["04","burned","02","03"];
 					[_x, [_tip,200]] remoteExec ["say3d"];
 
@@ -204,7 +204,7 @@ _flamer call fnc_flamerAnomaly_hide_flamer;
 
 					_didHurt = false;
 					{
-						[_x, 5, nil, nil, [0.2, 0.4, 0.6]] call f_fnc_woundUnitRandomly;
+						[_x, 5, nil, nil, [0.2, 0.4, 0.6]] remoteExec ["f_fnc_woundUnitRandomly", _x, false];
 						_tip = selectrandom ["04","burned","02","03"];
 						[_x, [_tip,200]] remoteExec ["say3d"];
 						_didHurt = true;
@@ -225,7 +225,7 @@ _flamer call fnc_flamerAnomaly_hide_flamer;
 
 				_nearflamer = (ASLToAGL getPosASL _flamer) nearEntities ["CAManBase",5];
 				{
-					[_x, 5, nil, nil, [0.2, 0.4, 0.6]] call f_fnc_woundUnitRandomly;
+					[_x, 5, nil, nil, [0.2, 0.4, 0.6]] remoteExec ["f_fnc_woundUnitRandomly", _x, false];
 					_tip = selectrandom ["04","burned","02","03"];
 					[_x, [_tip,200]] remoteExec ["say3d"];
 
@@ -253,7 +253,7 @@ _flamer call fnc_flamerAnomaly_hide_flamer;
 
 				_didHurt = false;
 				{
-					[_x, 5, nil, nil, [0.2, 0.4, 0.6]] call f_fnc_woundUnitRandomly;
+					[_x, 5, nil, nil, [0.2, 0.4, 0.6]] remoteExec ["f_fnc_woundUnitRandomly", _x, false];
 					_tip = selectrandom ["04","burned","02","03"];
 					[_x, [_tip,200]] remoteExec ["say3d"];
 					_didHurt = true;
