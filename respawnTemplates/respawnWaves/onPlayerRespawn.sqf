@@ -14,6 +14,7 @@ WAIT_UNTIL_PLAYER_EXISTS();
 waitUntil {local player};
 
 #include "..\parts\tryTeleport.sqf"
+#include "..\parts\applyOldLoadout.sqf"
 
 
 // Set language of the units depending on side (BABEL API)
@@ -31,6 +32,11 @@ _doRespawn =
         player setVariable ["f_var_mayTeleportToGroup", true, true];
     };
 
+    systemChat "what";
+    f_deathFadedIn = false;
+    "DeathFade" cutFadeOut 3;
+    3 fadeSound 1;
+
     [_unit, true] call f_fnc_activatePlayer;
     f_var_playerHasBeenKilled = false;
 
@@ -43,9 +49,7 @@ if (time < 30) exitWith
 {
     DEBUG_PRINT_LOG("[RespawnWaves] Time < 30, skipping respawn wave...")
 
-    #include "..\parts\applyOldLoadout.sqf"
     [_unit, _corpse] spawn _applyOldLoadout;
-
     [_unit, _corpse, false] call _doRespawn;
 }; // Apply a grace period at mission start.
 
@@ -64,11 +68,8 @@ if (!_hasBeenKilled) exitWith
 {
     DEBUG_PRINT_LOG("[RespawnWaves] Player was not killed, handling as JIP...")
 
-    #include "..\parts\applyOldLoadout.sqf"
-    [_unit, _corpse] spawn _applyOldLoadout;
-    
+    [_unit, _corpse] spawn _applyOldLoadout;    
     [_unit, _corpse, true] call _doRespawn;
-
 };
 
 
@@ -90,7 +91,6 @@ if (_hasBeenKilled) then
     }
     else
     {
-        #include "..\parts\applyOldLoadout.sqf"
         [_unit, _corpse] spawn _applyOldLoadout;
         
         player setPos (getMarkerPos "respawn_west");

@@ -94,3 +94,40 @@ private _trackHammer =
 };
 
 [_trackHammer, [_trackHammer], 2] call CBA_fnc_waitAndExecute;
+
+private _checkIfUnconscious = 
+{
+	((player getVariable ["ACE_isUnconscious", false]) and {alive player})
+};
+
+[_checkIfUnconscious] spawn
+{
+	params ["_checkIfUnconscious"];
+
+	while {true} do
+	{
+		waitUntil {[] call _checkIfUnconscious};
+
+		private _unconAtTime = CBA_missionTime;
+
+		waitUntil 
+		{
+			(!([] call _checkIfUnconscious)) or {CBA_missionTime > (_unconAtTime + 12)}
+		};
+
+		if ([] call _checkIfUnconscious) then
+		{
+			if !IS_TRUE(f_deathFadedIn) then
+			{
+				systemChat "wooot";
+				f_deathFadedIn = true;
+				"DeathFade" cutText ["", "BLACK OUT", 3, false];
+				3 fadeSound 0;
+			};
+
+			uiSleep 3.5;
+
+			player setDamage 1;
+		};
+	};
+};
