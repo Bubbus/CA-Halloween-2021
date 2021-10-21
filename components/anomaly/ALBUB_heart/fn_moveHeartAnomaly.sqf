@@ -105,7 +105,7 @@ if (hasInterface) then
 			{
 				while {alive _this} do
 				{
-					_this setLightIntensity (1000 + ((sin (CBA_missionTime * 45)) * 500) + random 250);
+					_this setLightIntensity (1150 + ((sin (CBA_missionTime * 45)) * 500) + random 100);
 					sleep 0.016;
 				};
 
