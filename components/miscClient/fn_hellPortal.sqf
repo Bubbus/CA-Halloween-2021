@@ -21,7 +21,8 @@
 
 // Fetch our params
 params [
-	["_obj", objNull, [objNull]]
+	["_obj", objNull, [objNull]],
+	["_subType", 0, [0]]
 ];
 
 // If no object was provided, exit
@@ -38,6 +39,88 @@ if (isNull _obj) exitWith {};
 private _dir = getDir _obj;
 private _dirVec = [sin _dir, cos _dir, 0];
 private _sourceSmoke = _obj getVariable [QGVAR(spk_hellPortal_sourceSmoke), objNull];
+private "_smokeParams";
+
+// Set up some constants
+private _const_subTypes = [
+/*
+	[
+		position offset,
+		setParticleCircle,
+		setParticleRandom,
+		setParticleParams,
+		setDropInterval
+	]
+*/
+	[	// Main entrance
+		[0, 0, 1.2] vectorAdd (_dirVec vectorMultiply -1),
+		[0, [0, 0, 0]],
+		[0.5, [0.25, 0.25, 1.3], [0.4, 0.4, 0], 0, 0.1, [0.25, 0, 0, 0.1], 0, 0, 1000],
+		[
+			["\A3\data_f\ParticleEffects\Universal\smoke.p3d", 1, 0, 1], "", "Billboard", 1, 5, [0, 0, 0], _dirVec vectorAdd [0, 0, 0.5], 0, 10, 7.6, 0.01, [1.25, 1.25, 1.75, 3],
+			[	// Colour
+				[0.8, 0.33, 0.3, 0],
+				[0.8, 0.33, 0.3, 0.8],
+				[0.8, 0.33, 0.3, 0.2],
+				[0.8, 0.33, 0.3, 0]
+			],
+			[0, 0.01, 0.2, 1], 1, 0, "", "", objNull, 0, false, -1,
+			[	// Emissive
+				MACRO_RGB_MULTIPLY(0.8, 0.33, 0.3, 50),
+				MACRO_RGB_MULTIPLY(0.8, 0.33, 0.3, 20),
+				MACRO_RGB_MULTIPLY(0.8, 0.33, 0.3, 5),
+				MACRO_RGB_MULTIPLY(0.8, 0.33, 0.3, 1)
+			]
+		],
+		0.075
+	],
+
+	[	// Side entrance
+		[0, 0, 1.5] vectorAdd (_dirVec vectorMultiply -1),
+		[0, [0, 0, 0]],
+		[0.5, [0.4, 0.4, 1.3], [0.2, 0.2, 0], 0, 0.1, [0.25, 0, 0, 0.1], 0, 0, 1000],
+		[
+			["\A3\data_f\ParticleEffects\Universal\smoke.p3d", 1, 0, 1], "", "Billboard", 1, 5, [0, 0, 0], _dirVec vectorAdd [0, 0, 0.2], 0, 10, 7.8, 0.01, [1.5, 1.5, 2, 3.5],
+			[	// Colour
+				[0.8, 0.33, 0.3, 0],
+				[0.8, 0.33, 0.3, 0.8],
+				[0.8, 0.33, 0.3, 0.2],
+				[0.8, 0.33, 0.3, 0]
+			],
+			[0, 0.01, 0.2, 1], 1, 0, "", "", objNull, 0, false, -1,
+			[	// Emissive
+				MACRO_RGB_MULTIPLY(0.8, 0.33, 0.3, 50),
+				MACRO_RGB_MULTIPLY(0.8, 0.33, 0.3, 20),
+				MACRO_RGB_MULTIPLY(0.8, 0.33, 0.3, 5),
+				MACRO_RGB_MULTIPLY(0.8, 0.33, 0.3, 1)
+			]
+		],
+		0.075
+	],
+
+	[	// Interior
+		[0, 0, 1.5],
+		[0.5, [0, 0.5, 0]],
+		[0.5, [1.0, 1.0, 1.3], [0.1, 0.1, 0.1], 0, 0.1, [0.25, 0, 0, 0.1], 0, 0, 1000],
+		[
+			["\A3\data_f\ParticleEffects\Universal\smoke.p3d", 1, 0, 1], "", "Billboard", 1, 3, [0, 0, 0], [0, 0, 0.2], 0, 10, 7.8, 0.01, [2.0, 2.0, 2.5, 4],
+			[	// Colour
+				[0.8, 0.33, 0.3, 0],
+				[0.8, 0.33, 0.3, 0.8],
+				[0.8, 0.33, 0.3, 0.2],
+				[0.8, 0.33, 0.3, 0]
+			],
+			[0, 0.01, 0.2, 1], 1, 0, "", "", objNull, 0, false, -1,
+			[	// Emissive
+				MACRO_RGB_MULTIPLY(0.8, 0.33, 0.3, 50),
+				MACRO_RGB_MULTIPLY(0.8, 0.33, 0.3, 20),
+				MACRO_RGB_MULTIPLY(0.8, 0.33, 0.3, 5),
+				MACRO_RGB_MULTIPLY(0.8, 0.33, 0.3, 1)
+			]
+		],
+		0.04
+	]
+];
 
 
 
@@ -47,26 +130,14 @@ private _sourceSmoke = _obj getVariable [QGVAR(spk_hellPortal_sourceSmoke), objN
 deleteVehicle _sourceSmoke;
 
 _sourceSmoke = "#particlesource" createVehicleLocal getPosATL _obj;
-_sourceSmoke setPosWorld (getPosWorld _obj vectorAdd [0, 0, 0.9] vectorAdd (_dirVec vectorMultiply -1));
-_sourceSmoke setParticleCircle [0, [0, 0, 0]];
-_sourceSmoke setParticleRandom [0.5, [0.0, 0.0, 1.1], [0.5, 0.5, 0], 0, 0.1, [0.25, 0, 0, 0.1], 0, 0, 1000];
-_sourceSmoke setParticleParams [
-	["\A3\data_f\ParticleEffects\Universal\smoke.p3d", 1, 0, 1], "", "Billboard", 1, 5, [0, 0, 0], _dirVec vectorAdd [0, 0, 0.5], 0, 10, 7.6, 0.01, [1, 1, 1.5, 3],
-	[	// Colour
-		[0.8, 0.33, 0.3, 0],
-		[0.8, 0.33, 0.3, 0.8],
-		[0.8, 0.33, 0.3, 0.2],
-		[0.8, 0.33, 0.3, 0]
-	],
-	[0, 0.01, 0.2, 1], 1, 0, "", "", _sourceSmoke, 0, false, -1,
-	[	// Emissive
-		MACRO_RGB_MULTIPLY(0.8, 0.33, 0.3, 50),
-		MACRO_RGB_MULTIPLY(0.8, 0.33, 0.3, 20),
-		MACRO_RGB_MULTIPLY(0.8, 0.33, 0.3, 5),
-		MACRO_RGB_MULTIPLY(0.8, 0.33, 0.3, 1)
-	]
-];
-_sourceSmoke setDropInterval 0.025;
+_smokeParams = _const_subTypes # _subType;
+(_smokeParams # 3) set [18, _sourceSmoke];	// Add the smoke source back into the array (this is dumb, but necessary)
+
+_sourceSmoke setPosWorld (getPosWorld _obj vectorAdd (_smokeParams # 0));
+_sourceSmoke setParticleCircle (_smokeParams # 1);
+_sourceSmoke setParticleRandom (_smokeParams # 2);
+_sourceSmoke setParticleParams (_smokeParams # 3);
+_sourceSmoke setDropInterval (_smokeParams # 4);
 
 _obj setVariable [QGVAR(spk_hellPortal_sourceSmoke), _sourceSmoke, false];
 _obj hideObject true;
