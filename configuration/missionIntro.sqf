@@ -23,7 +23,7 @@ f_var_showClassicIntroAtStart = true;
         MISSIONINTRO_FULL - Like MISSIONINTRO_DEFAULT, but also shows the author name along with the date and time.
         MISSIONINTRO_CUSTOM
 */
-f_var_missionIntro_type = MISSIONINTRO_DEFAULT;
+f_var_missionIntro_type = MISSIONINTRO_FULL;
 
 
 // Amount of time that the intro should stay on-screen (in seconds).
