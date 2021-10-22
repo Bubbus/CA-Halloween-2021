@@ -105,7 +105,7 @@ if (hasInterface) then
 			{
 				while {alive _this} do
 				{
-					_this setLightIntensity (1000 + ((sin (CBA_missionTime * 45)) * 500) + random 250);
+					_this setLightIntensity (1150 + ((sin (CBA_missionTime * 45)) * 500) + random 100);
 					sleep 0.016;
 				};
 
@@ -141,7 +141,7 @@ _sparkyAttack =
 
 		if (_x isKindOf "CAManBase") then
 		{
-			[_x, 12 - _distance, nil, nil, [0.5, 0.6, 0.7]] call f_fnc_woundUnitRandomly;
+			[_x, 12 - _distance, nil, nil, [0.5, 0.6, 0.7]] remoteExec ["f_fnc_woundUnitRandomly", _x, false];
 		}
 		else
 		{

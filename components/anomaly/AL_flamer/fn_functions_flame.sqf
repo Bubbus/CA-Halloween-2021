@@ -59,7 +59,7 @@ fnc_flamerAnomaly_attack_flamer =
 	_nearflamer = (ASLToAGL getPosASL _tgt_casp) nearEntities ["CAManBase",10];
 
 	{
-		[_x, 3, nil, nil, [0.2, 0.4, 0.6]] call f_fnc_woundUnitRandomly;
+		[_x, 3, nil, nil, [0.2, 0.4, 0.6]] remoteExec ["f_fnc_woundUnitRandomly", _x, false];
 		[_x, [_tip,200]] remoteExec ["say3d"];
 
 	} forEach (_nearflamer - [_flamer]);
