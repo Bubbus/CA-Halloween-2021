@@ -13,7 +13,7 @@ if (player distance _work_sfx_sec < 100) then
 	addCamShake [4,4,13 + (random 33)];
 };
 
-//_work_sfx_sec say3D ["uwboom", 500];
+_work_sfx_sec say3D ["uwboom", 500];
 
 _fire = "#particlesource" createVehicleLocal (getpos _work_sfx_sec);
 _fire setParticleCircle [0, [0, 0, 0]];

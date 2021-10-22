@@ -1,13 +1,19 @@
 #include "..\macros.hpp"
 
 SERVER_ONLY;
+RUN_AS_ASYNC(f_fnc_destroyHeartAnchor);
 
-params ["_anchor"];
+params ["_player", "_anchor"];
 
 if !(alive _anchor) exitWith {};
+if (_anchor getVariable ["destroying", false]) exitWith {};
+_anchor setVariable ["destroying", true];
+
+[_player, "hammersing"] remoteExecCall ["say3D"];
+
+uiSleep 4.9;
 
 [getPosASL _anchor] remoteExec ["f_fnc_fxDestroyHeartAnchor"];
-
 deleteVehicle _anchor;
 
 [

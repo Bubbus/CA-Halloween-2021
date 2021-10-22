@@ -142,7 +142,14 @@ COPY_ADDONS(ftl,rif);   // FTLs will now get the random uniforms and hats from t
 _baseLoadout = [[],[],["vn_m1911","","","",["vn_m1911_mag",7],[],""],["CFP_GUER_M81Tee",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1],["vn_m1911_mag",1,7]]],["CUP_V_OI_TKI_Jacket6_01",[]],["grcb_rus_patrol_bag_khaki",[["ACE_EntrenchingTool",1],["ACE_HandFlare_Red",2,1]]],"vn_b_boonie_05_01","",["Binocular","","","",[],[],""],["vn_b_item_map","","","ItemCompass","ItemWatch",""]];
 
 CREATE_LOADOUT(pistol,_baseLoadout);
-COPY_ADDONS(pistol,rif);   // FTLs will now get the random uniforms and hats from the Rifleman class.
+COPY_ADDONS(pistol,rif);
+
+
+// punished miller Loadout
+
+_baseLoadout = [["vn_izh54_shorty","","","",["vn_izh54_so_mag",2],[],""],[],["vn_m_hammer","","","",[],[],""],["CFP_GUER_TanTee",[["ACE_fieldDressing",4],["ACE_morphine",4],["ACE_tourniquet",4],["ACE_packingBandage",2],["ACE_epinephrine",1],["ACE_splint",2],["ACE_elasticBandage",4],["ACE_Flashlight_XL50",1],["ACE_MapTools",1],["ACE_salineIV",1]]],["CUP_V_OI_TKI_Jacket1_06",[["vn_izh54_so_mag",5,2]]],["vn_b_pack_trp_02",[["ACE_EntrenchingTool",1],["ACE_HandFlare_Red",4,1]]],"CUP_H_NAPA_Fedora","vn_b_scarf_01_03",["Binocular","","","",[],[],""],["vn_b_item_map","","","ItemCompass","ItemWatch",""]];
+
+CREATE_LOADOUT(punishedmiller,_baseLoadout);
 
 
 // Squad lead Loadout

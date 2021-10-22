@@ -81,7 +81,8 @@ if (_hasBeenKilled) then
 
     if (missionNamespace getVariable ["missionPhase2", false]) then
     {
-        ["pistol", _unit] spawn f_fnc_assignGear;
+        private _loadout = if IS_TRUE(f_playerIsMiller) then {"punishedmiller"} else {"pistol"};
+        [_loadout, _unit] spawn f_fnc_assignGear;
 
         private _telePoint = selectRandom ["tele_1","tele_2","tele_3","tele_4","tele_5","tele_6","tele_7","tele_8","tele_9"];
 

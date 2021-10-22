@@ -330,6 +330,18 @@ class CfgDebriefingSections
 // Sound files can be played in 3D, and are an effect for volume purposes.
 class CfgSounds
 {
+	class hammersing
+	{
+		name = "hammersing";
+		sound[] = {"\sounds\hammersing.ogg", db+10, 1};
+		titles[] = {};
+	};
+	class uwboom
+	{
+		name = "uwboom";
+		sound[] = {"\sounds\uwboom.ogg", db+10, 1};
+		titles[] = {};
+	};
 	// START: Burper
 
 	class bones_drop

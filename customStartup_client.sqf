@@ -4,6 +4,8 @@ firework22= _soundPath + "sounds\firework2.ogg";
 firework33= _soundPath + "sounds\firework3.ogg";
 
 
+
+
 private _naughtyHats =
 [
 	"NWTS_Deer",
@@ -34,6 +36,9 @@ private _removeNaughtyHat =
 
 [_removeNaughtyHat, [_naughtyHatMap, _removeNaughtyHat], 1] call CBA_fnc_waitAndExecute;
 
+
+
+
 [
 	{(player distance theheart) < 500},
 	{
@@ -58,28 +63,6 @@ private _removeNaughtyHat =
 ] call CBA_fnc_waitUntilAndExecute;
 
 
-{
-	_x addEventHandler ["HandleDamage", 
-	{
-		params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint"];
-
-		_unit setDamage 0;
-
-		if !(isPlayer _instigator) exitWith {0};
-
-		if !(currentWeapon _instigator isEqualTo "vn_m_hammer") exitWith {0};
-
-		[_unit] remoteExec ["f_fnc_destroyHeartAnchor", 2];
-
-		0
-	}];
-	
-} forEach 
-[
-	anchor_1,
-	anchor_2,
-	anchor_3
-];
 
 private _trackHammer =
 {
@@ -94,6 +77,9 @@ private _trackHammer =
 };
 
 [_trackHammer, [_trackHammer], 2] call CBA_fnc_waitAndExecute;
+
+
+
 
 private _checkIfUnconscious = 
 {
@@ -130,3 +116,16 @@ private _checkIfUnconscious =
 		};
 	};
 };
+
+
+
+
+[
+	{time > 10},
+	{
+		if ((player getVariable ["f_var_assignGear", ""]) isEqualTo "miller") then
+		{
+			f_playerIsMiller = true;
+		};
+	}
+] call CBA_fnc_waitUntilAndExecute;

@@ -3,6 +3,9 @@ firework11= _soundPath + "sounds\firework1.ogg";
 firework22= _soundPath + "sounds\firework2.ogg";
 firework33= _soundPath + "sounds\firework3.ogg";
 
+
+
+
 fnc_zen_createBurper =
 {
 	params ["_pos"];
@@ -45,28 +48,4 @@ fnc_zen_createMegaSparky =
 
 	_anomaly = [_pos, _radius, true] call f_fnc_createMegaSparkyAnomaly;
 	[_anomaly] call f_fnc_addObjectsToAllZeuses;
-};
-
-if !(hasInterface) then
-{
-	{
-		_x addEventHandler ["HandleDamage", 
-		{
-			params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint"];
-
-			if !(isPlayer _instigator) exitWith {0};
-
-			if !(currentWeapon _instigator isEqualTo "vn_m_hammer") exitWith {0};
-
-			[_unit] remoteExec ["f_fnc_destroyHeartAnchor", 2];
-
-			0
-		}];
-		
-	} forEach 
-	[
-		anchor_1,
-		anchor_2,
-		anchor_3
-	];
 };
