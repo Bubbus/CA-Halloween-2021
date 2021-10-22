@@ -17,7 +17,7 @@ while {true} do
 		{
 			if (isNil {_x getVariable "anomalie"}) then
 			{
-				[_x,_location_pos,_damage_toxic,_radius_toxic] remoteExec ["f_fnc_applyToxicDamageFartyAnomaly"];
+				[_x,_location_pos,_damage_toxic,_radius_toxic] remoteExec ["f_fnc_applyToxicDamageFartyAnomaly", _x, false];
 			};
 
 		} foreach _list_ai_in_range_tox;
