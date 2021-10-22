@@ -2,74 +2,26 @@
 // Credits: Please see the F3 online manual (http://www.ferstaberinde.com/f3/en/)
 // ====================================================================================
 
-// SIDE: WEST
+// FACTION: NATO
 
 // ====================================================================================
 
-//Creating simple tasks.
-//Previous examples for task creation were needlessly complicated, they don't need to be. Whilst the completion of one is handled by 
-//triggers in game, it can sometimes be enough to just have them be present on a players journal, it directs them, and keeps players on task.
+// TASKS
+// The code below creates tasks. Two (commented-out) sample tasks are included.
+// Note: tasks should be entered into this file in reverse order.
 
-//It is good practice to create them in the sides briefing file, as this means it seperates them neatly, without the creation of further files.
+// _task2 = player createSimpleTask ["OBJ_2"];
+// _task2 setSimpleTaskDescription ["IN DEPTH OBJECTIVE DESCRIPTION", "SHORT OBJECTIVE DESCRIPTION", "WAYPOINT TEXT"];
+// _task2 setSimpleTaskDestination WAYPOINTLOCATION;
+// _task2 setTaskState "Created";
 
-//Tasks follow this style:
+// _task1 = player createSimpleTask ["OBJ_1"];
+// _task1 setSimpleTaskDescription ["IN DEPTH OBJECTIVE DESCRIPTION", "SHORT OBJECTIVE DESCRIPTION", "WAYPOINT TEXT"];
+// _task1 setSimpleTaskDestination WAYPOINTLOCATION;
+// _task1 setTaskState "Created";
 
-//[civilian,["task1"],["Do this and you get a cookie","Earn Cookie","cookiemarker"],[0,0,0],1,2,true] call BIS_fnc_taskCreate
-//[west,["task2"],["Good luck finding this cookie","Find Cookie","cookiemarker2"],objNull,1,3,true] call BIS_fnc_taskCreate //Task without a map location
 
-//However, we don't use the civilian or west terms, as this is the western briefing file, instead, we can do something like this:
 
-//[group player, "AANorth", ["Destroy the AA present in Northern Aliabad", "Destroy the AA", "AANorth"], "AANorth", true] call BIS_fnc_taskCreate;
-//[group player, "AASouth", ["Destroy the AA present in Southern Aliabad", "Destroy the AA", "AASouth"], "AASouth", true] call BIS_fnc_taskCreate;
-
-//The two above would create two tasks for the Blufor team, it would create tasks for any player who also has this file directed at them, this is why 
-//it is better to handle tasks in the side's relevant briefing file. For the completion of tasks, refer to the trigger present on the framework's mission.sqm 
-//in game.
-// ====================================================================================
-
-// NOTES: CREDITS
-// The code below creates the administration sub-section of notes.
-
-_cre = player createDiaryRecord ["diary", ["Credits","
-<br/>
-*** Insert mission credits here. ***
-<br/><br/>
-Made with F3 (http://www.ferstaberinde.com/f3/en/)
-"]];
-
-// ====================================================================================
-
-// NOTES: ADMINISTRATION
-// The code below creates the administration sub-section of notes.
-
-_adm = player createDiaryRecord ["diary", ["Administration","
-<br/>
-*** Insert information on administration and logistics here. ***
-"]];
-
-// ====================================================================================
-
-// NOTES: EXECUTION
-// The code below creates the execution sub-section of notes.
-
-_exe = player createDiaryRecord ["diary", ["Execution","
-<br/>
-COMMANDER'S INTENT
-<br/>
-*** Insert very short summary of plan here. ***
-<br/><br/>
-MOVEMENT PLAN
-<br/>
-*** Insert movement instructions here. ***
-<br/><br/>
-FIRE SUPPORT PLAN
-<br/>
-*** Insert fire support instructions here. ***
-<br/><br/>
-SPECIAL TASKS
-<br/>
-*** Insert instructions for specific units here. ***
-"]];
 
 // ====================================================================================
 
@@ -78,7 +30,11 @@ SPECIAL TASKS
 
 _mis = player createDiaryRecord ["diary", ["Mission","
 <br/>
-*** Insert the mission here. ***
+Visit each of the known antiquity sites and uncover their secrets.  Archaeologists will be able to dig up the ruins and find artefacts.
+<br/>
+
+<br/>
+Read the information provided in the Tasks tab.  Whatever you learn will be revealed there.
 "]];
 
 // ====================================================================================
@@ -88,15 +44,19 @@ _mis = player createDiaryRecord ["diary", ["Mission","
 
 _sit = player createDiaryRecord ["diary", ["Situation","
 <br/>
-*** Insert general information about the situation here.***
-<br/><br/>
-ENEMY FORCES
+An expedition has been commissioned by the US government to investigate credible rumours of a useful ancient technology.  An archaeological team led by Montana Miller is being escorted by a veteran mercenary band known as Century Arms between antiquity sites in French Tanoa.
 <br/>
-*** Insert information about enemy forces here.***
-<br/><br/>
-FRIENDLY FORCES
+
 <br/>
-*** Insert information about friendly forces here.***
+The Tanoan colonists have recently rebelled since independence was declared from France.  Montana Miller's search will be taking place in an active conflict zone, although the local government has declared its support for the expedition largely to improve its ties with the US.
+<br/><br/>
+<font size='18'>ENEMY FORCES</font>
+<br/>
+Rebels, potentially backed by the Soviets.  Expect light motorised assets and irregular uniforms.
+<br/><br/>
+<font size='18'>FRIENDLY FORCES</font>
+<br/>
+Independent Tanoan government forces, backed by various Western powers.  Regular uniforms, Western gear and vehicles.
 "]];
 
 // ====================================================================================

@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=11;
+		nextID=14;
 	};
 	class Camera
 	{
 		pos[]={2977.4702,241.12822,2496.9866};
-		dir[]={0.70603162,-0.47887415,0.52183229};
-		up[]={0.38512182,0.87786156,0.28464609};
-		aside[]={0.59441453,-1.0768417e-006,-0.8042345};
+		dir[]={0.21389736,-0.50629854,0.8354761};
+		up[]={0.12557654,0.86233652,0.49049884};
+		aside[]={0.96881413,-9.7509474e-007,-0.24803442};
 	};
 };
 binarizationWanted=0;
@@ -16951,13 +16951,12 @@ class Mission
 						angles[]={0,4.3823996,0};
 					};
 					side="Civilian";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 					};
 					id=2081;
 					type="C_Marshal_F";
-					atlOffset=0.7858429;
 				};
 				class Item1
 				{
@@ -16968,12 +16967,12 @@ class Mission
 						angles[]={0,4.3823996,0};
 					};
 					side="Civilian";
+					flags=4;
 					class Attributes
 					{
 					};
 					id=2082;
 					type="C_Marshal_F";
-					atlOffset=0.7858429;
 				};
 			};
 			class Attributes
@@ -17013,7 +17012,7 @@ class Mission
 				};
 			};
 			id=2079;
-			atlOffset=0.7858429;
+			atlOffset=0.78584385;
 		};
 		class Item315
 		{
@@ -17031,7 +17030,7 @@ class Mission
 			};
 			id=2080;
 			type="CUP_C_DC3_TanoAir_CIV";
-			atlOffset=0.7858429;
+			atlOffset=0.78584385;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17280,13 +17279,12 @@ class Mission
 						angles[]={0,4.3823996,0};
 					};
 					side="Civilian";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 					};
 					id=2095;
 					type="C_Marshal_F";
-					atlOffset=0.81604481;
 				};
 				class Item1
 				{
@@ -17297,12 +17295,12 @@ class Mission
 						angles[]={0,4.3823996,0};
 					};
 					side="Civilian";
+					flags=4;
 					class Attributes
 					{
 					};
 					id=2096;
 					type="C_Marshal_F";
-					atlOffset=0.81604481;
 				};
 			};
 			class Attributes
@@ -17401,13 +17399,12 @@ class Mission
 						angles[]={0,4.3823996,0};
 					};
 					side="Civilian";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 					};
 					id=2099;
 					type="C_Marshal_F";
-					atlOffset=0.83631325;
 				};
 				class Item1
 				{
@@ -17418,12 +17415,12 @@ class Mission
 						angles[]={0,4.3823996,0};
 					};
 					side="Civilian";
+					flags=4;
 					class Attributes
 					{
 					};
 					id=2100;
 					type="C_Marshal_F";
-					atlOffset=0.83631325;
 				};
 			};
 			class Attributes
@@ -17463,7 +17460,7 @@ class Mission
 				};
 			};
 			id=2098;
-			atlOffset=0.83631325;
+			atlOffset=0.83631229;
 		};
 		class Item329
 		{
@@ -17481,7 +17478,7 @@ class Mission
 			};
 			id=2101;
 			type="CUP_C_DC3_TanoAir_CIV";
-			atlOffset=0.83631325;
+			atlOffset=0.83631229;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -29482,6 +29479,7 @@ class Mission
 			};
 			id=3656;
 			type="vn_b_wheeled_m54_fuel_airport";
+			atlOffset=-0.0021924973;
 		};
 	};
 	class Connections

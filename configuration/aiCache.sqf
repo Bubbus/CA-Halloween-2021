@@ -3,7 +3,7 @@
 // Define parameters
 
 // The range outside of which to cache units, in metres.
-f_param_caching = 1000;
+f_param_caching = 700;
 
 
 // The range for caching civilian presence modules.
