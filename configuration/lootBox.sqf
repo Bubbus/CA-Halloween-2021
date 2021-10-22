@@ -1,3 +1,5 @@
+#include "lootbox_parts\includes.sqf"
+
 CREATE_LOOTBOX(weapons);
 
 _alwaysPistol = ITEM("hgun_P07_F");
