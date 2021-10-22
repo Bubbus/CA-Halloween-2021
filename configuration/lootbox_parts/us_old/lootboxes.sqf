@@ -14,6 +14,7 @@ ADD_TO_LOOTBOX(mil_armoury,MULTIPLE(_mil_vests,2));
 ADD_TO_LOOTBOX(mil_armoury,MULTIPLE(_mil_hats,2));
 ADD_TO_LOOTBOX(mil_armoury,MULTIPLE(_mil_backpacks,2));
 ADD_TO_LOOTBOX(mil_armoury,MULTIPLE(_mil_guns,4));
+ADD_TO_LOOTBOX(mil_armoury,MULTIPLE(_mil_pistol,3));
 ADD_TO_LOOTBOX(mil_armoury,_med_hightier_small);
 
 CREATE_LOOTBOX(mil_gunbox_small);
