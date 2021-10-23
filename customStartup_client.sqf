@@ -33,3 +33,22 @@ private _removeNaughtyHat =
 };
 
 [_removeNaughtyHat, [_naughtyHatMap, _removeNaughtyHat], 1] call CBA_fnc_waitAndExecute;
+
+
+// Show mission titles (and play music if configured).
+
+_musicBreach = { ["Pt1AirstripBattle"] remoteExecCall ["playMusic"] };
+
+["[CA-BOO] Music", "Music: Airstrip battle", _musicBreach] call zen_custom_modules_fnc_register;
+
+// Show mission titles (and play music if configured).
+
+_musicHill = { ["Pt1HammerAquired"] remoteExecCall ["playMusic"] };
+
+["[CA-BOO] Music", "Music: Hammer get", _musicHill] call zen_custom_modules_fnc_register;
+
+// Show mission titles (and play music if configured).
+
+_musicContact = { ["Pt1TitleSequence"] remoteExecCall ["playMusic"] };
+
+["[CA-BOO] Music", "Music: Title sequence", _musicContact] call zen_custom_modules_fnc_register;

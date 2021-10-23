@@ -1399,6 +1399,24 @@ class CfgMusic
 		sound[] = {"\res\sounds\FourStringEnding.ogg",db+1, 1};
 	};
 
+	class Pt1AirstripBattle
+	{
+		name = "Pt1AirstripBattle";
+		sound[] = {"\music\pt_1_airstripBattle_The_Nightclub_Brawl.ogg",db+1, 1};
+	};
+
+	class Pt1HammerAquired
+	{
+		name = "Pt1HammerAquired";
+		sound[] = {"\music\pt_1_hammerAquired.ogg",db+1, 1};
+	};
+
+	class Pt1TitleSequence
+	{
+		name = "Pt1TitleSequence";
+		sound[] = {"\music\pt_1_TitleSequence.ogg",db+1, 1};
+	};
+
 };
 
 
