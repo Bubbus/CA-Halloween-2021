@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=3357;
+		nextID=3374;
 	};
 	class MarkerIDProvider
 	{
@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=124;
+		nextID=132;
 	};
 	class Camera
 	{
-		pos[]={4146.0996,85.661499,10348.311};
-		dir[]={-0.91759545,-0.31231287,-0.24602027};
-		up[]={-0.3016791,0.94996977,-0.080883689};
-		aside[]={-0.2589733,-3.9080624e-007,0.96591228};
+		pos[]={2682.8364,791.70447,12963.079};
+		dir[]={0.26176646,-0.77391708,0.57665473};
+		up[]={0.31989533,0.63328695,0.70470893};
+		aside[]={0.9105742,1.4901161e-008,-0.41334575};
 	};
 };
 binarizationWanted=0;
-sourceName="Halloween2021Part2";
+sourceName="CA-Halloween-2021-Part-2";
 addons[]=
 {
 	"A3_Modules_F_Curator_Curator",
@@ -8532,7 +8532,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=417;
+		items=433;
 		class Item0
 		{
 			dataType="Logic";
@@ -17340,7 +17340,7 @@ class Mission
 			};
 			id=2175;
 			type="Land_vn_humanskull_f";
-			atlOffset=1.5005188;
+			atlOffset=1.5639038;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17382,7 +17382,7 @@ class Mission
 			};
 			id=2176;
 			type="Land_vn_humanskull_f";
-			atlOffset=1.5669403;
+			atlOffset=1.6303253;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -17424,7 +17424,7 @@ class Mission
 			};
 			id=2177;
 			type="Land_vn_humanskull_f";
-			atlOffset=1.5635529;
+			atlOffset=1.6269379;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -25699,6 +25699,277 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item417
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3282.1963,491.16879,13696.971};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="statue_01";
+			};
+			id=3357;
+			type="vn_sign_skull_01_f";
+		};
+		class Item418
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3145.679,477.88718,13744.152};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="statue_02";
+			};
+			id=3359;
+			type="vn_sign_skull_01_f";
+			atlOffset=0.053955078;
+		};
+		class Item419
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3111.0508,479.6221,13556.883};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="statue_03";
+			};
+			id=3360;
+			type="vn_sign_skull_01_f";
+			atlOffset=0.053955078;
+		};
+		class Item420
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3563.3193,420.88898,13560.923};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="statue_04";
+			};
+			id=3361;
+			type="vn_sign_skull_01_f";
+			atlOffset=0.053955078;
+		};
+		class Item421
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2959.5247,179.93466,14131.881};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="statue_05";
+			};
+			id=3362;
+			type="vn_sign_skull_01_f";
+			atlOffset=0.053955078;
+		};
+		class Item422
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3555.1396,233.57837,13926.09};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="statue_06";
+			};
+			id=3363;
+			type="vn_sign_skull_01_f";
+			atlOffset=0.053955078;
+		};
+		class Item423
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={1827.5231,196.01999,13391.391};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="statue_07";
+			};
+			id=3364;
+			type="vn_sign_skull_01_f";
+			atlOffset=0.053955078;
+		};
+		class Item424
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2352.1379,238.20784,13038.963};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="statue_08";
+			};
+			id=3365;
+			type="vn_sign_skull_01_f";
+			atlOffset=0.053955078;
+		};
+		class Item425
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2379.3252,150.09006,12494.209};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="statue_09";
+			};
+			id=3366;
+			type="vn_sign_skull_01_f";
+			atlOffset=0.053955078;
+		};
+		class Item426
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3408.4158,230.88394,13112.469};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="statue_10";
+			};
+			id=3367;
+			type="vn_sign_skull_01_f";
+			atlOffset=0.053955078;
+		};
+		class Item427
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3077.1338,197.29938,12235.428};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="statue_11";
+			};
+			id=3368;
+			type="vn_sign_skull_01_f";
+			atlOffset=0.053955078;
+		};
+		class Item428
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3971.2949,89.232948,12345.184};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="statue_12";
+			};
+			id=3369;
+			type="vn_sign_skull_01_f";
+			atlOffset=0.053955078;
+		};
+		class Item429
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4020.6348,201.85602,13248.406};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="statue_13";
+			};
+			id=3370;
+			type="vn_sign_skull_01_f";
+			atlOffset=0.053955078;
+		};
+		class Item430
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4343.8618,99.658401,12521.396};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="statue_14";
+			};
+			id=3371;
+			type="vn_sign_skull_01_f";
+			atlOffset=0.053955078;
+		};
+		class Item431
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4754.6929,124.51015,13051.046};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="statue_15";
+			};
+			id=3372;
+			type="vn_sign_skull_01_f";
+			atlOffset=0.053955078;
+		};
+		class Item432
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3108.2363,201.23424,12975.744};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				name="statue_16";
+			};
+			id=3373;
+			type="vn_sign_skull_01_f";
+			atlOffset=0.053955078;
 		};
 	};
 	class Connections

@@ -263,3 +263,15 @@ _musicContact = { ["Pt2TheTempleOfTheHeart"] remoteExecCall ["playMusic"] };
 _musicContact2 = { ["Pt2TheTempleReveal"] remoteExecCall ["playMusic"] };
 
 ["[CA-BOO] Music", "Music: Temple reveal", _musicContact] call zen_custom_modules_fnc_register;
+
+_summonMegasparky =
+    {
+        _statues = [statue_01,statue_02,statue_03,statue_04,statue_05,statue_06,statue_07,statue_08,statue_09,statue_10,statue_11,statue_12,statue_13,statue_14,statue_15,statue_16];
+        {
+
+            playSound3D [getMissionPath "music\pt_2_SummonMegaSparky.ogg", _x, false, getPosASL _x, 3];
+
+        } foreach _statues;
+    };
+
+["[CA-BOO] Chant", "Summon Megasparky", _summonMegasparky] call zen_custom_modules_fnc_register;
