@@ -12,7 +12,7 @@ else
 	if (atak_swarmer) then
 	{
 		private _tgt_sw = swarmer_public getVariable ["tgt", objNull];
-		private _posASL = getposasl _tgt_sw;
+		private _posASL = getpos _tgt_sw;
 
 		flow_back = (_this vectorFromTo [_posASL # 0, _posASL # 1, 0.5 + random 1]) vectorMultiply (3 + random 5);
 

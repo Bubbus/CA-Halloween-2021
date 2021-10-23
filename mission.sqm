@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=3352;
+		nextID=3357;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=92;
+		nextID=124;
 	};
 	class Camera
 	{
-		pos[]={4075.8904,242.08098,12835.024};
-		dir[]={-0.010221271,-0.77484792,0.63206851};
-		up[]={-0.012527997,0.63214695,0.77474773};
-		aside[]={0.99987173,1.8495848e-007,0.016168272};
+		pos[]={4146.0996,85.661499,10348.311};
+		dir[]={-0.91759545,-0.31231287,-0.24602027};
+		up[]={-0.3016791,0.94996977,-0.080883689};
+		aside[]={-0.2589733,-3.9080624e-007,0.96591228};
 	};
 };
 binarizationWanted=0;
@@ -17455,7 +17455,7 @@ class Mission
 			name="No-zeus trigger";
 			class Entities
 			{
-				items=1;
+				items=2;
 				class Item0
 				{
 					dataType="Trigger";
@@ -17472,8 +17472,25 @@ class Mission
 					id=2179;
 					type="EmptyDetectorAreaR50";
 				};
+				class Item1
+				{
+					dataType="Trigger";
+					position[]={3240.512,135.17354,14350.063};
+					class Attributes
+					{
+						condition="(player in thisList) and {handgunWeapon player isEqualTo ""vn_m_hammer""}";
+						onActivation="systemChat ""Your hammer hums as you approach the temple."";" \n "f_hammerHinted = true;";
+						sizeA=250;
+						sizeB=250;
+						sizeC=80;
+						activationBy="ANYPLAYER";
+					};
+					id=3352;
+					type="EmptyDetectorAreaR50";
+				};
 			};
 			id=2180;
+			atlOffset=-6.1035156e-005;
 		};
 		class Item166
 		{
@@ -23207,7 +23224,7 @@ class Mission
 					name="Task Layout";
 					class Entities
 					{
-						items=15;
+						items=17;
 						class Item0
 						{
 							dataType="Trigger";
@@ -24192,13 +24209,250 @@ class Mission
 							type="EmptyDetector";
 							atlOffset=0.07699585;
 						};
+						class Item15
+						{
+							dataType="Trigger";
+							position[]={3231.9451,136.41516,14337.38};
+							class Attributes
+							{
+								condition="missionNamespace getVariable [""f_hammerHinted"", false]";
+								sizeA=0;
+								sizeB=0;
+							};
+							id=3353;
+							type="EmptyDetector";
+						};
+						class Item16
+						{
+							dataType="Logic";
+							class PositionInfo
+							{
+								position[]={3238.1594,135.54637,14345.862};
+								angles[]={0.10560538,0,6.2571888};
+							};
+							id=3356;
+							type="ModuleTaskCreate_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ModuleTaskCreate_F_Destination";
+									expression="_this setVariable ['Destination',_value,true];";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="ModuleTaskCreate_F_Type";
+									expression="_this setVariable ['Type',_value,true];";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="kill";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="ModuleTaskCreate_F_ShowNotification";
+									expression="_this setVariable ['ShowNotification',_value,true];";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=1;
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="ModuleTaskCreate_F_Marker";
+									expression="_this setVariable ['Marker',_value,true];";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="ModuleTaskCreate_F_Title";
+									expression="_this setVariable ['Title',_value,true];";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="Silence the Heart's Servants";
+										};
+									};
+								};
+								class Attribute5
+								{
+									property="ModuleTaskCreate_F_Description";
+									expression="_this setVariable ['Description',_value,true];";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="The Heart is being sustained by its Servants.  Use the hammer to break their bond to the Heart.";
+										};
+									};
+								};
+								class Attribute6
+								{
+									property="ModuleTaskCreate_F_ID";
+									expression="_this setVariable ['ID',_value,true];";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="KillServants";
+										};
+									};
+								};
+								class Attribute7
+								{
+									property="ModuleTaskCreate_F_AlwaysVisible";
+									expression="_this setVariable ['AlwaysVisible',_value,true];";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=0;
+										};
+									};
+								};
+								class Attribute8
+								{
+									property="ModuleTaskCreate_F_Owner";
+									expression="_this setVariable ['Owner',_value,true];";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"SCALAR"
+												};
+											};
+											value=4;
+										};
+									};
+								};
+								class Attribute9
+								{
+									property="ModuleTaskCreate_F_State";
+									expression="_this setVariable ['State',_value,true];";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="ASSIGNED";
+										};
+									};
+								};
+								class Attribute10
+								{
+									property="ModuleTaskCreate_F_IDParent";
+									expression="_this setVariable ['IDParent',_value,true];";
+									class Value
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="";
+										};
+									};
+								};
+								nAttributes=11;
+							};
+						};
 					};
 					id=3241;
-					atlOffset=-3.5444336;
+					atlOffset=63.139725;
 				};
 			};
 			id=3257;
-			atlOffset=-3.5444336;
+			atlOffset=63.139725;
 		};
 		class Item383
 		{
@@ -24850,7 +25104,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3508.2991,460.76501,13428.249};
-				angles[]={-0,1.5986168,6.2332273};
+				angles[]={0,1.5986168,6.2332273};
 			};
 			side="Empty";
 			flags=4;
@@ -24931,7 +25185,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2252.6914,197.89003,13377.758};
-				angles[]={-0,1.5986168,0};
+				angles[]={0,1.5986168,0};
 			};
 			side="Empty";
 			flags=4;
@@ -25011,7 +25265,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3203.8062,507.91553,13689.382};
-				angles[]={-0,1.5986168,0};
+				angles[]={0,1.5986168,0};
 			};
 			side="Empty";
 			flags=4;
@@ -25251,7 +25505,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2247.5618,197.74971,13367.492};
-				angles[]={-0,5.565238,0};
+				angles[]={0,5.565238,0};
 			};
 			side="Empty";
 			flags=4;
@@ -25331,7 +25585,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={3201.8633,507.77521,13700.897};
-				angles[]={0,3.5271022,-0};
+				angles[]={0,3.5271022,0};
 			};
 			side="Empty";
 			flags=4;
@@ -25451,11 +25705,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=11;
+			nextID=12;
 		};
 		class Links
 		{
-			items=11;
+			items=12;
 			class Item0
 			{
 				linkID=0;
@@ -25561,6 +25815,16 @@ class Mission
 				linkID=10;
 				item0=3270;
 				item1=3269;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item11
+			{
+				linkID=11;
+				item0=3353;
+				item1=3356;
 				class CustomData
 				{
 					type="Sync";

@@ -53,6 +53,7 @@ private _const_weapons = [
 private _candidates = allPlayers select {
 	(getPos _x) distance2D _pos < _maxDist
 	and {_x getVariable ["ace_captives_isHandcuffed", false]}
+	and {(handgunWeapon _x) isNotEqualTo "vn_m_hammer"}
 };
 
 if (_candidates isEqualTo []) exitWith {

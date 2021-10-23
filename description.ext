@@ -1411,6 +1411,30 @@ class CfgMusic
 		sound[] = {"\res\sounds\FourStringEnding.ogg",db+1, 1};
 	};
 
+	class Pt2AfterTheHeartbeat
+	{
+		name = "Pt2AfterTheHeartbeat";
+		sound[] = {"\music\pt_2_AfterTheHeartbeat.ogg",db+1, 1};
+	};
+
+	class Pt2SummonMegaSparky
+	{
+		name = "Pt2SummonMegaSparky";
+		sound[] = {"\music\pt_2_SummonMegaSparky.ogg",db+1, 1};
+	};
+
+	class Pt2TheTempleOfTheHeart
+	{
+		name = "Pt2TheTempleOfTheHeart";
+		sound[] = {"\music\pt_2_TheTempleOfTheHeart.ogg",db+1, 1};
+	};
+
+	class Pt2TheTempleReveal
+	{
+		name = "Pt2TheTempleReveal";
+		sound[] = {"\music\pt_2_TheTempleReveal.ogg",db+1, 1};
+	};
+
 };
 
 

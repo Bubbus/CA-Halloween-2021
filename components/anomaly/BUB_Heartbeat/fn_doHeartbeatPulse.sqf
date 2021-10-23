@@ -4,6 +4,11 @@ CLIENT_ONLY;
 
 params [["_baseObj", objNull], ["_strength", 4], ["_doKnockout", false], ["_doKillVic", false], ["_doWaveEffects", true], ["_velocity", 40]];
 
+if ((_strength >= 3) and {!(missionNamespace getVariable ["missionPhase2", false])}) then
+{
+    moveOut player;
+};
+
 private _visEffectStrength = _strength;
 
 if ((player getVariable ["anomalyIgnore", false]) and {_doKnockout isNotEqualTo 2}) then

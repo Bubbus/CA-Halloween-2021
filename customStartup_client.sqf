@@ -238,3 +238,28 @@ _spawnLootbox =
 
 ["[CA-BOO] Lootboxes (Military)", "Guns (Large)", _spawnLootbox] call zen_custom_modules_fnc_register;
 
+
+
+// Show mission titles (and play music if configured).
+
+_musicBreach = { ["Pt2AfterTheHeartbeat"] remoteExecCall ["playMusic"] };
+
+["[CA-BOO] Music", "Music: After the heartbeats", _musicBreach] call zen_custom_modules_fnc_register;
+
+// Show mission titles (and play music if configured).
+
+_musicHill = { ["Pt2SummonMegaSparky"] remoteExecCall ["playMusic"] };
+
+["[CA-BOO] Music", "Music: Summon mega sparky", _musicHill] call zen_custom_modules_fnc_register;
+
+// Show mission titles (and play music if configured).
+
+_musicContact = { ["Pt2TheTempleOfTheHeart"] remoteExecCall ["playMusic"] };
+
+["[CA-BOO] Music", "Music: Temple of the Heart", _musicContact] call zen_custom_modules_fnc_register;
+
+// Show mission titles (and play music if configured).
+
+_musicContact2 = { ["Pt2TheTempleReveal"] remoteExecCall ["playMusic"] };
+
+["[CA-BOO] Music", "Music: Temple reveal", _musicContact] call zen_custom_modules_fnc_register;

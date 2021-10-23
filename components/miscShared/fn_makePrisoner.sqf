@@ -12,7 +12,7 @@
 -------------------------------------------------------------------------------------------------------------------- */
 #define QUOTE(DATA)                                             #DATA
 #define DOUBLE(DATA_1,DATA_2)                                   DATA_1##_##DATA_2
-#define MACRO_PROJECT_PREFIX									f_
+#define MACRO_PROJECT_PREFIX                                    f_
 #define GVAR(VARNAME)                                           DOUBLE(MACRO_PROJECT_PREFIX,VARNAME)
 #define QGVAR(VARNAME)                                          QUOTE(GVAR(VARNAME))
 
@@ -31,6 +31,7 @@ if (!alive _unit or {!local _unit}) exitWith {};
 // Start by handcuffing the unit
 [_unit, true] call ace_captives_fnc_setHandcuffed;
 
+//*
 // Delay the remaining code (setHandcuffed sleeps for 0.01 seconds)
 [
 	{
@@ -89,7 +90,8 @@ if (!alive _unit or {!local _unit}) exitWith {};
 				case "amovpercmstpsnonwnondnon_turnl";	// Only used by AI, but I needed this for testing
 				case "amovpercmstpsnonwnondnon_turnr";	// Same as above
 				case "amovppnemstpsnonwnondnon";
-				case "amovpercmstpsnonwnondnon": {
+				case "amovpercmstpsnonwnondnon";
+				case "amovpercmstpsoptwbindnon": {
 
 					[_unit, _prisonerAnim] remoteExecCall ["switchMove", 0, false];
 
@@ -109,3 +111,4 @@ if (!alive _unit or {!local _unit}) exitWith {};
 	[_unit],
 	0.5
 ] call CBA_fnc_waitAndExecute;
+//*/

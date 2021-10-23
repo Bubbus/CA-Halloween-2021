@@ -42,7 +42,7 @@ else
         };
 
         _wind = f_var_heartbeatOriginalWind;
-        setWind [_wind#0, _wind#1, false];
+        setWind [(_wind#0) max 20, (_wind#1) max 20, false];
         f_var_heartbeatOriginalWind = nil;
 
     };
