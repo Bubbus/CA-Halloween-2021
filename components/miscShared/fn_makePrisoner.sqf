@@ -29,9 +29,9 @@ if (!alive _unit or {!local _unit}) exitWith {};
 
 
 // Start by handcuffing the unit
-[_unit, true] call ace_captives_fnc_setHandcuffed;
+[_unit, true] call ACE_captives_fnc_setHandcuffed;
+[_unit] joinSilent grpNull;
 
-//*
 // Delay the remaining code (setHandcuffed sleeps for 0.01 seconds)
 [
 	{
@@ -99,7 +99,15 @@ if (!alive _unit or {!local _unit}) exitWith {};
 						_unit playMoveNow _prisonerAnim;
 
 					} else {
-						_unit playMoveNow "Acts_AidlPsitMstpSsurWnonDnon_out";
+						// Additional delay because multiplayer is weird?
+						[
+							{
+								params ["_unit"];
+								_unit playMoveNow "Acts_AidlPsitMstpSsurWnonDnon_out";
+							},
+							[_unit],
+							0.25
+						] call CBA_fnc_waitAndExecute;
 
 						_unit removeEventHandler ["AnimChanged", _unit getVariable [QGVAR(EH_makePrisoner), -1]];
 					};
@@ -111,4 +119,3 @@ if (!alive _unit or {!local _unit}) exitWith {};
 	[_unit],
 	0.5
 ] call CBA_fnc_waitAndExecute;
-//*/
