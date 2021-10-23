@@ -9,121 +9,11 @@
 class CA_ZeusUI_Units
 {
 
-	// Category definition
-	class BLUFOR_Infantry
-	{
-		categoryName = "BLUFOR Infantry";			// This is the name of the category which you will see in-game.
-		gear = "blu_f";					// This is the faction code as used in the F3 framework. Here, "blu_f", means the gear will be taken from the BLUFOR gearscript (aka BLUFOR).
-		side = "west";					// "west" means the units will bear allegiance to the western side (aka BLUFOR). Available options are: "west", "east", "resistance" and "civilian".
-
-		// Units definition
-		class Rifleman
-		{
-			unitName = "BLUFOR Rifleman";		// This is the name of the squad which will be shown in-game.
-			units[] = {"rif"};			// This is the squad which will spawn - this just spawns one rifleman.
-		};
-
-		class Fireteam_4x
-		{
-			unitName = "BLUFOR Fireteam 4x";
-			units[] = {"ftl", "ar", "lat", "rif"};
-		};
-
-		class Squad_6x
-		{
-			unitName = "BLUFOR Squad 6x";
-			units[] = {"ftl", "ar", "aar", "lat", "rif", "mk"};	// This spawns a full 6-man fireteam. You can have as many or as few units in a squad as you want.
-		};
-
-		class Section_9x
-		{
-			unitName = "BLUFOR Section 9x";
-			units[] = {"ftl", "ar", "aar", "lat", "med", "mk", "rif", "rif", "rif"};
-		};
-
-		class LAT_Team
-		{
-			unitName = "BLUFOR LAT Team";
-			units[] = {"rif", "lat"};
-		};
-
-		class AR_Team
-		{
-			unitName = "BLUFOR AR Team";
-			units[] = {"aar", "ar"};
-		};
-
-		class MK_Team
-		{
-			unitName = "BLUFOR MK Team";
-			units[] = {"rif", "mk"};
-		};
-	};
-
-	class BLUFOR_Vehicles
-	{
-		categoryName = "BLUFOR Vehicles";
-		gear = "blu_f";
-		side = "west";
-
-		class M2A4_Slammer_UP
-		{
-			unitName = "M2A4 Slammer UP";		// This is the name of the vehicle which will be shown in-game.
-			vehicle = "B_MBT_01_TUSK_F";		// This is the classname of the vehicle. You can get it by right-clicking a vehicle in 3DEN and selecting "Log > Log classes to clipboard"
-			units[] = {"crew", "crew", "crew"};		// This is the crew of the vehicle.  The first unit in the list is always the commander.
-		};
-
-		class AMV7_Marshall		// Classnames can't contain '-'
-		{
-			unitName = "AMV-7 Marshall";
-			vehicle = "B_APC_Wheeled_01_cannon_F";
-			units[] = {"crew", "crew", "crew"};
-		};
-
-		class AMV_7_Reinforcements
-		{
-			unitName = "AMV-7 Marshall + Squad 6x"
-			vehicle = "B_APC_Wheeled_01_cannon_F";
-			units[] = {"crew", "crew", "crew"};
-			reinforcements[] = {"ftl", "ar", "aar", "lat", "rif", "mk"}; // When defined, this group spawns in the cargo space of the vehicle. The vehicle gets a TR unload waypoint and a RTB waypoint (only if it's unarmed), the group a Move waypoint. The vehicle will also despawn on RTB. If the vehicle is a Heli, it will spawn flying and always RTB
-		};
-
-		class IFV6C_Panther
-		{
-			unitName = "IFV-6C Panther";
-			vehicle = "B_APC_Tracked_01_rcws_F";
-			units[] = {"crew", "crew", "crew"};
-		};
-
-		class IFV6C_Panther_Reinforcements
-		{
-			unitName = "IFV-6C Panther + Squad 6x";
-			vehicle = "B_APC_Tracked_01_rcws_F";
-			units[] = {"crew", "crew", "crew"};
-			reinforcements[] = {"ftl", "ar", "aar", "lat", "rif", "mk"};
-		};
-
-		class Hunter_HMG
-		{
-			unitName = "Hunter HMG";
-			vehicle = "B_MRAP_01_HMG_F";
-			units[] = {"ftl", "rif", "rif"};
-		};
-
-		class HEMTT_Reinforcements
-		{
-			unitName = "HEMTT Transport + Section 9x";
-			vehicle = "B_Truck_01_covered_F";
-			units[] = {"rif", "rif"};
-			reinforcements[] = {"ftl", "ar", "aar", "lat", "med", "mk", "rif", "rif", "rif"};
-		};
-	};
-
 	class OPFOR_Infantry
 	{
 		categoryName = "US Infantry";
-		gear = "ind_f";
-		side = "resistance";
+		gear = "blu_f";					// This is the faction code as used in the F3 framework. Here, "blu_f", means the gear will be taken from the BLUFOR gearscript (aka BLUFOR).
+		side = "west";					// "west" means the units will bear allegiance to the western side (aka BLUFOR). Available options are: "west", "east", "resistance" and "civilian".
 
 		// Units definition
 		class Rifleman
@@ -172,8 +62,8 @@ class CA_ZeusUI_Units
 	class OPFOR_Vehicles
 	{
 		categoryName = "US Vehicles";
-		gear = "ind_f";
-		side = "resistance";
+		gear = "blu_f";					// This is the faction code as used in the F3 framework. Here, "blu_f", means the gear will be taken from the BLUFOR gearscript (aka BLUFOR).
+		side = "west";					// "west" means the units will bear allegiance to the western side (aka BLUFOR). Available options are: "west", "east", "resistance" and "civilian".
 
 		class T100_Varsuk		// Classnames can't contain '-'
 		{

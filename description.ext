@@ -1399,6 +1399,24 @@ class CfgMusic
 		sound[] = {"\res\sounds\FourStringEnding.ogg",db+1, 1};
 	};
 
+	class Pt3IntroMusic
+	{
+		name = "Pt3IntroMusic";
+		sound[] = {"\music\pt_3_IntroMusic.ogg",db+1, 1};
+	};
+
+	class Pt3SparkyIsBack
+	{
+		name = "Pt3SparkyIsBack";
+		sound[] = {"\music\pt_3_SparkyIsBack.ogg",db+1, 1};
+	};
+
+	class Pt3VillageCombat
+	{
+		name = "Pt3VillageCombat";
+		sound[] = {"\music\pt_3_VillageCombat.ogg",db+1, 1};
+	};
+
 };
 
 

@@ -138,3 +138,21 @@ _spawnLootbox =
 
 ["[CA-BOO] Lootboxes (Military)", "Guns (Large)", _spawnLootbox] call zen_custom_modules_fnc_register;
 
+
+// Show mission titles (and play music if configured).
+
+_musicBreach = { ["Pt3IntroMusic"] remoteExecCall ["playMusic"] };
+
+["[CA-BOO] Music", "Music: Intro", _musicBreach] call zen_custom_modules_fnc_register;
+
+// Show mission titles (and play music if configured).
+
+_musicHill = { ["Pt3SparkyIsBack"] remoteExecCall ["playMusic"] };
+
+["[CA-BOO] Music", "Music: Sparky is back", _musicHill] call zen_custom_modules_fnc_register;
+
+// Show mission titles (and play music if configured).
+
+_musicContact = { ["Pt3VillageCombat"] remoteExecCall ["playMusic"] };
+
+["[CA-BOO] Music", "Music: Village combat", _musicContact] call zen_custom_modules_fnc_register;
