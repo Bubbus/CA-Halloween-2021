@@ -65,13 +65,13 @@ f_arr_missionIntroLines =
 
 
 // If you want to time your intro with some music, set this to true.
-f_var_missionIntro_shouldChoreograph = false;
+f_var_missionIntro_shouldChoreograph = true;
 
 
 // Choose the music to play with your intro.  It should be put into the CfgMusic section of the description.ext file.
 // You can also use music from Arma itself.  Use the "utils" command in the mission editor console to get started.
-f_var_missionIntro_choreographWith = "LeadTrack01_F";
+f_var_missionIntro_choreographWith = "Pt1TitleSequence";
 
 
 // Choose how many seconds to wait into the music before showing the intro text.
-f_var_missionIntro_choreographDelay = 10.5;
+f_var_missionIntro_choreographDelay = 23;
