@@ -1393,6 +1393,21 @@ class CfgSounds
 
 	// END: Heartbeat
 
+
+	class EvacOnTheWay
+	{
+		name = "EvacOnTheWay";
+		sound[] = {"\sounds\Radio_pt2_01_EvacOnTheWay.ogg", db+15, 1};
+		titles[] = {};
+	};
+
+	class EvacFailed
+	{
+		name = "EvacFailed";
+		sound[] = {"\sounds\Radio_pt2_02_EvacFailed.ogg", db+15, 1};
+		titles[] = {};
+	};
+
 };
 
 

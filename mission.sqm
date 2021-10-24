@@ -16,18 +16,18 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=132;
+		nextID=140;
 	};
 	class Camera
 	{
-		pos[]={2682.8364,791.70447,12963.079};
-		dir[]={0.26176646,-0.77391708,0.57665473};
-		up[]={0.31989533,0.63328695,0.70470893};
-		aside[]={0.9105742,1.4901161e-008,-0.41334575};
+		pos[]={3172.2983,521.84186,13665.1};
+		dir[]={0.85075951,-0.45400816,0.26476693};
+		up[]={0.43350562,0.89099687,0.13491198};
+		aside[]={0.29715738,-6.5774657e-008,-0.95483851};
 	};
 };
 binarizationWanted=0;
-sourceName="CA-Halloween-2021-Part-2";
+sourceName="Halloween2021Part2";
 addons[]=
 {
 	"A3_Modules_F_Curator_Curator",
@@ -23911,6 +23911,7 @@ class Mission
 							class Attributes
 							{
 								condition="!(alive cancelHelpTask)";
+								onActivation="[] spawn {sleep 10; helpRadio say3D ['EvacFailed',250];}";
 								sizeA=0;
 								sizeB=0;
 							};
@@ -24465,7 +24466,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
-				init="[ " \n " this, " \n " ""Call for help"", " \n " ""\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa"", " \n " ""\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa"", " \n " ""(_this distance _target < 3) and {!(_target getVariable ['called', false])}"", " \n " ""(_caller distance _target < 3) and {!(_target getVariable ['called', false])}"", " \n " {}, " \n " {}, " \n " { _target setVariable ['called', true, true]; }, " \n " {}, " \n " [], " \n " 5, " \n " 0, " \n " true, " \n " false " \n "] call BIS_fnc_holdActionAdd;";
+				init="[ " \n " this, " \n " ""Call for help"", " \n " ""\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa"", " \n " ""\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_connect_ca.paa"", " \n " ""(_this distance _target < 3) and {!(_target getVariable ['called', false])}"", " \n " ""(_caller distance _target < 3) and {!(_target getVariable ['called', false])}"", " \n " {}, " \n " {}, " \n " { _target setVariable ['called', true, true]; [_target,['EvacOnTheWay',250]] remoteExec [""say3d"",0,false]; }, " \n " {}, " \n " [], " \n " 5, " \n " 0, " \n " true, " \n " false " \n "] call BIS_fnc_holdActionAdd;";
 				name="helpRadio";
 			};
 			id=3272;
